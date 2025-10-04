@@ -30,7 +30,7 @@ const WhyJoinSection = () => {
   ];
 
   return (
-    <section className="relative py-16 md:py-20 lg:py-24 bg-section-bg-grey overflow-hidden">
+    <section className="relative py-16 md:py-20 lg:py-24 bg-section-bg-grey overflow-x-hidden">
       {/* Decorative Background Patterns */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Left: Gradient Pink Ring - Partially visible from left edge */}
@@ -67,7 +67,7 @@ const WhyJoinSection = () => {
       </div>
 
       {/* Main Content Container */}
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-[35%_65%] gap-12 lg:gap-16">
           
           {/* Left Column (35%) */}
