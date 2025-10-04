@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['Poppins', 'Noto Sans Devanagari', 'sans-serif'],
-        body: ['Noto Sans Devanagari', 'sans-serif'],
+        heading: ['Anek Devanagari', 'sans-serif'],
+        body: ['Anek Devanagari', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -47,6 +47,7 @@ export default {
           DEFAULT: "hsl(var(--purple))",
           foreground: "hsl(var(--purple-foreground))",
         },
+        "nav-pink": "hsl(var(--nav-pink))",
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
