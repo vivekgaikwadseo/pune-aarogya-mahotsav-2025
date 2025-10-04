@@ -68,7 +68,7 @@ const WhyJoinSection = () => {
 
       {/* Main Content Container */}
       <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-[35%_65%] gap-12 lg:gap-16">
+        <div className="grid lg:grid-cols-[1fr_1.85fr] gap-12 lg:gap-16">
           
           {/* Left Column (35%) */}
           <div className="space-y-6">
@@ -108,7 +108,7 @@ const WhyJoinSection = () => {
           </div>
 
           {/* Right Column (65%) - 2×2 Grid */}
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 pr-0 md:pr-4 lg:pr-6">
             {features.map((feature) => {
               const Icon = feature.icon;
               return (
