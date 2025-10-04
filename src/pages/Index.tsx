@@ -19,6 +19,8 @@ const Index = () => {
           <div className="absolute top-10 left-10 w-96 h-96 bg-hero-light-grey rounded-full"></div>
           <div className="absolute bottom-20 right-20 w-80 h-80 bg-hero-light-grey rounded-3xl"></div>
           <div className="absolute top-1/2 left-1/3 w-72 h-72 bg-hero-light-grey rounded-full"></div>
+          {/* Large central light grey circle - positioned near countdown */}
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-hero-light-grey rounded-full opacity-60"></div>
         </div>
         
         {/* Floating Animated Colored Shapes */}
@@ -29,28 +31,34 @@ const Index = () => {
           {/* Pink Rectangle */}
           <div className="absolute bottom-32 left-20 w-20 h-12 bg-hero-pink rounded-lg opacity-70 animate-float-slow"></div>
           
-          {/* Blue X Shape */}
+          {/* Pink Zig-Zag Line */}
           <div className="absolute top-1/2 left-1/4 animate-float">
-            <div className="relative w-12 h-12">
-              <div className="absolute w-12 h-2 bg-hero-blue rotate-45 top-5 opacity-70"></div>
-              <div className="absolute w-12 h-2 bg-hero-blue -rotate-45 top-5 opacity-70"></div>
-            </div>
+            <svg width="60" height="20" viewBox="0 0 60 20" fill="none">
+              <path 
+                d="M0 10 L15 2 L30 10 L45 2 L60 10" 
+                stroke="hsl(var(--hero-deep-pink))" 
+                strokeWidth="3" 
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
           </div>
         </div>
         
         {/* Main Content */}
         <div className="container mx-auto px-4 relative z-10">
-          <div className="grid lg:grid-cols-[60%_40%] gap-8 md:gap-12 lg:gap-16">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
             
-            {/* Left Column - 60% Content Section */}
-            <div className="space-y-6 md:space-y-8">
+            {/* Left Column - 50% Content Section */}
+            <div className="space-y-5 md:space-y-6">
               {/* Main Headline */}
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-hero-navy leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-hero-navy leading-tight">
                 पुणे आरोग्य महोत्सव २०२५
               </h1>
               
               {/* Sub-headline */}
-              <h2 className="text-2xl md:text-3xl text-hero-navy font-medium">
+              <h2 className="text-xl md:text-2xl text-hero-navy font-medium">
                 महाराष्ट्रातील पहिले आरोग्य साहित्य संमेलन
               </h2>
               
@@ -75,7 +83,7 @@ const Index = () => {
               </div>
               
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 pt-6">
+              <div className="flex flex-col sm:flex-row gap-3 pt-5">
                 <Link to="/health-camp">
                   <Button 
                     size="lg" 
@@ -96,10 +104,13 @@ const Index = () => {
               </div>
             </div>
             
-            {/* Right Column - 40% Chief Minister Section */}
+            {/* Right Column - 50% Chief Minister Section */}
             <div className="relative flex flex-col items-center justify-center">
-              {/* Large Blue Circle with Chief Minister Image */}
-              <div className="relative w-80 h-80 md:w-96 md:h-96 bg-hero-blue rounded-full flex items-center justify-center overflow-hidden shadow-2xl">
+              {/* Modern Abstract Blue Shape with Chief Minister Image */}
+              <div 
+                className="relative w-80 h-80 md:w-96 md:h-96 bg-hero-blue flex items-center justify-center overflow-hidden shadow-2xl"
+                style={{ borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%' }}
+              >
                 <img 
                   src={chiefGuestPhoto}
                   alt="मा. ना. श्री. देवेंद्रजी फडणवीस"

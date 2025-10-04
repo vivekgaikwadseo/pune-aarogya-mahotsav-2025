@@ -46,7 +46,7 @@ const CountdownTimer = () => {
   return (
     <div className="grid grid-cols-4 gap-3 md:gap-4">
       {timeSegments.map((segment, index) => (
-        <div key={index} className="bg-hero-box-bg rounded-lg p-4 md:p-6 text-center">
+        <div key={index} className="bg-hero-box-bg rounded-lg p-4 md:p-6 text-center border border-hero-blue">
           <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-hero-blue">
             {segment.value}
           </div>
