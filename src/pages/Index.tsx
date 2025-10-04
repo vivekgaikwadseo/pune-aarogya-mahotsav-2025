@@ -19,8 +19,6 @@ const Index = () => {
           <div className="absolute top-10 left-10 w-96 h-96 bg-hero-light-grey rounded-full"></div>
           <div className="absolute bottom-20 right-20 w-80 h-80 bg-hero-light-grey rounded-3xl"></div>
           <div className="absolute top-1/2 left-1/3 w-72 h-72 bg-hero-light-grey rounded-full"></div>
-          {/* Large central light grey circle - positioned near countdown */}
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-hero-light-grey rounded-full opacity-60"></div>
         </div>
         
         {/* Floating Animated Colored Shapes */}
