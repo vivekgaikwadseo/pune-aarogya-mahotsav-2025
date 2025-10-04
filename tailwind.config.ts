@@ -48,6 +48,13 @@ export default {
           foreground: "hsl(var(--purple-foreground))",
         },
         "nav-pink": "hsl(var(--nav-pink))",
+        "hero-blue": "hsl(var(--hero-blue))",
+        "hero-pink": "hsl(var(--hero-pink))",
+        "hero-deep-pink": "hsl(var(--hero-deep-pink))",
+        "hero-navy": "hsl(var(--hero-navy))",
+        "hero-grey": "hsl(var(--hero-grey))",
+        "hero-light-grey": "hsl(var(--hero-light-grey))",
+        "hero-box-bg": "hsl(var(--hero-box-bg))",
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",

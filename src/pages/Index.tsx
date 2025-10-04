@@ -13,65 +13,73 @@ const Index = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section 
-        className="relative py-16 md:py-24 lg:py-32 overflow-hidden"
-        style={{
-          backgroundImage: `url(${heroBackground})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
-        }}
-      >
-        {/* White Overlay */}
-        <div className="absolute inset-0 bg-white/85"></div>
+      <section className="relative py-16 md:py-24 lg:py-32 overflow-hidden bg-white">
+        {/* Large Abstract Background Shapes - Light Grey */}
+        <div className="absolute inset-0 z-0 opacity-50">
+          <div className="absolute top-10 left-10 w-96 h-96 bg-hero-light-grey rounded-full"></div>
+          <div className="absolute bottom-20 right-20 w-80 h-80 bg-hero-light-grey rounded-3xl"></div>
+          <div className="absolute top-1/2 left-1/3 w-72 h-72 bg-hero-light-grey rounded-full"></div>
+        </div>
         
-        {/* Content */}
+        {/* Floating Animated Colored Shapes */}
+        <div className="absolute inset-0 z-5 pointer-events-none">
+          {/* Blue Circle */}
+          <div className="absolute top-20 right-20 w-16 h-16 bg-hero-blue rounded-full opacity-80 animate-float"></div>
+          
+          {/* Pink Rectangle */}
+          <div className="absolute bottom-32 left-20 w-20 h-12 bg-hero-pink rounded-lg opacity-70 animate-float-slow"></div>
+          
+          {/* Blue X Shape */}
+          <div className="absolute top-1/2 left-1/4 animate-float">
+            <div className="relative w-12 h-12">
+              <div className="absolute w-12 h-2 bg-hero-blue rotate-45 top-5 opacity-70"></div>
+              <div className="absolute w-12 h-2 bg-hero-blue -rotate-45 top-5 opacity-70"></div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Main Content */}
         <div className="container mx-auto px-4 relative z-10">
-          <div className="grid lg:grid-cols-[60%_40%] md:grid-cols-[55%_45%] gap-8 md:gap-12 items-start">
+          <div className="grid lg:grid-cols-[60%_40%] gap-8 md:gap-12 lg:gap-16">
             
-            {/* Left Column - Main Content */}
+            {/* Left Column - 60% Content Section */}
             <div className="space-y-6 md:space-y-8">
-              {/* Main Heading */}
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold font-heading text-primary leading-tight">
+              {/* Main Headline */}
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-hero-navy leading-tight">
                 पुणे आरोग्य महोत्सव २०२५
               </h1>
               
-              {/* Subheading */}
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-foreground">
+              {/* Sub-headline */}
+              <h2 className="text-2xl md:text-3xl text-hero-navy font-medium">
                 महाराष्ट्रातील पहिले आरोग्य साहित्य संमेलन
               </h2>
               
-              {/* Tagline */}
-              <p className="text-lg md:text-xl font-body text-muted-foreground italic">
-                आरोग्य, सेवा आणि साहित्य यांचा भव्य संगम
-              </p>
-              
-              {/* Event Details */}
-              <div className="space-y-3">
-                <div className="flex items-center gap-3 text-base md:text-lg font-body">
-                  <Calendar className="w-5 h-5 md:w-6 md:h-6 text-primary flex-shrink-0" />
-                  <span className="text-foreground font-semibold">रविवार, १९ ऑक्टोबर २०२५, सकाळी ९ वा</span>
+              {/* Information Block with Icons */}
+              <div className="space-y-3 pt-4">
+                <div className="flex items-center gap-3 text-base md:text-lg">
+                  <Calendar className="w-5 h-5 md:w-6 md:h-6 text-hero-blue flex-shrink-0" />
+                  <span className="text-hero-navy font-medium">रविवार, १९ ऑक्टोबर २०२५, सकाळी ९ वा</span>
                 </div>
-                <div className="flex items-center gap-3 text-base md:text-lg font-body">
-                  <MapPin className="w-5 h-5 md:w-6 md:h-6 text-primary flex-shrink-0" />
-                  <span className="text-foreground font-semibold">स्थळ: बालगंधर्व रंगमंदिर, पुणे</span>
+                <div className="flex items-center gap-3 text-base md:text-lg">
+                  <MapPin className="w-5 h-5 md:w-6 md:h-6 text-hero-blue flex-shrink-0" />
+                  <span className="text-hero-navy font-medium">स्थळ: बालगंधर्व रंगमंदिर, पुणे</span>
                 </div>
               </div>
               
               {/* Countdown Timer */}
-              <div className="space-y-4 pt-4">
-                <h3 className="text-xl md:text-2xl font-bold font-heading text-foreground">
+              <div className="space-y-4 pt-6">
+                <h3 className="text-xl md:text-2xl font-semibold text-hero-navy">
                   सोहळा सुरु होण्यास...
                 </h3>
                 <CountdownTimer />
               </div>
               
-              {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 pt-6">
                 <Link to="/health-camp">
                   <Button 
                     size="lg" 
-                    className="text-lg px-8 w-full sm:w-auto font-body"
+                    className="bg-hero-pink hover:bg-hero-pink/90 text-white text-lg px-8 w-full sm:w-auto font-medium"
                   >
                     भव्य आरोग्य शिबिर माहिती
                   </Button>
@@ -79,8 +87,8 @@ const Index = () => {
                 <Link to="/events">
                   <Button 
                     size="lg" 
-                    variant="outline" 
-                    className="text-lg px-8 w-full sm:w-auto border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-body"
+                    variant="outline"
+                    className="border-2 border-hero-blue text-hero-blue hover:bg-hero-blue hover:text-white text-lg px-8 w-full sm:w-auto font-medium transition-all duration-300"
                   >
                     संपूर्ण वेळापत्रक पहा
                   </Button>
@@ -88,30 +96,28 @@ const Index = () => {
               </div>
             </div>
             
-            {/* Right Column - Chief Guest */}
-            <div className="lg:sticky lg:top-24">
-              <div className="bg-card/90 backdrop-blur-sm rounded-xl p-6 md:p-8 shadow-lg border border-border text-center">
-                {/* Small Heading */}
-                <p className="text-sm md:text-base font-heading font-semibold text-primary uppercase tracking-wide mb-6">
-                  प्रमुख उद्घाटक
-                </p>
-                
-                {/* Chief Guest Image */}
-                <div className="flex justify-center mb-6">
-                  <img 
-                    src={chiefGuestPhoto}
-                    alt="मा.ना.श्री. देवेंद्रजी फडणवीस"
-                    className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border-4 border-white shadow-xl"
-                  />
-                </div>
-                
-                {/* Name */}
-                <h3 className="text-xl md:text-2xl font-bold font-heading text-foreground mb-2">
-                  मा.ना.श्री. देवेंद्रजी फडणवीस
+            {/* Right Column - 40% Chief Minister Section */}
+            <div className="relative flex flex-col items-center justify-center">
+              {/* Large Blue Circle with Chief Minister Image */}
+              <div className="relative w-80 h-80 md:w-96 md:h-96 bg-hero-blue rounded-full flex items-center justify-center overflow-hidden shadow-2xl">
+                <img 
+                  src={chiefGuestPhoto}
+                  alt="मा. ना. श्री. देवेंद्रजी फडणवीस"
+                  className="w-full h-full object-cover p-4"
+                />
+              </div>
+              
+              {/* Decorative Deep Pink Plus Sign */}
+              <div className="absolute -top-4 -right-4 text-hero-deep-pink text-5xl md:text-6xl font-bold transform rotate-12">
+                +
+              </div>
+              
+              {/* Name and Title */}
+              <div className="mt-8 text-center space-y-2">
+                <h3 className="text-2xl md:text-3xl font-bold text-hero-navy">
+                  मा. ना. श्री. देवेंद्रजी फडणवीस
                 </h3>
-                
-                {/* Title */}
-                <p className="text-base md:text-lg font-body text-muted-foreground">
+                <p className="text-base md:text-lg text-hero-grey">
                   मुख्यमंत्री, महाराष्ट्र राज्य
                 </p>
               </div>

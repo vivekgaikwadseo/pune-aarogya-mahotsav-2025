@@ -96,6 +96,14 @@ All colors MUST be HSL.
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --hero-blue: 240 100% 29%;
+    --hero-pink: 328 100% 50%;
+    --hero-deep-pink: 333 95% 43%;
+    --hero-navy: 243 71% 13%;
+    --hero-grey: 0 0% 33%;
+    --hero-light-grey: 220 14% 96%;
+    --hero-box-bg: 210 17% 98%;
   }
 }
 
@@ -110,5 +118,33 @@ All colors MUST be HSL.
   
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading;
+  }
+}
+
+@layer utilities {
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  @keyframes float-slow {
+    0%, 100% {
+      transform: translateY(0px) translateX(0px);
+    }
+    50% {
+      transform: translateY(-15px) translateX(10px);
+    }
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-float-slow {
+    animation: float-slow 8s ease-in-out infinite;
   }
 }

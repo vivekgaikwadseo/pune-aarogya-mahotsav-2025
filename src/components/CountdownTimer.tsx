@@ -36,40 +36,25 @@ const CountdownTimer = () => {
     return () => clearInterval(timer);
   }, []);
 
+  const timeSegments = [
+    { value: timeLeft.days, label: 'दिवस' },
+    { value: timeLeft.hours, label: 'तास' },
+    { value: timeLeft.minutes, label: 'मिनिटे' },
+    { value: timeLeft.seconds, label: 'सेकंद' }
+  ];
+
   return (
     <div className="grid grid-cols-4 gap-3 md:gap-4">
-      <div className="bg-card/80 backdrop-blur-sm rounded-lg p-3 md:p-4 shadow-md text-center border border-border">
-        <div className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-primary">
-          {timeLeft.days}
+      {timeSegments.map((segment, index) => (
+        <div key={index} className="bg-hero-box-bg rounded-lg p-4 md:p-6 text-center">
+          <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-hero-blue">
+            {segment.value}
+          </div>
+          <div className="text-sm md:text-base text-hero-navy mt-2">
+            {segment.label}
+          </div>
         </div>
-        <div className="text-xs md:text-sm text-muted-foreground font-body mt-1">
-          दिवस
-        </div>
-      </div>
-      <div className="bg-card/80 backdrop-blur-sm rounded-lg p-3 md:p-4 shadow-md text-center border border-border">
-        <div className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-primary">
-          {timeLeft.hours}
-        </div>
-        <div className="text-xs md:text-sm text-muted-foreground font-body mt-1">
-          तास
-        </div>
-      </div>
-      <div className="bg-card/80 backdrop-blur-sm rounded-lg p-3 md:p-4 shadow-md text-center border border-border">
-        <div className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-primary">
-          {timeLeft.minutes}
-        </div>
-        <div className="text-xs md:text-sm text-muted-foreground font-body mt-1">
-          मिनिटे
-        </div>
-      </div>
-      <div className="bg-card/80 backdrop-blur-sm rounded-lg p-3 md:p-4 shadow-md text-center border border-border">
-        <div className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-primary">
-          {timeLeft.seconds}
-        </div>
-        <div className="text-xs md:text-sm text-muted-foreground font-body mt-1">
-          सेकंद
-        </div>
-      </div>
+      ))}
     </div>
   );
 };
