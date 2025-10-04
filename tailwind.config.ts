@@ -55,6 +55,7 @@ export default {
         "hero-grey": "hsl(var(--hero-grey))",
         "hero-light-grey": "hsl(var(--hero-light-grey))",
         "hero-box-bg": "hsl(var(--hero-box-bg))",
+        "hero-pastel-pink": "hsl(var(--hero-pastel-pink))",
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",

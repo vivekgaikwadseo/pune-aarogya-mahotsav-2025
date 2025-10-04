@@ -13,7 +13,7 @@ const Index = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative py-16 md:py-24 lg:py-32 overflow-hidden bg-white">
+      <section className="relative py-8 md:py-12 lg:py-16 overflow-hidden bg-white">
         {/* Large Abstract Background Shapes - Light Grey */}
         <div className="absolute inset-0 z-0 opacity-50">
           <div className="absolute top-10 left-10 w-96 h-96 bg-hero-light-grey rounded-full"></div>
@@ -51,7 +51,7 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
             
             {/* Left Column - 50% Content Section */}
-            <div className="space-y-5 md:space-y-6">
+            <div className="space-y-3 md:space-y-4">
               {/* Main Headline */}
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-hero-navy leading-tight">
                 पुणे आरोग्य महोत्सव २०२५
@@ -63,7 +63,7 @@ const Index = () => {
               </h2>
               
               {/* Information Block with Icons */}
-              <div className="space-y-3 pt-4">
+              <div className="space-y-2 pt-2">
                 <div className="flex items-center gap-3 text-base md:text-lg">
                   <Calendar className="w-5 h-5 md:w-6 md:h-6 text-hero-blue flex-shrink-0" />
                   <span className="text-hero-navy font-medium">रविवार, १९ ऑक्टोबर २०२५, सकाळी ९ वा</span>
@@ -75,7 +75,7 @@ const Index = () => {
               </div>
               
               {/* Countdown Timer */}
-              <div className="space-y-4 pt-6">
+              <div className="space-y-3 pt-3">
                 <h3 className="text-xl md:text-2xl font-semibold text-hero-navy">
                   सोहळा सुरु होण्यास...
                 </h3>
@@ -83,7 +83,7 @@ const Index = () => {
               </div>
               
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3 pt-5">
+              <div className="flex flex-col sm:flex-row gap-3 pt-3">
                 <Link to="/health-camp">
                   <Button 
                     size="lg" 
@@ -106,9 +106,9 @@ const Index = () => {
             
             {/* Right Column - 50% Chief Minister Section */}
             <div className="relative flex flex-col items-center justify-center">
-              {/* Modern Abstract Blue Shape with Chief Minister Image */}
+              {/* Modern Abstract Pastel Pink Shape with Chief Minister Image */}
               <div 
-                className="relative w-80 h-80 md:w-96 md:h-96 bg-hero-blue flex items-center justify-center overflow-hidden shadow-2xl"
+                className="relative w-80 h-80 md:w-96 md:h-96 bg-hero-pastel-pink flex items-center justify-center overflow-hidden shadow-2xl"
                 style={{ borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%' }}
               >
                 <img 
@@ -124,7 +124,7 @@ const Index = () => {
               </div>
               
               {/* Name and Title */}
-              <div className="mt-8 text-center space-y-2">
+              <div className="mt-6 text-center space-y-2">
                 <h3 className="text-2xl md:text-3xl font-bold text-hero-navy">
                   मा. ना. श्री. देवेंद्रजी फडणवीस
                 </h3>

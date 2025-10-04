@@ -50,6 +50,7 @@ All colors MUST be HSL.
     --hero-grey: 0 0% 33%;
     --hero-light-grey: 220 14% 96%;
     --hero-box-bg: 210 17% 98%;
+    --hero-pastel-pink: 330 100% 97%;
 
     --sidebar-background: 0 0% 98%;
 
@@ -112,6 +113,7 @@ All colors MUST be HSL.
     --hero-grey: 0 0% 33%;
     --hero-light-grey: 220 14% 96%;
     --hero-box-bg: 210 17% 98%;
+    --hero-pastel-pink: 330 100% 97%;
   }
 }
 
