@@ -6,7 +6,7 @@ import { Calendar, MapPin } from "lucide-react";
 import CountdownTimer from "@/components/CountdownTimer";
 import WhyJoinSection from "@/components/WhyJoinSection";
 import heroBackground from "@/assets/hero-health-background.jpg";
-import chiefGuestPhoto from "@/assets/devendra-fadnavis-new.png";
+import chiefGuestPhoto from "@/assets/devandra-0904_d_PhotoGrid-removebg-preview.png";
 
 const Index = () => {
   return (
