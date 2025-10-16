@@ -111,11 +111,11 @@ const HealthCamp = () => {
                   className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                 >
                   {/* Image with Icon Overlay */}
-                  <div className="relative h-48 overflow-hidden">
+                  <div className="relative h-48">
                     <img 
                       src={service.image} 
                       alt={service.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover rounded-t-xl"
                     />
                     {/* Icon Circle Overlay - positioned at bottom-center with white border */}
                     <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2">
