@@ -152,46 +152,6 @@ const Index = () => {
       {/* Program Schedule Section */}
       <ProgramSchedule />
 
-      {/* Features Section */}
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
-            महोत्सवाची वैशिष्ट्ये
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-6 rounded-lg bg-card border-2 border-border hover:border-primary transition-colors">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">🏥</span>
-              </div>
-              <h3 className="text-xl font-bold mb-3">भव्य आरोग्य शिबिर</h3>
-              <p className="text-muted-foreground">
-                मोफत आरोग्य तपासणी आणि तज्ञ डॉक्टरांचे मार्गदर्शन
-              </p>
-            </div>
-            
-            <div className="text-center p-6 rounded-lg bg-card border-2 border-border hover:border-secondary transition-colors">
-              <div className="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">🎤</span>
-              </div>
-              <h3 className="text-xl font-bold mb-3">प्रख्यात वक्ते</h3>
-              <p className="text-muted-foreground">
-                आरोग्य क्षेत्रातील तज्ञांचे प्रेरणादायी भाषण
-              </p>
-            </div>
-            
-            <div className="text-center p-6 rounded-lg bg-card border-2 border-border hover:border-accent transition-colors">
-              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">🎪</span>
-              </div>
-              <h3 className="text-xl font-bold mb-3">विविध कार्यक्रम</h3>
-              <p className="text-muted-foreground">
-                योग, व्यायाम, पोषण आणि निरोगी जीवनशैलीचे कार्यशाळा
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <Footer />
     </div>
   );
