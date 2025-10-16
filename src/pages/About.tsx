@@ -101,182 +101,206 @@ const About = () => {
 
           {/* Team Grid - 2 columns */}
           <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-            {/* Card 1 - Left Column (Light Grey) */}
-            <div className="bg-[#F8F9FA] rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="flex items-center p-6 gap-6">
-                <img 
-                  src={teamUmeshChavan} 
-                  alt="मा. उमेश चव्हाण"
-                  className="w-24 h-24 object-cover rounded-lg flex-shrink-0"
-                />
-                <div>
+            {/* Card 1 */}
+            <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-center">
+                <div className="bg-[#F8F9FA] p-6">
+                  <img 
+                    src={teamUmeshChavan} 
+                    alt="मा. उमेश चव्हाण"
+                    className="w-24 h-24 object-cover rounded-lg flex-shrink-0"
+                  />
+                </div>
+                <div className="bg-white p-6 flex-1">
                   <h3 className="text-xl font-bold text-hero-navy mb-1">मा. उमेश चव्हाण</h3>
-                  <p className="text-muted-foreground">संस्थापक अध्यक्ष</p>
+                  <p className="text-hero-pink">संस्थापक अध्यक्ष</p>
                 </div>
               </div>
             </div>
 
-            {/* Card 2 - Right Column (White) */}
+            {/* Card 2 */}
             <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="flex items-center p-6 gap-6">
-                <img 
-                  src={teamBhanupratapBarge} 
-                  alt="श्री. भानुप्रताप बर्गे"
-                  className="w-24 h-24 object-cover rounded-lg flex-shrink-0"
-                />
-                <div>
+              <div className="flex items-center">
+                <div className="bg-[#F8F9FA] p-6">
+                  <img 
+                    src={teamBhanupratapBarge} 
+                    alt="श्री. भानुप्रताप बर्गे"
+                    className="w-24 h-24 object-cover rounded-lg flex-shrink-0"
+                  />
+                </div>
+                <div className="bg-white p-6 flex-1">
                   <h3 className="text-xl font-bold text-hero-navy mb-1">श्री. भानुप्रताप बर्गे</h3>
-                  <p className="text-muted-foreground">माजी सहा. पोलीस आयुक्त</p>
+                  <p className="text-hero-pink">माजी सहा. पोलीस आयुक्त</p>
                 </div>
               </div>
             </div>
 
-            {/* Card 3 - Left Column (Light Grey) */}
-            <div className="bg-[#F8F9FA] rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="flex items-center p-6 gap-6">
-                <img 
-                  src={teamMilindGaikwad} 
-                  alt="श्री. मिलिंद गायकवाड"
-                  className="w-24 h-24 object-cover rounded-lg flex-shrink-0"
-                />
-                <div>
+            {/* Card 3 */}
+            <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-center">
+                <div className="bg-[#F8F9FA] p-6">
+                  <img 
+                    src={teamMilindGaikwad} 
+                    alt="श्री. मिलिंद गायकवाड"
+                    className="w-24 h-24 object-cover rounded-lg flex-shrink-0"
+                  />
+                </div>
+                <div className="bg-white p-6 flex-1">
                   <h3 className="text-xl font-bold text-hero-navy mb-1">श्री. मिलिंद गायकवाड</h3>
-                  <p className="text-muted-foreground">माजी सहा. पोलीस आयुक्त</p>
+                  <p className="text-hero-pink">माजी सहा. पोलीस आयुक्त</p>
                 </div>
               </div>
             </div>
 
-            {/* Card 4 - Right Column (White) */}
+            {/* Card 4 */}
             <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="flex items-center p-6 gap-6">
-                <img 
-                  src={teamJanmohammadPathan} 
-                  alt="श्री. जान महंमद पठाण"
-                  className="w-24 h-24 object-cover rounded-lg flex-shrink-0"
-                />
-                <div>
+              <div className="flex items-center">
+                <div className="bg-[#F8F9FA] p-6">
+                  <img 
+                    src={teamJanmohammadPathan} 
+                    alt="श्री. जान महंमद पठाण"
+                    className="w-24 h-24 object-cover rounded-lg flex-shrink-0"
+                  />
+                </div>
+                <div className="bg-white p-6 flex-1">
                   <h3 className="text-xl font-bold text-hero-navy mb-1">श्री. जान महंमद पठाण</h3>
-                  <p className="text-muted-foreground">मा. सहा. पोलीस आयुक्त</p>
+                  <p className="text-hero-pink">मा. सहा. पोलीस आयुक्त</p>
                 </div>
               </div>
             </div>
 
-            {/* Card 5 - Left Column (Light Grey) */}
-            <div className="bg-[#F8F9FA] rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="flex items-center p-6 gap-6">
-                <img 
-                  src={teamAparnaSathe} 
-                  alt="सौ. अपर्णा मारणे-साठ्ये"
-                  className="w-24 h-24 object-cover rounded-lg flex-shrink-0"
-                />
-                <div>
+            {/* Card 5 */}
+            <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-center">
+                <div className="bg-[#F8F9FA] p-6">
+                  <img 
+                    src={teamAparnaSathe} 
+                    alt="सौ. अपर्णा मारणे-साठ्ये"
+                    className="w-24 h-24 object-cover rounded-lg flex-shrink-0"
+                  />
+                </div>
+                <div className="bg-white p-6 flex-1">
                   <h3 className="text-xl font-bold text-hero-navy mb-1">सौ. अपर्णा मारणे-साठ्ये</h3>
-                  <p className="text-muted-foreground">पुणे शहराध्यक्षा</p>
+                  <p className="text-hero-pink">पुणे शहराध्यक्षा</p>
                 </div>
               </div>
             </div>
 
-            {/* Card 6 - Right Column (White) */}
+            {/* Card 6 */}
             <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="flex items-center p-6 gap-6">
-                <img 
-                  src={teamIqbalShaikh} 
-                  alt="श्री. इकबाल शेख"
-                  className="w-24 h-24 object-cover rounded-lg flex-shrink-0"
-                />
-                <div>
+              <div className="flex items-center">
+                <div className="bg-[#F8F9FA] p-6">
+                  <img 
+                    src={teamIqbalShaikh} 
+                    alt="श्री. इकबाल शेख"
+                    className="w-24 h-24 object-cover rounded-lg flex-shrink-0"
+                  />
+                </div>
+                <div className="bg-white p-6 flex-1">
                   <h3 className="text-xl font-bold text-hero-navy mb-1">श्री. इकबाल शेख</h3>
-                  <p className="text-muted-foreground">संचालक, ग्रँड पृथ्वी मेडिकल फाऊंडेशन</p>
+                  <p className="text-hero-pink">संचालक, ग्रँड पृथ्वी मेडिकल फाऊंडेशन</p>
                 </div>
               </div>
             </div>
 
-            {/* Card 7 - Left Column (Light Grey) */}
-            <div className="bg-[#F8F9FA] rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="flex items-center p-6 gap-6">
-                <img 
-                  src={teamAashishGandhi} 
-                  alt="श्री. आशिष गांधी"
-                  className="w-24 h-24 object-cover rounded-lg flex-shrink-0"
-                />
-                <div>
+            {/* Card 7 */}
+            <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-center">
+                <div className="bg-[#F8F9FA] p-6">
+                  <img 
+                    src={teamAashishGandhi} 
+                    alt="श्री. आशिष गांधी"
+                    className="w-24 h-24 object-cover rounded-lg flex-shrink-0"
+                  />
+                </div>
+                <div className="bg-white p-6 flex-1">
                   <h3 className="text-xl font-bold text-hero-navy mb-1">श्री. आशिष गांधी</h3>
-                  <p className="text-muted-foreground">उपाध्यक्ष, ग्रँड पृथ्वी मेडिकल फाऊंडेशन</p>
+                  <p className="text-hero-pink">उपाध्यक्ष, ग्रँड पृथ्वी मेडिकल फाऊंडेशन</p>
                 </div>
               </div>
             </div>
 
-            {/* Card 8 - Right Column (White) */}
+            {/* Card 8 */}
             <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="flex items-center p-6 gap-6">
-                <img 
-                  src={teamRahulHulawale} 
-                  alt="श्री. राहुल हुलावळे"
-                  className="w-24 h-24 object-cover rounded-lg flex-shrink-0"
-                />
-                <div>
+              <div className="flex items-center">
+                <div className="bg-[#F8F9FA] p-6">
+                  <img 
+                    src={teamRahulHulawale} 
+                    alt="श्री. राहुल हुलावळे"
+                    className="w-24 h-24 object-cover rounded-lg flex-shrink-0"
+                  />
+                </div>
+                <div className="bg-white p-6 flex-1">
                   <h3 className="text-xl font-bold text-hero-navy mb-1">श्री. राहुल हुलावळे</h3>
-                  <p className="text-muted-foreground">सदस्य</p>
+                  <p className="text-hero-pink">सदस्य</p>
                 </div>
               </div>
             </div>
 
-            {/* Card 9 - Left Column (Light Grey) */}
-            <div className="bg-[#F8F9FA] rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="flex items-center p-6 gap-6">
-                <img 
-                  src={teamRajendraKadam} 
-                  alt="श्री. राजेंद्र कदम"
-                  className="w-24 h-24 object-cover rounded-lg flex-shrink-0"
-                />
-                <div>
+            {/* Card 9 */}
+            <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-center">
+                <div className="bg-[#F8F9FA] p-6">
+                  <img 
+                    src={teamRajendraKadam} 
+                    alt="श्री. राजेंद्र कदम"
+                    className="w-24 h-24 object-cover rounded-lg flex-shrink-0"
+                  />
+                </div>
+                <div className="bg-white p-6 flex-1">
                   <h3 className="text-xl font-bold text-hero-navy mb-1">श्री. राजेंद्र कदम</h3>
-                  <p className="text-muted-foreground">समन्वयक</p>
+                  <p className="text-hero-pink">समन्वयक</p>
                 </div>
               </div>
             </div>
 
-            {/* Card 10 - Right Column (White) */}
+            {/* Card 10 */}
             <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="flex items-center p-6 gap-6">
-                <img 
-                  src={teamSangeetaPatil} 
-                  alt="सौ. संगिता पाटील"
-                  className="w-24 h-24 object-cover rounded-lg flex-shrink-0"
-                />
-                <div>
+              <div className="flex items-center">
+                <div className="bg-[#F8F9FA] p-6">
+                  <img 
+                    src={teamSangeetaPatil} 
+                    alt="सौ. संगिता पाटील"
+                    className="w-24 h-24 object-cover rounded-lg flex-shrink-0"
+                  />
+                </div>
+                <div className="bg-white p-6 flex-1">
                   <h3 className="text-xl font-bold text-hero-navy mb-1">सौ. संगिता पाटील</h3>
-                  <p className="text-muted-foreground">मा. सहा. पोलीस आयुक्त</p>
+                  <p className="text-hero-pink">मा. सहा. पोलीस आयुक्त</p>
                 </div>
               </div>
             </div>
 
-            {/* Card 11 - Left Column (Light Grey) */}
-            <div className="bg-[#F8F9FA] rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="flex items-center p-6 gap-6">
-                <img 
-                  src={teamSanjayAalhat} 
-                  alt="श्री. संजय आल्हाट"
-                  className="w-24 h-24 object-cover rounded-lg flex-shrink-0"
-                />
-                <div>
-                  <h3 className="text-xl font-bold text-hero-navy mb-1">श्री. संजय आल्हाट</h3>
-                  <p className="text-muted-foreground">सदस्य</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 12 - Right Column (White) */}
+            {/* Card 11 */}
             <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="flex items-center p-6 gap-6">
-                <img 
-                  src={teamSureshFale} 
-                  alt="श्री. सुरेश फाले"
-                  className="w-24 h-24 object-cover rounded-lg flex-shrink-0"
-                />
-                <div>
+              <div className="flex items-center">
+                <div className="bg-[#F8F9FA] p-6">
+                  <img 
+                    src={teamSanjayAalhat} 
+                    alt="श्री. संजय आल्हाट"
+                    className="w-24 h-24 object-cover rounded-lg flex-shrink-0"
+                  />
+                </div>
+                <div className="bg-white p-6 flex-1">
+                  <h3 className="text-xl font-bold text-hero-navy mb-1">श्री. संजय आल्हाट</h3>
+                  <p className="text-hero-pink">सदस्य</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 12 */}
+            <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-center">
+                <div className="bg-[#F8F9FA] p-6">
+                  <img 
+                    src={teamSureshFale} 
+                    alt="श्री. सुरेश फाले"
+                    className="w-24 h-24 object-cover rounded-lg flex-shrink-0"
+                  />
+                </div>
+                <div className="bg-white p-6 flex-1">
                   <h3 className="text-xl font-bold text-hero-navy mb-1">श्री. सुरेश फाले</h3>
-                  <p className="text-muted-foreground">सदस्य</p>
+                  <p className="text-hero-pink">सदस्य</p>
                 </div>
               </div>
             </div>
