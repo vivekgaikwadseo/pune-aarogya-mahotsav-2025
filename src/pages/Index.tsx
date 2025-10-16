@@ -7,6 +7,7 @@ import CountdownTimer from "@/components/CountdownTimer";
 import WhyJoinSection from "@/components/WhyJoinSection";
 import ProgramSchedule from "@/components/ProgramSchedule";
 import ConceptSection from "@/components/ConceptSection";
+import CTASection from "@/components/CTASection";
 import heroBackground from "@/assets/hero-health-background.jpg";
 import chiefGuestPhoto from "@/assets/devandra-0904_d_PhotoGrid-removebg-preview.png";
 
@@ -144,6 +145,9 @@ const Index = () => {
 
       {/* Why Join Section */}
       <WhyJoinSection />
+
+      {/* CTA Section */}
+      <CTASection />
 
       {/* Program Schedule Section */}
       <ProgramSchedule />
