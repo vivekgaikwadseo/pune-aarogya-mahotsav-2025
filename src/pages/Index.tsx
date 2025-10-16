@@ -16,7 +16,7 @@ const Index = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative py-8 md:py-12 lg:py-16 overflow-hidden bg-white">
+      <section className="relative py-8 md:py-12 lg:py-16 pb-16 md:pb-20 lg:pb-24 overflow-hidden bg-white" style={{ clipPath: 'polygon(0 0, 100% 0, 100% 92%, 0 100%)' }}>
         {/* Large Abstract Background Shapes - Light Grey */}
         <div className="absolute inset-0 z-0 opacity-50">
           <div className="absolute top-10 left-10 w-96 h-96 bg-hero-light-grey rounded-full"></div>
