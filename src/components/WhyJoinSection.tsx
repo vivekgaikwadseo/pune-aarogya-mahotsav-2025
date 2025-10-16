@@ -30,29 +30,9 @@ const WhyJoinSection = () => {
   ];
 
   return (
-    <section className="relative py-16 md:py-20 lg:py-24 bg-section-bg-grey overflow-x-hidden">
+    <section className="relative py-16 md:py-20 lg:py-24 bg-white overflow-x-hidden">
       {/* Decorative Background Patterns */}
       <div className="absolute inset-0 pointer-events-none">
-        {/* Left: Gradient Pink Ring - Partially visible from left edge */}
-        <div className="absolute -left-32 top-1/4 w-64 h-64 opacity-30">
-          <svg width="256" height="256" viewBox="0 0 256 256" className="w-full h-full">
-            <defs>
-              <linearGradient id="pinkGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#FF0080" />
-                <stop offset="100%" stopColor="#D20062" />
-              </linearGradient>
-            </defs>
-            <circle 
-              cx="128" 
-              cy="128" 
-              r="100" 
-              fill="none" 
-              stroke="url(#pinkGradient)" 
-              strokeWidth="30" 
-            />
-          </svg>
-        </div>
-        
         {/* Right: Grey Circle with Diagonal Lines - Partially visible from right edge */}
         <div className="absolute -right-32 bottom-1/4 w-64 h-64 opacity-20">
           <svg width="256" height="256" viewBox="0 0 256 256" className="w-full h-full">
