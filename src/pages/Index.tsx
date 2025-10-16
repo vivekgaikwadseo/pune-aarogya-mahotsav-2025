@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { Calendar, MapPin } from "lucide-react";
 import CountdownTimer from "@/components/CountdownTimer";
 import WhyJoinSection from "@/components/WhyJoinSection";
+import ProgramSchedule from "@/components/ProgramSchedule";
 import heroBackground from "@/assets/hero-health-background.jpg";
 import chiefGuestPhoto from "@/assets/devandra-0904_d_PhotoGrid-removebg-preview.png";
 
@@ -139,6 +140,9 @@ const Index = () => {
 
       {/* Why Join Section */}
       <WhyJoinSection />
+
+      {/* Program Schedule Section */}
+      <ProgramSchedule />
 
       {/* Features Section */}
       <section className="py-16 md:py-24">
