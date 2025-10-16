@@ -1,17 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-
 const CTASection = () => {
-  return (
-    <section className="relative py-16 md:py-20 lg:py-24 bg-hero-navy overflow-hidden">
+  return <section className="relative py-16 md:py-20 lg:py-24 bg-hero-navy overflow-hidden">
       {/* Dot Pattern Overlay */}
-      <div 
-        className="absolute inset-0 opacity-10"
-        style={{
-          backgroundImage: `radial-gradient(circle, white 1px, transparent 1px)`,
-          backgroundSize: '24px 24px'
-        }}
-      />
+      <div className="absolute inset-0 opacity-10" style={{
+      backgroundImage: `radial-gradient(circle, white 1px, transparent 1px)`,
+      backgroundSize: '24px 24px'
+    }} />
       
       {/* Animated Decorative Shapes */}
       <div className="absolute inset-0 pointer-events-none">
@@ -34,25 +29,18 @@ const CTASection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           {/* Headline */}
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
-            आरोग्यमय आणि निरोगी आयुष्याच्या या उत्सवात सामील व्हा!
-          </h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">साहित्यातून आरोग्याचा जागर.</h2>
           
           {/* CTA Button */}
           <div className="flex justify-center">
             <Link to="/contact">
-              <Button 
-                size="lg"
-                className="bg-hero-pink hover:bg-hero-pink/90 text-white text-lg md:text-xl px-10 py-6 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl"
-              >
+              <Button size="lg" className="bg-hero-pink hover:bg-hero-pink/90 text-white text-lg md:text-xl px-10 py-6 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl">
                 आता नोंदणी करा
               </Button>
             </Link>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default CTASection;
