@@ -8,6 +8,11 @@ import WhyJoinSection from "@/components/WhyJoinSection";
 import ProgramSchedule from "@/components/ProgramSchedule";
 import ConceptSection from "@/components/ConceptSection";
 import CTASection from "@/components/CTASection";
+import GuestsSection from "@/components/GuestsSection";
+import OrganizersSection from "@/components/OrganizersSection";
+import SponsorsSection from "@/components/SponsorsSection";
+import FAQSection from "@/components/FAQSection";
+import FinalCTASection from "@/components/FinalCTASection";
 import heroBackground from "@/assets/hero-health-background.jpg";
 import chiefGuestPhoto from "@/assets/devandra-0904_d_PhotoGrid-removebg-preview.png";
 
@@ -151,6 +156,21 @@ const Index = () => {
 
       {/* Program Schedule Section */}
       <ProgramSchedule />
+
+      {/* Guests & Dignitaries Section */}
+      <GuestsSection />
+
+      {/* Organizers Section */}
+      <OrganizersSection />
+
+      {/* Sponsors Section */}
+      <SponsorsSection />
+
+      {/* FAQ Section */}
+      <FAQSection />
+
+      {/* Final CTA Section */}
+      <FinalCTASection />
 
       <Footer />
     </div>
