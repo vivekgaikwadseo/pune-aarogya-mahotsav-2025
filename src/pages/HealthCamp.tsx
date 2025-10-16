@@ -17,57 +17,49 @@ const HealthCamp = () => {
       icon: Heart,
       image: healthHeart,
       title: "हृदयरोग तपासणी आणि मोफत शस्त्रक्रिया",
-      items: ["ईसीजी", "पेसमेकर", "अँजिओप्लास्टी", "बायपास", "ओपन हार्ट सर्जरी", "व्हॉल्व्ह चेंज ऑपरेशन"],
-      colorClass: "bg-hero-pink"
+      items: ["ईसीजी", "पेसमेकर", "अँजिओप्लास्टी", "बायपास", "ओपन हार्ट सर्जरी", "व्हॉल्व्ह चेंज ऑपरेशन"]
     },
     {
       icon: Hospital,
       image: healthCancer,
       title: "कॅन्सरवरील मोफत उपचार आणि शस्त्रक्रिया",
-      items: ["केमोथेरपी", "रेडिएशन", "गाठींचे ऑपरेशन", "महिलांसाठी ब्रेस्ट कॅन्सर स्क्रिनिंग"],
-      colorClass: "bg-hero-blue"
+      items: ["केमोथेरपी", "रेडिएशन", "गाठींचे ऑपरेशन", "महिलांसाठी ब्रेस्ट कॅन्सर स्क्रिनिंग"]
     },
     {
       icon: Activity,
       image: healthKnee,
       title: "गुडघ्याची तपासणी",
-      items: ["गुडघ्याच्या वाट्या बदलणे", "खुब्याचे बॉल बसवणे", "७० % मोफत ऑपरेशन"],
-      colorClass: "bg-hero-pink"
+      items: ["गुडघ्याच्या वाट्या बदलणे", "खुब्याचे बॉल बसवणे", "७० % मोफत ऑपरेशन"]
     },
     {
       icon: Users,
       image: healthWomen,
       title: "स्त्रियांच्या सर्व तपासण्या",
-      items: ["हिमोग्लोबिन", "रक्तवाढीसाठी मार्गदर्शन", "हाडे मजबुत करणे", "सॅनिटरी नॅपकीन वाटप"],
-      colorClass: "bg-hero-blue"
+      items: ["हिमोग्लोबिन", "रक्तवाढीसाठी मार्गदर्शन", "हाडे मजबुत करणे", "सॅनिटरी नॅपकीन वाटप"]
     },
     {
       icon: FileText,
       image: healthCards,
       title: "मोफत शासकीय योजना कार्ड",
-      items: ["आयुष्यमान भारत कार्ड", "शहरी गरीब योजना कार्ड"],
-      colorClass: "bg-hero-pink"
+      items: ["आयुष्यमान भारत कार्ड", "शहरी गरीब योजना कार्ड"]
     },
     {
       icon: Brain,
       image: healthBrain,
       title: "मेंदुच्या सर्व शस्त्रक्रिया",
-      items: ["रक्ताच्या गाठी", "मेंदुच्या गाठी", "मेंदुचे ऑपरेशन"],
-      colorClass: "bg-hero-blue"
+      items: ["रक्ताच्या गाठी", "मेंदुच्या गाठी", "मेंदुचे ऑपरेशन"]
     },
     {
       icon: Eye,
       image: healthEye,
       title: "मोफत नेत्र तपासणी व चष्मे वाटप",
-      items: ["संपूर्ण नेत्र तपासणी", "मोफत चष्मे वाटप"],
-      colorClass: "bg-hero-pink"
+      items: ["संपूर्ण नेत्र तपासणी", "मोफत चष्मे वाटप"]
     },
     {
       icon: HeartPulse,
       image: healthDonation,
       title: "अवयव दान नाव नोंदणी",
-      items: ["अवयव दान", "नेत्रदान", "देहदान"],
-      colorClass: "bg-hero-blue"
+      items: ["अवयव दान", "नेत्रदान", "देहदान"]
     }
   ];
 
@@ -112,7 +104,6 @@ const HealthCamp = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {services.map((service, index) => {
               const Icon = service.icon;
-              const checkmarkColor = service.colorClass === "bg-hero-pink" ? "text-hero-pink" : "text-hero-blue";
               
               return (
                 <div 
@@ -126,26 +117,26 @@ const HealthCamp = () => {
                       alt={service.title}
                       className="w-full h-full object-cover"
                     />
-                    {/* Icon Circle Overlay */}
-                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-                      <div className={`w-16 h-16 ${service.colorClass} rounded-full flex items-center justify-center shadow-lg`}>
+                    {/* Icon Circle Overlay - positioned at bottom-center with white border */}
+                    <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2">
+                      <div className="w-16 h-16 bg-hero-blue rounded-full flex items-center justify-center shadow-lg border-2 border-white">
                         <Icon className="w-8 h-8 text-white" />
                       </div>
                     </div>
                   </div>
                   
                   {/* Content */}
-                  <div className="p-6">
-                    {/* Title */}
-                    <h3 className="text-lg font-bold text-hero-navy mb-4 leading-tight min-h-[3.5rem]">
+                  <div className="p-6 pt-10">
+                    {/* Title - Pink color */}
+                    <h3 className="text-lg font-bold text-hero-pink mb-4 leading-tight min-h-[3.5rem]">
                       {service.title}
                     </h3>
                     
-                    {/* Services List with Checkmarks */}
+                    {/* Services List with Checkmarks - Light pink */}
                     <ul className="space-y-2">
                       {service.items.map((item, idx) => (
                         <li key={idx} className="text-sm text-muted-foreground flex items-start">
-                          <Check className={`w-4 h-4 ${checkmarkColor} mr-2 mt-0.5 flex-shrink-0`} />
+                          <Check className="w-4 h-4 mr-2 mt-0.5 flex-shrink-0" style={{ color: '#FFC0CB' }} />
                           <span>{item}</span>
                         </li>
                       ))}
