@@ -6,6 +6,7 @@ import { Calendar, MapPin } from "lucide-react";
 import CountdownTimer from "@/components/CountdownTimer";
 import WhyJoinSection from "@/components/WhyJoinSection";
 import ProgramSchedule from "@/components/ProgramSchedule";
+import ConceptSection from "@/components/ConceptSection";
 import heroBackground from "@/assets/hero-health-background.jpg";
 import chiefGuestPhoto from "@/assets/devandra-0904_d_PhotoGrid-removebg-preview.png";
 
@@ -137,6 +138,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Concept Section */}
+      <ConceptSection />
 
       {/* Why Join Section */}
       <WhyJoinSection />
