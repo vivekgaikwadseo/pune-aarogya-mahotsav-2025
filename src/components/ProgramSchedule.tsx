@@ -34,14 +34,12 @@ const EventCard = ({ image, title, tagText, tagColor, time, description, footer 
       </div>
       
       {/* Content Box - overlaps image and narrower */}
-      <div className="relative -mt-8 mx-4 bg-white rounded-lg shadow-lg border-t-4 p-4 space-y-3" 
-           style={{ borderTopColor: tagColor === '#FF0080' || tagColor === '#D20062' ? tagColor : '#000F93' }}>
+      <div className="relative -mt-8 mx-4 bg-white rounded-lg shadow-lg border-t-4 border-t-bright-pink p-4 space-y-3">
         
         {/* Tag Badge */}
         <div>
           <Badge 
-            className="text-white font-medium"
-            style={{ backgroundColor: tagColor }}
+            className="bg-bright-pink text-white font-medium hover:bg-bright-pink"
           >
             {tagText}
           </Badge>
