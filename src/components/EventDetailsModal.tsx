@@ -25,7 +25,7 @@ const GuestCard = ({ image, name, title }: GuestCardProps) => (
     <img 
       src={image} 
       alt={name}
-      className="w-12 h-12 rounded-full object-cover border-2 border-bright-pink flex-shrink-0"
+      className="w-12 h-12 rounded-full object-cover border-[3px] border-white flex-shrink-0"
     />
     <div className="min-w-0">
       <h4 className="font-bold text-hero-navy text-sm leading-tight">{name}</h4>
@@ -57,10 +57,10 @@ const EventDetailsModal = ({ open, onOpenChange }: EventDetailsModalProps) => {
         </div>
 
         {/* Three Column Layout */}
-        <div className="grid md:grid-cols-[35%_30%_35%] gap-0 bg-white max-h-[calc(90vh-4rem)] overflow-hidden">
+        <div className="grid md:grid-cols-[35%_30%_35%] gap-6 bg-gray-50 p-6">
           
-          {/* Left Column (35%) - Fixed Image */}
-          <div className="relative h-full min-h-[400px] md:min-h-full">
+          {/* Left Column (35%) - Image Card */}
+          <div className="bg-white rounded-lg shadow-md overflow-hidden h-[500px]">
             <img 
               src={eventInauguration} 
               alt="उद्घाटन सोहळा"
@@ -68,56 +68,50 @@ const EventDetailsModal = ({ open, onOpenChange }: EventDetailsModalProps) => {
             />
           </div>
 
-          {/* Center Column (30%) - Main Person */}
-          <div className="p-6 flex flex-col items-center justify-start overflow-y-auto">
-            <h3 className="text-lg font-bold text-bright-pink mb-6">उद्घाटक</h3>
-            <img 
-              src={guestDevendra}
-              alt="देवेंद्र फडणवीस"
-              className="w-32 h-32 rounded-full object-cover border-4 border-bright-pink mb-4"
-            />
-            <h4 className="font-bold text-hero-navy text-center text-base mb-2">
-              मा. ना. श्री. देवेंद्रजी फडणवीस
-            </h4>
-            <p className="text-sm text-hero-grey text-center">
-              मुख्यमंत्री, महाराष्ट्र राज्य
-            </p>
+          {/* Center Column (30%) - Main Person Card */}
+          <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-[500px]">
+            <div className="flex-shrink-0">
+              <img 
+                src={guestDevendra}
+                alt="देवेंद्र फडणवीस"
+                className="w-full h-[320px] object-cover"
+              />
+            </div>
+            <div className="p-4 flex flex-col items-center justify-center flex-1">
+              <h4 className="font-bold text-hero-navy text-center text-base mb-2">
+                मा. ना. श्री. देवेंद्रजी फडणवीस
+              </h4>
+              <p className="text-sm text-hero-grey text-center">
+                मुख्यमंत्री, महाराष्ट्र राज्य
+              </p>
+            </div>
           </div>
 
-          {/* Right Column (35%) - Details & Actions */}
-          <div className="p-6 space-y-6 overflow-y-auto border-l border-gray-200">
+          {/* Right Column (35%) - Details Card */}
+          <div className="bg-white rounded-lg shadow-md p-6 space-y-6 h-[500px]">
             
             {/* Event Details */}
-            <div>
-              <h3 className="text-lg font-bold text-bright-pink mb-4">कार्यक्रमाचा तपशील</h3>
-              <div className="space-y-3">
-                <div className="flex items-center gap-3 text-hero-grey">
-                  <Calendar className="w-5 h-5 text-bright-pink flex-shrink-0" />
-                  <span className="text-sm">रविवार, १९ ऑक्टोबर २०२५</span>
-                </div>
-                <div className="flex items-center gap-3 text-hero-grey">
-                  <Clock className="w-5 h-5 text-bright-pink flex-shrink-0" />
-                  <span className="text-sm">सकाळी १०:०० वा</span>
-                </div>
-                <div className="flex items-center gap-3 text-hero-grey">
-                  <MapPin className="w-5 h-5 text-bright-pink flex-shrink-0" />
-                  <span className="text-sm">बालगंधर्व रंगमंदिर, पुणे</span>
+            <div className="space-y-5">
+              <div className="flex items-start gap-4">
+                <Calendar className="w-8 h-8 text-bright-pink flex-shrink-0 mt-1" />
+                <div>
+                  <p className="text-xs font-bold text-hero-grey uppercase mb-1">तारीख</p>
+                  <p className="text-sm text-hero-navy">रविवार, १९ ऑक्टोबर २०२५</p>
                 </div>
               </div>
-            </div>
-
-            {/* Actions */}
-            <div>
-              <h3 className="text-lg font-bold text-bright-pink mb-4">क्रिया</h3>
-              <div className="space-y-2">
-                <button className="flex items-center gap-3 text-hero-navy hover:text-bright-pink transition-colors w-full text-left">
-                  <Share2 className="w-5 h-5" />
-                  <span className="text-sm font-medium">Share Event</span>
-                </button>
-                <button className="flex items-center gap-3 text-hero-navy hover:text-bright-pink transition-colors w-full text-left">
-                  <CalendarPlus className="w-5 h-5" />
-                  <span className="text-sm font-medium">Add to Calendar</span>
-                </button>
+              <div className="flex items-start gap-4">
+                <Clock className="w-8 h-8 text-bright-pink flex-shrink-0 mt-1" />
+                <div>
+                  <p className="text-xs font-bold text-hero-grey uppercase mb-1">वेळ</p>
+                  <p className="text-sm text-hero-navy">सकाळी १०:०० वा</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <MapPin className="w-8 h-8 text-bright-pink flex-shrink-0 mt-1" />
+                <div>
+                  <p className="text-xs font-bold text-hero-grey uppercase mb-1">स्थळ</p>
+                  <p className="text-sm text-hero-navy">बालगंधर्व रंगमंदिर, पुणे</p>
+                </div>
               </div>
             </div>
           </div>
