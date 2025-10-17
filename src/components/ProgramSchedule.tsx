@@ -1,5 +1,6 @@
+import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
-import { Link } from "react-router-dom";
+import EventDetailsModal from "@/components/EventDetailsModal";
 import eventHealthCamp from "@/assets/event-health-camp.jpg";
 import eventInauguration from "@/assets/event-inauguration.jpg";
 import eventPanelDiscussion from "@/assets/event-panel-discussion.jpg";
@@ -19,9 +20,11 @@ interface EventCardProps {
   time: string;
   description: string;
   footer: string;
+  showDetailsLink?: boolean;
+  onDetailsClick?: () => void;
 }
 
-const EventCard = ({ image, title, tagText, tagColor, time, description, footer }: EventCardProps) => {
+const EventCard = ({ image, title, tagText, tagColor, time, description, footer, showDetailsLink, onDetailsClick }: EventCardProps) => {
   return (
     <div className="group">
       {/* Image Container */}
@@ -66,18 +69,22 @@ const EventCard = ({ image, title, tagText, tagColor, time, description, footer 
         </p>
         
         {/* Details Link */}
-        <Link 
-          to="/events" 
-          className="inline-block text-sm font-medium text-hero-pink hover:text-hero-deep-pink transition-colors"
-        >
-          अधिक जाणून घ्या »
-        </Link>
+        {showDetailsLink && (
+          <button
+            onClick={onDetailsClick}
+            className="inline-block text-sm font-medium text-bright-pink hover:text-hero-deep-pink transition-colors cursor-pointer"
+          >
+            अधिक जाणून घ्या »
+          </button>
+        )}
       </div>
     </div>
   );
 };
 
 const ProgramSchedule = () => {
+  const [showInaugurationModal, setShowInaugurationModal] = useState(false);
+
   const events = [
     {
       image: eventHealthCamp,
@@ -197,10 +204,20 @@ const ProgramSchedule = () => {
         {/* Event Cards Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
           {events.map((event, index) => (
-            <EventCard key={index} {...event} />
+            <EventCard 
+              key={index} 
+              {...event} 
+              showDetailsLink={event.title === "उद्घाटन सोहळा"}
+              onDetailsClick={() => setShowInaugurationModal(true)}
+            />
           ))}
         </div>
       </div>
+
+      <EventDetailsModal 
+        open={showInaugurationModal}
+        onOpenChange={setShowInaugurationModal}
+      />
     </section>
   );
 };

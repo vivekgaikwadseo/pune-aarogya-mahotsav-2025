@@ -1,6 +1,8 @@
+import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
+import EventDetailsModal from "@/components/EventDetailsModal";
 import eventHealthCamp from "@/assets/event-health-camp.jpg";
 import eventInauguration from "@/assets/event-inauguration.jpg";
 import eventPanelDiscussion from "@/assets/event-panel-discussion.jpg";
@@ -20,9 +22,11 @@ interface EventCardProps {
   time: string;
   description: string;
   footer: string;
+  showDetailsLink?: boolean;
+  onDetailsClick?: () => void;
 }
 
-const EventCard = ({ image, title, tagText, tagColor, time, description, footer }: EventCardProps) => {
+const EventCard = ({ image, title, tagText, tagColor, time, description, footer, showDetailsLink, onDetailsClick }: EventCardProps) => {
   return (
     <div className="group">
       {/* Image Container */}
@@ -65,12 +69,24 @@ const EventCard = ({ image, title, tagText, tagColor, time, description, footer 
         <p className="text-xs text-hero-grey leading-relaxed pt-2 border-t border-border">
           {footer}
         </p>
+        
+        {/* Details Link */}
+        {showDetailsLink && (
+          <button
+            onClick={onDetailsClick}
+            className="inline-block text-sm font-medium text-bright-pink hover:text-hero-deep-pink transition-colors cursor-pointer"
+          >
+            अधिक जाणून घ्या »
+          </button>
+        )}
       </div>
     </div>
   );
 };
 
 const Events = () => {
+  const [showInaugurationModal, setShowInaugurationModal] = useState(false);
+
   const events = [
     {
       image: eventHealthCamp,
@@ -212,11 +228,21 @@ const Events = () => {
           {/* Event Cards Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
             {events.map((event, index) => (
-              <EventCard key={index} {...event} />
+              <EventCard 
+                key={index} 
+                {...event} 
+                showDetailsLink={event.title === "उद्घाटन सोहळा"}
+                onDetailsClick={() => setShowInaugurationModal(true)}
+              />
             ))}
           </div>
         </div>
       </section>
+
+      <EventDetailsModal 
+        open={showInaugurationModal}
+        onOpenChange={setShowInaugurationModal}
+      />
 
       <Footer />
     </div>
