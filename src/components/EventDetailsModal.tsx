@@ -70,14 +70,17 @@ const EventDetailsModal = ({ open, onOpenChange }: EventDetailsModalProps) => {
 
           {/* Center Column (30%) - Main Person Card */}
           <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-[500px]">
+            <h3 className="text-lg font-bold text-bright-pink px-4 pt-4 pb-2">
+              उद्घाटक
+            </h3>
             <div className="flex-shrink-0">
               <img 
                 src={guestDevendra}
                 alt="देवेंद्र फडणवीस"
-                className="w-full h-[320px] object-cover"
+                className="w-full h-[280px] object-cover"
               />
             </div>
-            <div className="p-4 flex flex-col items-center justify-center flex-1">
+            <div className="p-4 flex flex-col items-center justify-center flex-1 bg-white">
               <h4 className="font-bold text-hero-navy text-center text-base mb-2">
                 मा. ना. श्री. देवेंद्रजी फडणवीस
               </h4>
@@ -88,31 +91,55 @@ const EventDetailsModal = ({ open, onOpenChange }: EventDetailsModalProps) => {
           </div>
 
           {/* Right Column (35%) - Details Card */}
-          <div className="bg-white rounded-lg shadow-md p-6 space-y-6 h-[500px]">
+          <div className="bg-white rounded-lg shadow-md p-6 space-y-6 h-[500px] flex flex-col">
             
+            <h3 className="text-lg font-bold text-bright-pink">
+              कार्यक्रमाचा तपशील
+            </h3>
+
             {/* Event Details */}
-            <div className="space-y-5">
-              <div className="flex items-start gap-4">
-                <Calendar className="w-8 h-8 text-bright-pink flex-shrink-0 mt-1" />
-                <div>
-                  <p className="text-xs font-bold text-hero-grey uppercase mb-1">तारीख</p>
-                  <p className="text-sm text-hero-navy">रविवार, १९ ऑक्टोबर २०२५</p>
+            <div className="space-y-1 flex-1">
+              <div className="border-t border-gray-200 pt-4">
+                <div className="flex items-start gap-4">
+                  <Calendar className="w-8 h-8 text-bright-pink flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="text-xs font-bold text-hero-grey uppercase mb-1">तारीख</p>
+                    <p className="text-sm text-hero-navy">रविवार, १९ ऑक्टोबर २०२५</p>
+                  </div>
                 </div>
               </div>
-              <div className="flex items-start gap-4">
-                <Clock className="w-8 h-8 text-bright-pink flex-shrink-0 mt-1" />
-                <div>
-                  <p className="text-xs font-bold text-hero-grey uppercase mb-1">वेळ</p>
-                  <p className="text-sm text-hero-navy">सकाळी १०:०० वा</p>
+              
+              <div className="border-t border-gray-200 pt-4 mt-4">
+                <div className="flex items-start gap-4">
+                  <Clock className="w-8 h-8 text-bright-pink flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="text-xs font-bold text-hero-grey uppercase mb-1">वेळ</p>
+                    <p className="text-sm text-hero-navy">सकाळी १०:०० वा</p>
+                  </div>
                 </div>
               </div>
-              <div className="flex items-start gap-4">
-                <MapPin className="w-8 h-8 text-bright-pink flex-shrink-0 mt-1" />
-                <div>
-                  <p className="text-xs font-bold text-hero-grey uppercase mb-1">स्थळ</p>
-                  <p className="text-sm text-hero-navy">बालगंधर्व रंगमंदिर, पुणे</p>
+              
+              <div className="border-t border-gray-200 pt-4 mt-4">
+                <div className="flex items-start gap-4">
+                  <MapPin className="w-8 h-8 text-bright-pink flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="text-xs font-bold text-hero-grey uppercase mb-1">स्थळ</p>
+                    <p className="text-sm text-hero-navy">बालगंधर्व रंगमंदिर, पुणे</p>
+                  </div>
                 </div>
               </div>
+            </div>
+
+            {/* Action Links */}
+            <div className="border-t border-gray-200 pt-4 space-y-3">
+              <button className="flex items-center gap-3 text-bright-pink hover:text-hero-navy transition-colors w-full">
+                <Share2 className="w-5 h-5" />
+                <span className="text-sm font-semibold">Share Event</span>
+              </button>
+              <button className="flex items-center gap-3 text-bright-pink hover:text-hero-navy transition-colors w-full">
+                <CalendarPlus className="w-5 h-5" />
+                <span className="text-sm font-semibold">Add to Calendar</span>
+              </button>
             </div>
           </div>
         </div>
