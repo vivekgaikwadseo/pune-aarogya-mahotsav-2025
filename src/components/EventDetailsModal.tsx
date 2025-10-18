@@ -85,7 +85,7 @@ END:VCALENDAR`;
         {/* Dark Navy Header */}
         <div className="bg-hero-navy px-6 py-4 flex items-center justify-between">
           <h2 className="text-2xl md:text-3xl font-bold text-white text-center flex-1">
-            भव्य उद्घाटन सोहळा
+            भव्य उद्घाटन सोहळा - पहिले आरोग्य साहित्य संमेलन, पुणे २०२५
           </h2>
           <button
             onClick={() => onOpenChange(false)}
@@ -111,14 +111,14 @@ END:VCALENDAR`;
 
             {/* Center Column (30%) - Main Person Card */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-[500px]">
-              <div className="bg-bright-blue px-4 py-2">
-                <h3 className="text-sm font-bold text-white">उद्घाटक</h3>
-              </div>
+            <div className="bg-bright-pink px-4 py-2">
+              <h3 className="text-sm font-bold text-white text-center">उद्घाटक</h3>
+            </div>
               <div className="flex-shrink-0">
                 <img 
                   src={guestDevendra}
                   alt="देवेंद्र फडणवीस"
-                  className="w-full h-[280px] object-cover"
+                  className="w-full h-[240px] object-contain"
                 />
               </div>
               <div className="p-4 flex flex-col items-center justify-center flex-1 bg-white">
@@ -134,15 +134,15 @@ END:VCALENDAR`;
             {/* Right Column (35%) - Details Card */}
             <div className="bg-white rounded-lg shadow-md p-6 space-y-4 h-[500px] flex flex-col">
               
-              <div className="bg-bright-blue px-4 py-2 -mx-6 -mt-6 mb-2">
-                <h3 className="text-sm font-bold text-white">कार्यक्रमाचा तपशील</h3>
-              </div>
+            <div className="bg-bright-pink px-4 py-2 -mx-6 -mt-6 mb-2">
+              <h3 className="text-sm font-bold text-white text-center">कार्यक्रमाचा तपशील</h3>
+            </div>
 
               {/* Event Details */}
-              <div className="space-y-1">
-                <div className="border-t border-gray-200 pt-4">
-                  <div className="flex items-start gap-4">
-                    <Calendar className="w-8 h-8 text-bright-pink flex-shrink-0 mt-1" />
+              <div className="space-y-3">
+                <div className="bg-white rounded-lg shadow-sm p-3 border border-gray-100">
+                  <div className="flex items-start gap-3">
+                    <Calendar className="w-6 h-6 text-bright-pink flex-shrink-0 mt-1" />
                     <div>
                       <p className="text-xs font-bold text-hero-grey uppercase mb-1">तारीख</p>
                       <p className="text-sm text-hero-navy">रविवार, १९ ऑक्टोबर २०२५</p>
@@ -150,9 +150,9 @@ END:VCALENDAR`;
                   </div>
                 </div>
                 
-                <div className="border-t border-gray-200 pt-4 mt-4">
-                  <div className="flex items-start gap-4">
-                    <Clock className="w-8 h-8 text-bright-pink flex-shrink-0 mt-1" />
+                <div className="bg-white rounded-lg shadow-sm p-3 border border-gray-100">
+                  <div className="flex items-start gap-3">
+                    <Clock className="w-6 h-6 text-bright-pink flex-shrink-0 mt-1" />
                     <div>
                       <p className="text-xs font-bold text-hero-grey uppercase mb-1">वेळ</p>
                       <p className="text-sm text-hero-navy">सकाळी १०:०० वा</p>
@@ -160,9 +160,9 @@ END:VCALENDAR`;
                   </div>
                 </div>
                 
-                <div className="border-t border-gray-200 pt-4 mt-4">
-                  <div className="flex items-start gap-4">
-                    <MapPin className="w-8 h-8 text-bright-pink flex-shrink-0 mt-1" />
+                <div className="bg-white rounded-lg shadow-sm p-3 border border-gray-100">
+                  <div className="flex items-start gap-3">
+                    <MapPin className="w-6 h-6 text-bright-pink flex-shrink-0 mt-1" />
                     <div>
                       <p className="text-xs font-bold text-hero-grey uppercase mb-1">स्थळ</p>
                       <p className="text-sm text-hero-navy">बालगंधर्व रंगमंदिर, पुणे</p>
