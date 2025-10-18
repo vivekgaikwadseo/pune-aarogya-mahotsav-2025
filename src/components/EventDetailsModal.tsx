@@ -221,7 +221,7 @@ END:VCALENDAR`;
           </div>
 
           {/* Bottom Section - Guest List */}
-          <div className="border-t border-gray-200 bg-white p-6">
+          <div className="border-t border-gray-200 bg-white p-6 pb-8">
             
             {/* Chief Presence */}
             <div className="mb-8">
