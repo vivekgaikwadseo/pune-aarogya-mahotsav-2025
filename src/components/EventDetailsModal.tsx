@@ -221,7 +221,7 @@ END:VCALENDAR`;
             </div>
 
           {/* Modal Footer */}
-          <div className="bg-hero-navy px-6 py-4 mx-0 my-[30px]">
+          <div className="bg-hero-navy px-6 py-4 mx-0 mt-[30px] mb-0">
             <p className="text-white text-center text-sm md:text-base">
               स्वागताध्यक्ष : श्री उमेश चव्हाण ( संस्थापक, पुणे आरोग्य महोत्सव समिती )
             </p>
