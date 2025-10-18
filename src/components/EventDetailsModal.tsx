@@ -101,7 +101,7 @@ END:VCALENDAR`;
           <div className="grid md:grid-cols-[35%_30%_35%] gap-6 bg-gray-50 p-6">
             
             {/* Left Column (35%) - Image Card */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden h-[500px]">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden h-[420px]">
               <img 
                 src={eventInauguration} 
                 alt="उद्घाटन सोहळा"
@@ -110,7 +110,7 @@ END:VCALENDAR`;
             </div>
 
             {/* Center Column (30%) - Main Person Card */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-[500px]">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-[420px]">
             <div className="bg-bright-pink px-4 py-2">
               <h3 className="text-sm font-bold text-white text-center">उद्घाटक</h3>
             </div>
@@ -118,10 +118,10 @@ END:VCALENDAR`;
                 <img 
                   src={guestDevendra}
                   alt="देवेंद्र फडणवीस"
-                  className="w-full h-[240px] object-contain"
+                  className="w-full h-[300px] object-contain"
                 />
               </div>
-              <div className="p-4 flex flex-col items-center justify-center flex-1 bg-white">
+              <div className="p-2 flex flex-col items-center bg-white">
                 <h4 className="font-bold text-hero-navy text-center text-base mb-2">
                   मा. ना. श्री. देवेंद्रजी फडणवीस
                 </h4>
@@ -132,9 +132,9 @@ END:VCALENDAR`;
             </div>
 
             {/* Right Column (35%) - Details Card */}
-            <div className="bg-white rounded-lg shadow-md p-6 space-y-4 h-[500px] flex flex-col">
+            <div className="bg-white rounded-lg shadow-md p-6 space-y-4 h-[420px] flex flex-col">
               
-            <div className="bg-bright-pink px-4 py-2 -mx-6 -mt-6 mb-2">
+            <div className="bg-bright-pink px-4 py-2 -mx-6 -mt-6 mb-2 rounded-t-lg">
               <h3 className="text-sm font-bold text-white text-center">कार्यक्रमाचा तपशील</h3>
             </div>
 
@@ -289,6 +289,13 @@ END:VCALENDAR`;
                 />
               </div>
             </div>
+
+          {/* Modal Footer */}
+          <div className="bg-hero-navy px-6 py-4">
+            <p className="text-white text-center text-sm md:text-base">
+              स्वागताध्यक्ष : श्री उमेश चव्हाण ( संस्थापक, पुणे आरोग्य महोत्सव समिती )
+            </p>
+          </div>
           </div>
         </div>
       </DialogContent>
