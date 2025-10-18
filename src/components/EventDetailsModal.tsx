@@ -132,7 +132,7 @@ END:VCALENDAR`;
             </div>
 
             {/* Right Column (35%) - Details Card */}
-            <div className="bg-white rounded-lg shadow-md p-6 space-y-4 h-[420px] flex flex-col">
+            <div className="bg-white rounded-lg shadow-md p-6 space-y-4 h-[420px] flex flex-col mr-6">
               
             <div className="bg-bright-pink px-4 py-2 -mx-6 -mt-6 mb-2 rounded-t-lg">
               <h3 className="text-sm font-bold text-white text-center">कार्यक्रमाचा तपशील</h3>
