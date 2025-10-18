@@ -1,7 +1,4 @@
-import {
-  Dialog,
-  DialogContent,
-} from "@/components/ui/dialog";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { X, Calendar, Clock, MapPin, CalendarPlus, Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
 import eventInauguration from "@/assets/event-inauguration.jpg";
 import guestDevendra from "@/assets/guest-devendra-fadnavis.png";
@@ -13,33 +10,30 @@ import guestMohan from "@/assets/guest-mohan-agashe.png";
 import guestMeghraj from "@/assets/guest-meghraj-bhosale.png";
 import guestSiddharth from "@/assets/guest-siddharth-shirole.png";
 import guestSunil from "@/assets/guest-sunil-kulkarni.png";
-
 interface GuestCardProps {
   image: string;
   name: string;
   title: string;
 }
-
-const GuestCard = ({ image, name, title }: GuestCardProps) => (
-  <div className="flex items-start gap-4 p-5 bg-gray-50 rounded-lg">
-    <img 
-      src={image} 
-      alt={name}
-      className="w-16 h-16 rounded-full object-cover border-[3px] border-white flex-shrink-0"
-    />
+const GuestCard = ({
+  image,
+  name,
+  title
+}: GuestCardProps) => <div className="flex items-start gap-4 p-5 bg-gray-50 rounded-lg">
+    <img src={image} alt={name} className="w-16 h-16 rounded-full object-cover border-[3px] border-white flex-shrink-0" />
     <div className="min-w-0">
       <h4 className="font-bold text-hero-navy text-lg leading-tight">{name}</h4>
       <p className="text-base text-hero-grey mt-1 leading-tight">{title}</p>
     </div>
-  </div>
-);
-
+  </div>;
 interface EventDetailsModalProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
 }
-
-const EventDetailsModal = ({ open, onOpenChange }: EventDetailsModalProps) => {
+const EventDetailsModal = ({
+  open,
+  onOpenChange
+}: EventDetailsModalProps) => {
   const handleAddToCalendar = () => {
     const icsContent = `BEGIN:VCALENDAR
 VERSION:2.0
@@ -51,8 +45,9 @@ LOCATION:बालगंधर्व रंगमंदिर, पुणे
 DESCRIPTION:१ले आरोग्य साहित्य संमेलन
 END:VEVENT
 END:VCALENDAR`;
-
-    const blob = new Blob([icsContent], { type: 'text/calendar' });
+    const blob = new Blob([icsContent], {
+      type: 'text/calendar'
+    });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
@@ -62,35 +57,29 @@ END:VCALENDAR`;
     document.body.removeChild(link);
     URL.revokeObjectURL(url);
   };
-
   const handleShare = (platform: string) => {
     const eventUrl = window.location.href;
     const eventText = 'भव्य उद्घाटन सोहळा - १ले आरोग्य साहित्य संमेलन';
-    
-    const shareUrls: { [key: string]: string } = {
+    const shareUrls: {
+      [key: string]: string;
+    } = {
       facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(eventUrl)}`,
       twitter: `https://twitter.com/intent/tweet?text=${encodeURIComponent(eventText)}&url=${encodeURIComponent(eventUrl)}`,
       linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(eventUrl)}`,
       instagram: `https://www.instagram.com/` // Instagram doesn't support web sharing
     };
-
     if (shareUrls[platform]) {
       window.open(shareUrls[platform], '_blank', 'width=600,height=400');
     }
   };
-
-  return (
-    <Dialog open={open} onOpenChange={onOpenChange}>
+  return <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-7xl w-[85vw] max-h-[90vh] p-0 overflow-hidden flex flex-col">
         {/* Dark Navy Header */}
         <div className="bg-hero-navy px-6 py-4 flex items-center justify-between">
           <h2 className="text-2xl md:text-3xl font-bold text-white text-center flex-1">
             भव्य उद्घाटन सोहळा - पहिले आरोग्य साहित्य संमेलन, पुणे २०२५
           </h2>
-          <button
-            onClick={() => onOpenChange(false)}
-            className="text-white hover:text-gray-300 transition-colors"
-          >
+          <button onClick={() => onOpenChange(false)} className="text-white hover:text-gray-300 transition-colors">
             <X className="w-6 h-6" />
           </button>
         </div>
@@ -102,11 +91,7 @@ END:VCALENDAR`;
             
             {/* Left Column (35%) - Image Card */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden h-[420px]">
-              <img 
-                src={eventInauguration} 
-                alt="उद्घाटन सोहळा"
-                className="w-full h-full object-cover"
-              />
+              <img src={eventInauguration} alt="उद्घाटन सोहळा" className="w-full h-full object-cover" />
             </div>
 
             {/* Center Column (30%) - Main Person Card */}
@@ -115,11 +100,7 @@ END:VCALENDAR`;
               <h3 className="text-sm font-bold text-white text-center">उद्घाटक</h3>
             </div>
               <div className="flex-shrink-0">
-                <img 
-                  src={guestDevendra}
-                  alt="देवेंद्र फडणवीस"
-                  className="w-full h-[300px] object-contain"
-                />
+                <img src={guestDevendra} alt="देवेंद्र फडणवीस" className="w-full h-[300px] object-contain" />
               </div>
               <div className="p-2 flex flex-col items-center bg-white">
                 <h4 className="font-bold text-hero-navy text-center text-base mb-2">
@@ -177,42 +158,23 @@ END:VCALENDAR`;
                 <div>
                   <p className="text-xs font-bold text-hero-grey uppercase mb-2">शेअर करा</p>
                   <div className="flex gap-3">
-                    <button 
-                      onClick={() => handleShare('facebook')}
-                      className="p-2 text-gray-600 hover:text-bright-pink transition-colors"
-                      aria-label="Share on Facebook"
-                    >
+                    <button onClick={() => handleShare('facebook')} className="p-2 text-gray-600 hover:text-bright-pink transition-colors" aria-label="Share on Facebook">
                       <Facebook className="w-5 h-5" />
                     </button>
-                    <button 
-                      onClick={() => handleShare('instagram')}
-                      className="p-2 text-gray-600 hover:text-bright-pink transition-colors"
-                      aria-label="Share on Instagram"
-                    >
+                    <button onClick={() => handleShare('instagram')} className="p-2 text-gray-600 hover:text-bright-pink transition-colors" aria-label="Share on Instagram">
                       <Instagram className="w-5 h-5" />
                     </button>
-                    <button 
-                      onClick={() => handleShare('twitter')}
-                      className="p-2 text-gray-600 hover:text-bright-pink transition-colors"
-                      aria-label="Share on Twitter"
-                    >
+                    <button onClick={() => handleShare('twitter')} className="p-2 text-gray-600 hover:text-bright-pink transition-colors" aria-label="Share on Twitter">
                       <Twitter className="w-5 h-5" />
                     </button>
-                    <button 
-                      onClick={() => handleShare('linkedin')}
-                      className="p-2 text-gray-600 hover:text-bright-pink transition-colors"
-                      aria-label="Share on LinkedIn"
-                    >
+                    <button onClick={() => handleShare('linkedin')} className="p-2 text-gray-600 hover:text-bright-pink transition-colors" aria-label="Share on LinkedIn">
                       <Linkedin className="w-5 h-5" />
                     </button>
                   </div>
                 </div>
                 
                 {/* Add to Calendar */}
-                <button 
-                  onClick={handleAddToCalendar}
-                  className="flex items-center gap-3 text-bright-pink hover:text-hero-navy transition-colors w-full"
-                >
+                <button onClick={handleAddToCalendar} className="flex items-center gap-3 text-bright-pink hover:text-hero-navy transition-colors w-full">
                   <CalendarPlus className="w-5 h-5" />
                   <span className="text-sm font-semibold">Add to Calendar</span>
                 </button>
@@ -229,16 +191,8 @@ END:VCALENDAR`;
                 प्रमुख उपस्थिती
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-                <GuestCard 
-                  image={guestMurlidhar}
-                  name="मा. ना. श्री. मुरलीधर मोहोळ"
-                  title="केंद्रीय राज्य मंत्री, खासदार"
-                />
-                <GuestCard 
-                  image={guestRamesh}
-                  name="मा. श्री. रमेश नाईक"
-                  title="मुख्यमंत्री सहा. निधी कक्ष प्रमुख"
-                />
+                <GuestCard image={guestMurlidhar} name="मा. ना. श्री. मुरलीधर मोहोळ" title="केंद्रीय राज्य मंत्री, खासदार" />
+                <GuestCard image={guestRamesh} name="मा. श्री. रमेश नाईक" title="मुख्यमंत्री सहा. निधी कक्ष प्रमुख" />
               </div>
             </div>
 
@@ -248,11 +202,7 @@ END:VCALENDAR`;
                 संमेलनाध्यक्ष
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-                <GuestCard 
-                  image={guestSanjay}
-                  name="मा. डॉ. संजय ओक"
-                  title="१ले आरोग्य साहित्य संमेलन, पुणे"
-                />
+                <GuestCard image={guestSanjay} name="मा. डॉ. संजय ओक" title="१ले आरोग्य साहित्य संमेलन, पुणे" />
               </div>
             </div>
 
@@ -262,36 +212,16 @@ END:VCALENDAR`;
                 सन्माननीय उपस्थिती
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-                <GuestCard 
-                  image={guestMohan}
-                  name="डॉ. मोहन आगाशे"
-                  title="जेष्ठ अभिनेते"
-                />
-                <GuestCard 
-                  image={guestPrasanna}
-                  name="मा. प्रसन्न पाटील"
-                  title="विश्वस्त, डी. वाय. पाटील हॉस्पिटल, पिंपरी"
-                />
-                <GuestCard 
-                  image={guestMeghraj}
-                  name="श्री. मेघराजराजे भोसले"
-                  title="अध्यक्ष, अ. भा. चित्रपट महामंडळ"
-                />
-                <GuestCard 
-                  image={guestSiddharth}
-                  name="श्री. सिद्धार्थ शिरोळे"
-                  title="आमदार"
-                />
-                <GuestCard 
-                  image={guestSunil}
-                  name="श्री. सुनील कुलकर्णी"
-                  title="अध्यक्ष, ग्रँड मेडिकल फाऊंडेशन"
-                />
+                <GuestCard image={guestMohan} name="डॉ. मोहन आगाशे" title="जेष्ठ अभिनेते" />
+                <GuestCard image={guestPrasanna} name="मा. प्रसन्न पाटील" title="विश्वस्त, डी. वाय. पाटील हॉस्पिटल, पिंपरी" />
+                <GuestCard image={guestMeghraj} name="श्री. मेघराजराजे भोसले" title="अध्यक्ष, अ. भा. चित्रपट महामंडळ" />
+                <GuestCard image={guestSiddharth} name="श्री. सिद्धार्थ शिरोळे" title="आमदार" />
+                <GuestCard image={guestSunil} name="श्री. सुनील कुलकर्णी" title="अध्यक्ष, ग्रँड मेडिकल फाऊंडेशन" />
               </div>
             </div>
 
           {/* Modal Footer */}
-          <div className="bg-hero-navy px-6 py-4">
+          <div className="bg-hero-navy px-6 py-4 mx-0 my-[30px]">
             <p className="text-white text-center text-sm md:text-base">
               स्वागताध्यक्ष : श्री उमेश चव्हाण ( संस्थापक, पुणे आरोग्य महोत्सव समिती )
             </p>
@@ -299,8 +229,6 @@ END:VCALENDAR`;
           </div>
         </div>
       </DialogContent>
-    </Dialog>
-  );
+    </Dialog>;
 };
-
 export default EventDetailsModal;
