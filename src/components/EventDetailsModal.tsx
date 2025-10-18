@@ -21,15 +21,15 @@ interface GuestCardProps {
 }
 
 const GuestCard = ({ image, name, title }: GuestCardProps) => (
-  <div className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg">
+  <div className="flex items-start gap-4 p-5 bg-gray-50 rounded-lg">
     <img 
       src={image} 
       alt={name}
-      className="w-12 h-12 rounded-full object-cover border-[3px] border-white flex-shrink-0"
+      className="w-16 h-16 rounded-full object-cover border-[3px] border-white flex-shrink-0"
     />
     <div className="min-w-0">
-      <h4 className="font-bold text-hero-navy text-sm leading-tight">{name}</h4>
-      <p className="text-xs text-hero-grey mt-1 leading-tight">{title}</p>
+      <h4 className="font-bold text-hero-navy text-lg leading-tight">{name}</h4>
+      <p className="text-base text-hero-grey mt-1 leading-tight">{title}</p>
     </div>
   </div>
 );
@@ -224,11 +224,11 @@ END:VCALENDAR`;
           <div className="border-t border-gray-200 bg-white p-6">
             
             {/* Chief Presence */}
-            <div className="mb-6">
-              <h3 className="text-base font-bold text-bright-pink mb-3 uppercase tracking-wide">
+            <div className="mb-8">
+              <h3 className="text-xl md:text-2xl font-bold text-bright-pink mb-4 uppercase tracking-wide">
                 प्रमुख उपस्थिती
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 <GuestCard 
                   image={guestMurlidhar}
                   name="मा. ना. श्री. मुरलीधर मोहोळ"
@@ -243,11 +243,11 @@ END:VCALENDAR`;
             </div>
 
             {/* President of Conclave */}
-            <div className="mb-6">
-              <h3 className="text-base font-bold text-bright-pink mb-3 uppercase tracking-wide">
+            <div className="mb-8">
+              <h3 className="text-xl md:text-2xl font-bold text-bright-pink mb-4 uppercase tracking-wide">
                 संमेलनाध्यक्ष
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 <GuestCard 
                   image={guestSanjay}
                   name="मा. डॉ. संजय ओक"
@@ -258,10 +258,10 @@ END:VCALENDAR`;
 
             {/* Honorable Presence */}
             <div>
-              <h3 className="text-base font-bold text-bright-pink mb-3 uppercase tracking-wide">
+              <h3 className="text-xl md:text-2xl font-bold text-bright-pink mb-4 uppercase tracking-wide">
                 सन्माननीय उपस्थिती
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 <GuestCard 
                   image={guestMohan}
                   name="डॉ. मोहन आगाशे"
