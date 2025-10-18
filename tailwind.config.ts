@@ -59,6 +59,7 @@ export default {
         "section-bg-grey": "hsl(var(--section-bg-grey))",
         "bright-pink": "hsl(var(--bright-pink))",
         "pattern-grey": "hsl(var(--pattern-grey))",
+        "bright-blue": "hsl(var(--bright-blue))",
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
