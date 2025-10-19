@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import EventDetailsModal from "@/components/EventDetailsModal";
+import PanelDiscussion1Modal from "@/components/PanelDiscussion1Modal";
 import eventHealthCamp from "@/assets/event-health-camp.jpg";
 import eventInauguration from "@/assets/event-inauguration.jpg";
 import eventPanelDiscussion from "@/assets/event-panel-discussion.jpg";
@@ -84,6 +85,7 @@ const EventCard = ({ image, title, tagText, tagColor, time, description, footer,
 
 const ProgramSchedule = () => {
   const [showInaugurationModal, setShowInaugurationModal] = useState(false);
+  const [showPanelDiscussion1Modal, setShowPanelDiscussion1Modal] = useState(false);
 
   const events = [
     {
@@ -207,8 +209,14 @@ const ProgramSchedule = () => {
             <EventCard 
               key={index} 
               {...event} 
-              showDetailsLink={event.title === "उद्घाटन सोहळा"}
-              onDetailsClick={() => setShowInaugurationModal(true)}
+              showDetailsLink={event.title === "उद्घाटन सोहळा" || event.title === "परिसंवाद १: अंमलीपदार्थ मुक्त महाराष्ट्र"}
+              onDetailsClick={() => {
+                if (event.title === "उद्घाटन सोहळा") {
+                  setShowInaugurationModal(true);
+                } else if (event.title === "परिसंवाद १: अंमलीपदार्थ मुक्त महाराष्ट्र") {
+                  setShowPanelDiscussion1Modal(true);
+                }
+              }}
             />
           ))}
         </div>
@@ -217,6 +225,11 @@ const ProgramSchedule = () => {
       <EventDetailsModal 
         open={showInaugurationModal}
         onOpenChange={setShowInaugurationModal}
+      />
+      
+      <PanelDiscussion1Modal 
+        open={showPanelDiscussion1Modal}
+        onOpenChange={setShowPanelDiscussion1Modal}
       />
     </section>
   );
