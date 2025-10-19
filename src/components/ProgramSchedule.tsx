@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import EventDetailsModal from "@/components/EventDetailsModal";
 import PanelDiscussion1Modal from "@/components/PanelDiscussion1Modal";
+import AwardsModal from "@/components/AwardsModal";
 import eventHealthCamp from "@/assets/event-health-camp.jpg";
 import eventInauguration from "@/assets/event-inauguration.jpg";
 import eventPanelDiscussion from "@/assets/event-panel-discussion.jpg";
@@ -86,6 +87,7 @@ const EventCard = ({ image, title, tagText, tagColor, time, description, footer,
 const ProgramSchedule = () => {
   const [showInaugurationModal, setShowInaugurationModal] = useState(false);
   const [showPanelDiscussion1Modal, setShowPanelDiscussion1Modal] = useState(false);
+  const [showAwardsModal, setShowAwardsModal] = useState(false);
 
   const events = [
     {
@@ -209,12 +211,18 @@ const ProgramSchedule = () => {
             <EventCard 
               key={index} 
               {...event} 
-              showDetailsLink={event.title === "उद्घाटन सोहळा" || event.title === "परिसंवाद १: अंमलीपदार्थ मुक्त महाराष्ट्र"}
+              showDetailsLink={
+                event.title === "उद्घाटन सोहळा" || 
+                event.title === "परिसंवाद १: अंमलीपदार्थ मुक्त महाराष्ट्र" ||
+                event.title === "आरोग्यभूषण पुरस्कार आणि स्मरणिका प्रकाशन"
+              }
               onDetailsClick={() => {
                 if (event.title === "उद्घाटन सोहळा") {
                   setShowInaugurationModal(true);
                 } else if (event.title === "परिसंवाद १: अंमलीपदार्थ मुक्त महाराष्ट्र") {
                   setShowPanelDiscussion1Modal(true);
+                } else if (event.title === "आरोग्यभूषण पुरस्कार आणि स्मरणिका प्रकाशन") {
+                  setShowAwardsModal(true);
                 }
               }}
             />
@@ -230,6 +238,11 @@ const ProgramSchedule = () => {
       <PanelDiscussion1Modal 
         open={showPanelDiscussion1Modal}
         onOpenChange={setShowPanelDiscussion1Modal}
+      />
+
+      <AwardsModal 
+        open={showAwardsModal}
+        onOpenChange={setShowAwardsModal}
       />
     </section>
   );
