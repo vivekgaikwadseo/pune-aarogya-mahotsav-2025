@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import EventDetailsModal from "@/components/EventDetailsModal";
 import PanelDiscussion1Modal from "@/components/PanelDiscussion1Modal";
 import AwardsModal from "@/components/AwardsModal";
+import SpecialFelicitationModal from "@/components/SpecialFelicitationModal";
 import eventHealthCamp from "@/assets/event-health-camp.jpg";
 import eventInauguration from "@/assets/event-inauguration.jpg";
 import eventPanelDiscussion from "@/assets/event-panel-discussion.jpg";
@@ -88,6 +89,7 @@ const ProgramSchedule = () => {
   const [showInaugurationModal, setShowInaugurationModal] = useState(false);
   const [showPanelDiscussion1Modal, setShowPanelDiscussion1Modal] = useState(false);
   const [showAwardsModal, setShowAwardsModal] = useState(false);
+  const [showSpecialFelicitationModal, setShowSpecialFelicitationModal] = useState(false);
 
   const events = [
     {
@@ -214,7 +216,8 @@ const ProgramSchedule = () => {
               showDetailsLink={
                 event.title === "उद्घाटन सोहळा" || 
                 event.title === "परिसंवाद १: अंमलीपदार्थ मुक्त महाराष्ट्र" ||
-                event.title === "आरोग्यभूषण पुरस्कार आणि स्मरणिका प्रकाशन"
+                event.title === "आरोग्यभूषण पुरस्कार आणि स्मरणिका प्रकाशन" ||
+                event.title === "विशेष सन्मान सोहळा"
               }
               onDetailsClick={() => {
                 if (event.title === "उद्घाटन सोहळा") {
@@ -223,6 +226,8 @@ const ProgramSchedule = () => {
                   setShowPanelDiscussion1Modal(true);
                 } else if (event.title === "आरोग्यभूषण पुरस्कार आणि स्मरणिका प्रकाशन") {
                   setShowAwardsModal(true);
+                } else if (event.title === "विशेष सन्मान सोहळा") {
+                  setShowSpecialFelicitationModal(true);
                 }
               }}
             />
@@ -241,8 +246,13 @@ const ProgramSchedule = () => {
       />
 
       <AwardsModal 
-        open={showAwardsModal}
-        onOpenChange={setShowAwardsModal}
+        open={showAwardsModal} 
+        onOpenChange={setShowAwardsModal} 
+      />
+
+      <SpecialFelicitationModal 
+        open={showSpecialFelicitationModal} 
+        onOpenChange={setShowSpecialFelicitationModal} 
       />
     </section>
   );
