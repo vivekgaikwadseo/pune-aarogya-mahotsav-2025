@@ -4,6 +4,7 @@ import EventDetailsModal from "@/components/EventDetailsModal";
 import PanelDiscussion1Modal from "@/components/PanelDiscussion1Modal";
 import AwardsModal from "@/components/AwardsModal";
 import SpecialFelicitationModal from "@/components/SpecialFelicitationModal";
+import BookLaunchModal from "@/components/BookLaunchModal";
 import eventHealthCamp from "@/assets/event-health-camp.jpg";
 import eventInauguration from "@/assets/event-inauguration.jpg";
 import eventPanelDiscussion from "@/assets/event-panel-discussion.jpg";
@@ -90,6 +91,7 @@ const ProgramSchedule = () => {
   const [showPanelDiscussion1Modal, setShowPanelDiscussion1Modal] = useState(false);
   const [showAwardsModal, setShowAwardsModal] = useState(false);
   const [showSpecialFelicitationModal, setShowSpecialFelicitationModal] = useState(false);
+  const [showBookLaunchModal, setShowBookLaunchModal] = useState(false);
 
   const events = [
     {
@@ -217,7 +219,8 @@ const ProgramSchedule = () => {
                 event.title === "उद्घाटन सोहळा" || 
                 event.title === "परिसंवाद १: अंमलीपदार्थ मुक्त महाराष्ट्र" ||
                 event.title === "आरोग्यभूषण पुरस्कार आणि स्मरणिका प्रकाशन" ||
-                event.title === "विशेष सन्मान सोहळा"
+                event.title === "विशेष सन्मान सोहळा" ||
+                event.title === "पुस्तक प्रकाशन समारंभ"
               }
               onDetailsClick={() => {
                 if (event.title === "उद्घाटन सोहळा") {
@@ -228,6 +231,8 @@ const ProgramSchedule = () => {
                   setShowAwardsModal(true);
                 } else if (event.title === "विशेष सन्मान सोहळा") {
                   setShowSpecialFelicitationModal(true);
+                } else if (event.title === "पुस्तक प्रकाशन समारंभ") {
+                  setShowBookLaunchModal(true);
                 }
               }}
             />
@@ -250,9 +255,13 @@ const ProgramSchedule = () => {
         onOpenChange={setShowAwardsModal} 
       />
 
-      <SpecialFelicitationModal 
-        open={showSpecialFelicitationModal} 
-        onOpenChange={setShowSpecialFelicitationModal} 
+      <SpecialFelicitationModal
+        open={showSpecialFelicitationModal}
+        onOpenChange={setShowSpecialFelicitationModal}
+      />
+      <BookLaunchModal
+        open={showBookLaunchModal}
+        onOpenChange={setShowBookLaunchModal}
       />
     </section>
   );
