@@ -6,6 +6,7 @@ import AwardsModal from "@/components/AwardsModal";
 import SpecialFelicitationModal from "@/components/SpecialFelicitationModal";
 import BookLaunchModal from "@/components/BookLaunchModal";
 import ConcludingCeremonyModal from "@/components/ConcludingCeremonyModal";
+import PanelDiscussion2Modal from "@/components/PanelDiscussion2Modal";
 import eventHealthCamp from "@/assets/event-health-camp.jpg";
 import eventInauguration from "@/assets/event-inauguration.jpg";
 import eventPanelDiscussion from "@/assets/event-panel-discussion.jpg";
@@ -94,6 +95,7 @@ const ProgramSchedule = () => {
   const [showSpecialFelicitationModal, setShowSpecialFelicitationModal] = useState(false);
   const [showBookLaunchModal, setShowBookLaunchModal] = useState(false);
   const [showConcludingCeremonyModal, setShowConcludingCeremonyModal] = useState(false);
+  const [showPanelDiscussion2Modal, setShowPanelDiscussion2Modal] = useState(false);
 
   const events = [
     {
@@ -232,6 +234,7 @@ const ProgramSchedule = () => {
                 event.title === "आरोग्यभूषण पुरस्कार आणि स्मरणिका प्रकाशन" ||
                 event.title === "विशेष सन्मान सोहळा" ||
                 event.title === "पुस्तक प्रकाशन समारंभ" ||
+                event.title === "परिसंवाद २: आरोग्य व्यवस्थेपुढील आव्हाने" ||
                 event.title === "समारोप"
               }
               onDetailsClick={() => {
@@ -245,6 +248,8 @@ const ProgramSchedule = () => {
                   setShowSpecialFelicitationModal(true);
                 } else if (event.title === "पुस्तक प्रकाशन समारंभ") {
                   setShowBookLaunchModal(true);
+                } else if (event.title === "परिसंवाद २: आरोग्य व्यवस्थेपुढील आव्हाने") {
+                  setShowPanelDiscussion2Modal(true);
                 } else if (event.title === "समारोप") {
                   setShowConcludingCeremonyModal(true);
                 }
@@ -281,6 +286,11 @@ const ProgramSchedule = () => {
       <ConcludingCeremonyModal
         open={showConcludingCeremonyModal}
         onOpenChange={setShowConcludingCeremonyModal}
+      />
+
+      <PanelDiscussion2Modal
+        open={showPanelDiscussion2Modal}
+        onOpenChange={setShowPanelDiscussion2Modal}
       />
     </section>
   );
