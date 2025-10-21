@@ -5,6 +5,7 @@ import PanelDiscussion1Modal from "@/components/PanelDiscussion1Modal";
 import AwardsModal from "@/components/AwardsModal";
 import SpecialFelicitationModal from "@/components/SpecialFelicitationModal";
 import BookLaunchModal from "@/components/BookLaunchModal";
+import ConcludingCeremonyModal from "@/components/ConcludingCeremonyModal";
 import eventHealthCamp from "@/assets/event-health-camp.jpg";
 import eventInauguration from "@/assets/event-inauguration.jpg";
 import eventPanelDiscussion from "@/assets/event-panel-discussion.jpg";
@@ -92,6 +93,7 @@ const ProgramSchedule = () => {
   const [showAwardsModal, setShowAwardsModal] = useState(false);
   const [showSpecialFelicitationModal, setShowSpecialFelicitationModal] = useState(false);
   const [showBookLaunchModal, setShowBookLaunchModal] = useState(false);
+  const [showConcludingCeremonyModal, setShowConcludingCeremonyModal] = useState(false);
 
   const events = [
     {
@@ -186,12 +188,21 @@ const ProgramSchedule = () => {
     },
     {
       image: eventMusicNight,
-      title: "संगीत रजनी आणि समारोप",
+      title: "संगीत रजनी",
       tagText: "सांस्कृतिक",
       tagColor: "#D20062",
-      time: "🕙 रात्री ९:०० वा",
-      description: "पुण्यातील प्रसिद्ध डॉक्टर्स आणि कलावंतांच्या संगीत रजनीने महोत्सवाची सांगता.",
-      footer: "🎤 अध्यक्ष: डॉ. संजय ओक | ⏳ कालावधी: अंदाजे १.५ तास | 🎟️ प्रवेश: विनामूल्य"
+      time: "🕙 सायं. ७:०० वा",
+      description: "पुण्यातील प्रसिद्ध डॉक्टर्स आणि कलावंतांच्या संगीत रजनीचा आनंद घ्या.",
+      footer: "🎤 कलाकार: पुण्यातील प्रसिद्ध डॉक्टर्स आणि कलावंत | ⏳ कालावधी: अंदाजे १ तास | 🎟️ प्रवेश: विनामूल्य"
+    },
+    {
+      image: eventMusicNight,
+      title: "समारोप",
+      tagText: "समारोप",
+      tagColor: "#FF0080",
+      time: "🕙 रात्री ८:०० वा",
+      description: "संमेलनाचा आढावा आणि पुढील वाटचालीवर चर्चा यासह महोत्सवाची सांगता.",
+      footer: "🎤 अध्यक्ष: डॉ. संजय ओक | ⏳ कालावधी: अंदाजे १ तास | 🎟️ प्रवेश: विनामूल्य"
     }
   ];
 
@@ -220,7 +231,8 @@ const ProgramSchedule = () => {
                 event.title === "परिसंवाद १: अंमलीपदार्थ मुक्त महाराष्ट्र" ||
                 event.title === "आरोग्यभूषण पुरस्कार आणि स्मरणिका प्रकाशन" ||
                 event.title === "विशेष सन्मान सोहळा" ||
-                event.title === "पुस्तक प्रकाशन समारंभ"
+                event.title === "पुस्तक प्रकाशन समारंभ" ||
+                event.title === "समारोप"
               }
               onDetailsClick={() => {
                 if (event.title === "उद्घाटन सोहळा") {
@@ -233,6 +245,8 @@ const ProgramSchedule = () => {
                   setShowSpecialFelicitationModal(true);
                 } else if (event.title === "पुस्तक प्रकाशन समारंभ") {
                   setShowBookLaunchModal(true);
+                } else if (event.title === "समारोप") {
+                  setShowConcludingCeremonyModal(true);
                 }
               }}
             />
@@ -262,6 +276,11 @@ const ProgramSchedule = () => {
       <BookLaunchModal
         open={showBookLaunchModal}
         onOpenChange={setShowBookLaunchModal}
+      />
+
+      <ConcludingCeremonyModal
+        open={showConcludingCeremonyModal}
+        onOpenChange={setShowConcludingCeremonyModal}
       />
     </section>
   );
