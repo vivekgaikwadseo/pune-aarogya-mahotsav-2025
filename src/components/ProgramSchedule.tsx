@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import EventDetailsModal from "@/components/EventDetailsModal";
 import PanelDiscussion1Modal from "@/components/PanelDiscussion1Modal";
@@ -78,7 +79,7 @@ const EventCard = ({ image, title, tagText, tagColor, time, description, footer,
         {showDetailsLink && (
           <button
             onClick={onDetailsClick}
-            className="inline-block text-sm font-medium text-bright-pink hover:text-hero-deep-pink transition-colors cursor-pointer"
+            className="inline-block text-sm font-medium text-hero-navy hover:text-bright-pink transition-colors cursor-pointer"
           >
             अधिक जाणून घ्या »
           </button>
@@ -89,6 +90,7 @@ const EventCard = ({ image, title, tagText, tagColor, time, description, footer,
 };
 
 const ProgramSchedule = () => {
+  const navigate = useNavigate();
   const [showInaugurationModal, setShowInaugurationModal] = useState(false);
   const [showPanelDiscussion1Modal, setShowPanelDiscussion1Modal] = useState(false);
   const [showAwardsModal, setShowAwardsModal] = useState(false);
@@ -229,6 +231,7 @@ const ProgramSchedule = () => {
               key={index} 
               {...event} 
               showDetailsLink={
+                event.title === "भव्य आरोग्य शिबीर" ||
                 event.title === "उद्घाटन सोहळा" || 
                 event.title === "परिसंवाद १: अंमलीपदार्थ मुक्त महाराष्ट्र" ||
                 event.title === "आरोग्यभूषण पुरस्कार आणि स्मरणिका प्रकाशन" ||
@@ -238,7 +241,9 @@ const ProgramSchedule = () => {
                 event.title === "समारोप"
               }
               onDetailsClick={() => {
-                if (event.title === "उद्घाटन सोहळा") {
+                if (event.title === "भव्य आरोग्य शिबीर") {
+                  navigate("/health-camp");
+                } else if (event.title === "उद्घाटन सोहळा") {
                   setShowInaugurationModal(true);
                 } else if (event.title === "परिसंवाद १: अंमलीपदार्थ मुक्त महाराष्ट्र") {
                   setShowPanelDiscussion1Modal(true);
