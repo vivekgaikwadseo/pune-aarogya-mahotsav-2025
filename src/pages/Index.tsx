@@ -105,10 +105,10 @@ const Index = () => {
             </div>
             
             {/* Right Column - 50% Chief Minister Section */}
-            <div className="relative flex flex-col items-center justify-center min-h-[500px] md:min-h-[600px]">
+            <div className="relative flex flex-col items-center justify-center min-h-[400px] md:min-h-[450px]">
               {/* Pink Blob Background - Positioned Behind */}
               <div 
-                className="absolute top-1/4 left-1/2 -translate-x-1/2 w-72 h-72 md:w-96 md:h-96 bg-hero-pastel-pink -z-10"
+                className="absolute top-1/3 left-1/2 -translate-x-1/2 w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-hero-pastel-pink -z-10"
                 style={{ borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%' }}
               />
               
@@ -117,18 +117,17 @@ const Index = () => {
                 <img 
                   src={chiefGuestPhoto}
                   alt="मा. ना. श्री. देवेंद्रजी फडणवीस"
-                  className="w-full h-auto object-contain"
-                  style={{ height: '450px', width: 'auto', maxWidth: '100%' }}
+                  className="h-[280px] md:h-[320px] lg:h-[360px] w-auto object-contain"
                 />
               </div>
               
               {/* Decorative Deep Pink Plus Sign */}
-              <div className="absolute top-8 right-8 md:top-12 md:right-12 text-hero-deep-pink text-5xl md:text-6xl font-bold transform rotate-12 z-20">
+              <div className="absolute top-4 right-4 md:top-6 md:right-8 text-hero-deep-pink text-5xl md:text-6xl font-bold transform rotate-12 z-20">
                 +
               </div>
               
               {/* Name and Title - Below Image */}
-              <div className="mt-4 text-center space-y-2 z-10">
+              <div className="mt-2 md:mt-3 text-center space-y-2 z-10">
                 <h3 className="text-2xl md:text-3xl font-bold text-hero-navy">
                   मा. ना. श्री. देवेंद्रजी फडणवीस
                 </h3>
