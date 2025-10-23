@@ -14,7 +14,7 @@ import SponsorsSection from "@/components/SponsorsSection";
 import FAQSection from "@/components/FAQSection";
 import FinalCTASection from "@/components/FinalCTASection";
 import heroBackground from "@/assets/hero-health-background.jpg";
-import chiefGuestPhoto from "@/assets/devandra-0904_d_PhotoGrid-removebg-preview.png";
+import chiefGuestPhoto from "@/assets/devendra-fadnavis-new.png";
 
 const Index = () => {
   return (
@@ -105,26 +105,30 @@ const Index = () => {
             </div>
             
             {/* Right Column - 50% Chief Minister Section */}
-            <div className="relative flex flex-col items-center justify-center">
-              {/* Modern Abstract Pastel Pink Shape with Chief Minister Image */}
+            <div className="relative flex flex-col items-center justify-center min-h-[500px] md:min-h-[600px]">
+              {/* Pink Blob Background - Positioned Behind */}
               <div 
-                className="relative w-80 h-80 md:w-96 md:h-96 bg-hero-pastel-pink flex items-center justify-center overflow-hidden shadow-2xl"
+                className="absolute top-1/4 left-1/2 -translate-x-1/2 w-72 h-72 md:w-96 md:h-96 bg-hero-pastel-pink -z-10"
                 style={{ borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%' }}
-              >
+              />
+              
+              {/* Large CM Image - Prominent & Overflowing */}
+              <div className="relative z-10 w-full max-w-md flex justify-center">
                 <img 
                   src={chiefGuestPhoto}
                   alt="मा. ना. श्री. देवेंद्रजी फडणवीस"
-                  className="w-full h-full object-cover p-4"
+                  className="w-full h-auto object-contain"
+                  style={{ height: '450px', width: 'auto', maxWidth: '100%' }}
                 />
               </div>
               
               {/* Decorative Deep Pink Plus Sign */}
-              <div className="absolute -top-4 -right-4 text-hero-deep-pink text-5xl md:text-6xl font-bold transform rotate-12">
+              <div className="absolute top-8 right-8 md:top-12 md:right-12 text-hero-deep-pink text-5xl md:text-6xl font-bold transform rotate-12 z-20">
                 +
               </div>
               
-              {/* Name and Title */}
-              <div className="mt-6 text-center space-y-2">
+              {/* Name and Title - Below Image */}
+              <div className="mt-4 text-center space-y-2 z-10">
                 <h3 className="text-2xl md:text-3xl font-bold text-hero-navy">
                   मा. ना. श्री. देवेंद्रजी फडणवीस
                 </h3>
