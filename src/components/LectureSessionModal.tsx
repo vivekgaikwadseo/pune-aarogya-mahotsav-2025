@@ -83,7 +83,7 @@ END:VCALENDAR`;
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-hidden p-0 bg-gradient-to-br from-blue-50 to-pink-50">
+      <DialogContent className="max-w-6xl max-h-[90vh] overflow-hidden p-0 bg-gradient-to-br from-blue-50 to-pink-50">
         {/* Header */}
         <div className="bg-hero-navy text-white p-6 relative">
           <button
@@ -124,6 +124,10 @@ END:VCALENDAR`;
                   <Clock className="h-5 w-5 text-bright-pink" />
                   <span className="font-semibold">दुपारी ३:०० वा.</span>
                 </div>
+                <div className="flex items-center gap-2 text-hero-navy">
+                  <MapPin className="h-5 w-5 text-bright-pink" />
+                  <span className="font-semibold">स्थळ: बालगंधर्व रंगमंदिर, पुणे</span>
+                </div>
               </div>
 
               {/* Description */}
@@ -139,7 +143,7 @@ END:VCALENDAR`;
               </h3>
 
               {/* Share and Calendar Actions */}
-              <div className="flex flex-wrap items-center gap-4 pt-2">
+              <div className="flex flex-col gap-3 pt-2">
                 <div className="flex items-center gap-2">
                   <Share2 className="h-4 w-4 text-bright-pink" />
                   <span className="text-sm font-semibold text-hero-navy">Share:</span>
@@ -170,7 +174,7 @@ END:VCALENDAR`;
                 </div>
                 <button
                   onClick={handleAddToCalendar}
-                  className="text-sm text-bright-pink hover:text-hero-deep-pink transition-colors font-semibold"
+                  className="text-sm text-bright-pink hover:text-hero-deep-pink transition-colors font-semibold text-left"
                 >
                   📅 Add to Calendar
                 </button>
