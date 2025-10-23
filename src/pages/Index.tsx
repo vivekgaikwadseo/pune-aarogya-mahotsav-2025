@@ -105,7 +105,7 @@ const Index = () => {
             </div>
             
             {/* Right Column - 50% Chief Minister Section */}
-            <div className="relative flex flex-col items-center justify-start pt-4 md:pt-6 min-h-[400px] md:min-h-[450px]">
+            <div className="relative flex flex-col items-center justify-start pt-0 min-h-[400px] md:min-h-[450px]">
               {/* Pink Blob Background - Positioned Behind */}
               <div 
                 className="absolute top-1/3 left-1/2 -translate-x-1/2 w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-hero-pastel-pink -z-10"
