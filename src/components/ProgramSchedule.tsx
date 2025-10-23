@@ -8,6 +8,7 @@ import SpecialFelicitationModal from "@/components/SpecialFelicitationModal";
 import BookLaunchModal from "@/components/BookLaunchModal";
 import ConcludingCeremonyModal from "@/components/ConcludingCeremonyModal";
 import PanelDiscussion2Modal from "@/components/PanelDiscussion2Modal";
+import LectureSessionModal from "@/components/LectureSessionModal";
 import eventHealthCamp from "@/assets/event-health-camp.jpg";
 import eventInauguration from "@/assets/event-inauguration.jpg";
 import eventPanelDiscussion from "@/assets/event-panel-discussion.jpg";
@@ -98,6 +99,7 @@ const ProgramSchedule = () => {
   const [showBookLaunchModal, setShowBookLaunchModal] = useState(false);
   const [showConcludingCeremonyModal, setShowConcludingCeremonyModal] = useState(false);
   const [showPanelDiscussion2Modal, setShowPanelDiscussion2Modal] = useState(false);
+  const [showLectureModal, setShowLectureModal] = useState(false);
 
   const events = [
     {
@@ -238,6 +240,7 @@ const ProgramSchedule = () => {
                 event.title === "विशेष सन्मान सोहळा" ||
                 event.title === "पुस्तक प्रकाशन समारंभ" ||
                 event.title === "परिसंवाद २: आरोग्य व्यवस्थेपुढील आव्हाने" ||
+                event.title === "विशेष व्याख्यान सत्र" ||
                 event.title === "समारोप"
               }
               onDetailsClick={() => {
@@ -255,6 +258,8 @@ const ProgramSchedule = () => {
                   setShowBookLaunchModal(true);
                 } else if (event.title === "परिसंवाद २: आरोग्य व्यवस्थेपुढील आव्हाने") {
                   setShowPanelDiscussion2Modal(true);
+                } else if (event.title === "विशेष व्याख्यान सत्र") {
+                  setShowLectureModal(true);
                 } else if (event.title === "समारोप") {
                   setShowConcludingCeremonyModal(true);
                 }
@@ -296,6 +301,11 @@ const ProgramSchedule = () => {
       <PanelDiscussion2Modal
         open={showPanelDiscussion2Modal}
         onOpenChange={setShowPanelDiscussion2Modal}
+      />
+
+      <LectureSessionModal
+        open={showLectureModal}
+        onOpenChange={setShowLectureModal}
       />
     </section>
   );
