@@ -23,13 +23,6 @@ const Index = () => {
       
       {/* Hero Section */}
       <section className="relative py-8 md:py-12 lg:py-16 pb-16 md:pb-20 lg:pb-24 overflow-hidden bg-white" style={{ clipPath: 'polygon(0 0, 100% 0, 100% 92%, 0 100%)' }}>
-        {/* Large Abstract Background Shapes - Light Grey */}
-        <div className="absolute inset-0 z-0 opacity-50">
-          <div className="absolute top-10 left-10 w-96 h-96 bg-hero-light-grey rounded-full"></div>
-          <div className="absolute bottom-20 right-20 w-80 h-80 bg-hero-light-grey rounded-3xl"></div>
-          <div className="absolute top-1/2 left-1/3 w-72 h-72 bg-hero-light-grey rounded-full"></div>
-        </div>
-        
         {/* Floating Animated Colored Shapes */}
         <div className="absolute inset-0 z-5 pointer-events-none">
           {/* Blue Circle */}
@@ -60,13 +53,13 @@ const Index = () => {
             {/* Left Column - 50% Content Section */}
             <div className="space-y-3 md:space-y-4">
               {/* Main Headline */}
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-hero-navy leading-tight">
-                पुणे आरोग्य महोत्सव २०२५
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-hero-navy leading-tight whitespace-nowrap">
+                पुणे आरोग्य महोत्सव
               </h1>
               
               {/* Sub-headline */}
-              <h2 className="text-xl md:text-2xl text-hero-navy font-medium">
-                महाराष्ट्रातील पहिले आरोग्य साहित्य संमेलन
+              <h2 className="text-2xl md:text-3xl lg:text-4xl text-hero-navy font-medium">
+                महाराष्ट्रातील <span className="text-[#FF0080]">पहिले</span> आरोग्य साहित्य संमेलन
               </h2>
               
               {/* Information Block with Icons */}
