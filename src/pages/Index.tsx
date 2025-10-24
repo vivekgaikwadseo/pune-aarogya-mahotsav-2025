@@ -147,14 +147,14 @@ const Index = () => {
       {/* Why Join Section */}
       <WhyJoinSection />
 
-      {/* CTA Section */}
-      <CTASection />
-
       {/* Program Schedule Section */}
       <ProgramSchedule />
 
       {/* Guests & Dignitaries Section */}
       <GuestsSection />
+
+      {/* CTA Section */}
+      <CTASection />
 
       {/* Organizers Section */}
       <OrganizersSection />
