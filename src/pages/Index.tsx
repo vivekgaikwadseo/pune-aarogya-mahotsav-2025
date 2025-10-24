@@ -156,6 +156,9 @@ const Index = () => {
       {/* Guests & Dignitaries Section */}
       <GuestsSection />
 
+      {/* Final CTA Section */}
+      <FinalCTASection />
+
       {/* Organizers Section */}
       <OrganizersSection />
 
@@ -164,9 +167,6 @@ const Index = () => {
 
       {/* FAQ Section */}
       <FAQSection />
-
-      {/* Final CTA Section */}
-      <FinalCTASection />
 
       <Footer />
     </div>
