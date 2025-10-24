@@ -60,16 +60,6 @@ const GuestsSection = () => {
       image: ramesh,
     },
     {
-      name: "पद्मश्री डॉ. स्मिता कोल्हे",
-      title: "पुरस्कार मानकरी",
-      image: kolhe,
-    },
-    {
-      name: "पद्मश्री डॉ. रविंद्र कोल्हे",
-      title: "पुरस्कार मानकरी",
-      image: kolhe,
-    },
-    {
       name: "मा. ना. श्री. चंद्रकांतदादा पाटील",
       title: "मंत्री, उच्च व तंत्र शिक्षण",
       image: chandrakant,
@@ -197,7 +187,7 @@ const GuestsSection = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-blue-50/30 to-white">
+    <section className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4 md:px-8 lg:px-12">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -231,7 +221,7 @@ const GuestsSection = () => {
                     <img
                       src={guest.image}
                       alt={guest.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
 
@@ -252,7 +242,7 @@ const GuestsSection = () => {
                         <h3 className="text-sm font-bold text-hero-navy leading-tight mb-1 break-words">
                           {guest.name}
                         </h3>
-                        <p className="text-xs text-gray-600 leading-tight line-clamp-2">
+                        <p className="text-xs text-gray-600 leading-tight break-words">
                           {guest.title}
                         </p>
                       </div>
