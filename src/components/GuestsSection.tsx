@@ -187,7 +187,7 @@ const GuestsSection = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="py-16 md:py-24 bg-[#FFF0F7]" style={{ boxShadow: 'inset 0 2px 8px rgba(0, 0, 0, 0.06), inset 0 -2px 8px rgba(0, 0, 0, 0.06)' }}>
       <div className="container mx-auto px-4 md:px-8 lg:px-12">
         {/* Section Header */}
         <div className="text-center mb-12">
