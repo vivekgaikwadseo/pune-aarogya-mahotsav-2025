@@ -198,7 +198,7 @@ const GuestsSection = () => {
 
   return (
     <section className="py-16 md:py-24 bg-gradient-to-b from-blue-50/30 to-white">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 md:px-8 lg:px-12">
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-hero-navy mb-4">
@@ -227,7 +227,7 @@ const GuestsSection = () => {
               >
                 <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
                   {/* Large Top Image - 70% */}
-                  <div className="relative h-64 overflow-hidden rounded-t-2xl">
+                  <div className="relative h-64 overflow-hidden rounded-t-2xl bg-[#F5F5F5]">
                     <img
                       src={guest.image}
                       alt={guest.name}
@@ -236,20 +236,20 @@ const GuestsSection = () => {
                   </div>
 
                   {/* Bottom White Box - 30% */}
-                  <div className="bg-white p-4 rounded-b-2xl">
-                    <div className="flex items-start gap-3">
+                  <div className="bg-white p-3 rounded-b-2xl">
+                    <div className="flex items-start gap-2">
                       {/* Small Circular Avatar */}
                       <div className="flex-shrink-0">
                         <img
                           src={guest.image}
                           alt={guest.name}
-                          className="w-12 h-12 rounded-full object-cover border-2 border-gray-100"
+                          className="w-10 h-10 rounded-full object-cover border-2 border-gray-100"
                         />
                       </div>
 
                       {/* Name and Title */}
                       <div className="flex-1 min-w-0">
-                        <h3 className="text-sm font-bold text-hero-navy leading-tight mb-1 line-clamp-2">
+                        <h3 className="text-sm font-bold text-hero-navy leading-tight mb-1 break-words">
                           {guest.name}
                         </h3>
                         <p className="text-xs text-gray-600 leading-tight line-clamp-2">
