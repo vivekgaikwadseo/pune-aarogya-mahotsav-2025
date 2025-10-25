@@ -63,17 +63,22 @@ const SponsorsSection = () => {
             विशेष आभार
           </h3>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
             {partners.map((partner, index) => (
               <div 
                 key={index}
-                className="bg-white rounded-lg border-2 border-gray-200 p-5 flex items-center justify-center hover:border-hero-pink hover:shadow-xl transition-all duration-300 hover:scale-105"
+                className="bg-white rounded-xl shadow-md hover:shadow-xl p-6 flex flex-col items-center justify-center transition-all duration-300 hover:scale-105"
               >
-                <img 
-                  src={partner.logo}
-                  alt={partner.name}
-                  className="w-full h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300"
-                />
+                <div className="w-full h-24 flex items-center justify-center mb-4">
+                  <img 
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <h4 className="text-hero-navy font-semibold text-center text-sm md:text-base">
+                  {partner.name}
+                </h4>
               </div>
             ))}
           </div>
