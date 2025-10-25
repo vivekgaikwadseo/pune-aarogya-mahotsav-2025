@@ -13,6 +13,7 @@ import OrganizersSection from "@/components/OrganizersSection";
 import SponsorsSection from "@/components/SponsorsSection";
 import FAQSection from "@/components/FAQSection";
 import FinalCTASection from "@/components/FinalCTASection";
+import LocationSection from "@/components/LocationSection";
 import heroBackground from "@/assets/hero-health-background.jpg";
 import chiefGuestPhoto from "@/assets/devendra-fadnavis-new.png";
 
@@ -167,6 +168,9 @@ const Index = () => {
 
       {/* FAQ Section */}
       <FAQSection />
+
+      {/* Location & Time Section */}
+      <LocationSection />
 
       <Footer />
     </div>
