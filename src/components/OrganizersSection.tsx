@@ -52,20 +52,7 @@ const OrganizersSection = () => {
         {/* Part A - Organizer's Portfolio */}
         <div className="mb-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left Column - Photo */}
-            <div className="relative">
-              <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
-                <img 
-                  src={umeshChavan}
-                  alt="मा. उमेश चव्हाण"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              {/* Decorative Element */}
-              <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-hero-pink rounded-full opacity-20 blur-3xl"></div>
-            </div>
-
-            {/* Right Column - Text */}
+            {/* Left Column - Text */}
             <div className="space-y-6">
               <h3 className="text-2xl md:text-3xl font-bold text-hero-navy">
                 आयोजकांविषयी
@@ -89,11 +76,38 @@ const OrganizersSection = () => {
                 </p>
               </div>
             </div>
+
+            {/* Right Column - Photo with Abstract Background */}
+            <div className="relative flex justify-center items-center">
+              {/* Abstract Background Shape */}
+              <div className="absolute inset-0 flex justify-center items-center">
+                <svg viewBox="0 0 500 500" className="w-full h-full opacity-30">
+                  <path
+                    d="M250,50 Q400,100 450,250 Q400,400 250,450 Q100,400 50,250 Q100,100 250,50"
+                    fill="#F8F9FA"
+                    stroke="none"
+                  />
+                  <circle cx="250" cy="250" r="180" fill="#F8F9FA" opacity="0.5" />
+                </svg>
+              </div>
+              
+              {/* Image */}
+              <div className="relative z-10 aspect-square rounded-2xl overflow-hidden shadow-2xl max-w-md">
+                <img 
+                  src={umeshChavan}
+                  alt="मा. उमेश चव्हाण"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              
+              {/* Decorative Element */}
+              <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-hero-pink rounded-full opacity-20 blur-3xl z-0"></div>
+            </div>
           </div>
         </div>
 
         {/* Part B - Team Slider */}
-        <div className="space-y-8">
+        <div className="space-y-8 mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-hero-navy text-center">
             आमची टीम
           </h2>
@@ -111,9 +125,19 @@ const OrganizersSection = () => {
                   <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
                     <Card className="overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-shadow duration-300">
                       <CardContent className="p-0">
-                        {/* Background Image Section */}
-                        <div className={`h-64 ${member.bgColor} relative overflow-hidden`}>
-                          <div className="absolute inset-0 bg-black/20"></div>
+                        {/* Background Pattern Section */}
+                        <div className="h-64 relative overflow-hidden" style={{
+                          background: '#F8F9FA',
+                          backgroundImage: `
+                            linear-gradient(45deg, #ffffff 25%, transparent 25%),
+                            linear-gradient(-45deg, #ffffff 25%, transparent 25%),
+                            linear-gradient(45deg, transparent 75%, #ffffff 75%),
+                            linear-gradient(-45deg, transparent 75%, #ffffff 75%)
+                          `,
+                          backgroundSize: '20px 20px',
+                          backgroundPosition: '0 0, 0 10px, 10px -10px, -10px 0px'
+                        }}>
+                          <div className="absolute inset-0 bg-gradient-to-br from-transparent to-gray-100/30"></div>
                         </div>
                         
                         {/* White Content Box */}
