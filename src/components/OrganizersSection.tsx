@@ -85,57 +85,54 @@ const OrganizersSection = () => {
                 <svg viewBox="0 0 500 500" className="absolute w-full h-full opacity-20">
                   <defs>
                     <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" style={{ stopColor: '#E91E63', stopOpacity: 0.3 }} />
-                      <stop offset="100%" style={{ stopColor: '#2196F3', stopOpacity: 0.3 }} />
+                      <stop offset="0%" style={{ stopColor: '#2196F3', stopOpacity: 0.4 }} />
+                      <stop offset="50%" style={{ stopColor: '#1976D2', stopOpacity: 0.3 }} />
+                      <stop offset="100%" style={{ stopColor: '#0D47A1', stopOpacity: 0.4 }} />
                     </linearGradient>
                   </defs>
-                  <path
-                    d="M250,30 Q420,80 470,250 Q420,420 250,470 Q80,420 30,250 Q80,80 250,30"
-                    fill="url(#gradient1)"
-                    stroke="none"
-                  />
-                  <circle cx="250" cy="250" r="200" fill="url(#gradient1)" opacity="0.4" />
+                  <ellipse cx="250" cy="250" rx="220" ry="200" fill="url(#gradient1)" opacity="0.5" />
+                  <ellipse cx="250" cy="250" rx="180" ry="160" fill="url(#gradient1)" opacity="0.3" />
                 </svg>
                 
                 {/* Secondary Circular Shape */}
-                <div className="absolute w-96 h-96 bg-gradient-to-br from-hero-pink/20 to-hero-blue/20 rounded-full blur-3xl"></div>
+                <div className="absolute w-96 h-96 bg-gradient-to-br from-hero-blue/15 to-blue-900/15 rounded-full blur-3xl"></div>
               </div>
               
-              {/* Floating Decorative Circles */}
-              <div className="absolute top-10 right-10 w-20 h-20 bg-hero-pink/30 rounded-full blur-2xl animate-pulse"></div>
-              <div className="absolute bottom-16 left-10 w-24 h-24 bg-hero-blue/30 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-              <div className="absolute top-1/3 left-5 w-16 h-16 bg-purple-400/20 rounded-full blur-xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+              {/* Floating Decorative Circles - Blue Theme */}
+              <div className="absolute top-10 right-10 w-20 h-20 bg-hero-blue/25 rounded-full blur-2xl animate-pulse"></div>
+              <div className="absolute bottom-16 left-10 w-24 h-24 bg-blue-600/25 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+              <div className="absolute top-1/3 left-5 w-16 h-16 bg-blue-400/20 rounded-full blur-xl animate-pulse" style={{ animationDelay: '2s' }}></div>
               
-              {/* Main Image Container with Enhanced Effects */}
+              {/* Main Image Container with Oval Shape */}
               <div className="relative z-10 max-w-md w-full">
-                {/* Gradient Border Effect */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-hero-pink via-purple-500 to-hero-blue rounded-3xl blur opacity-30 group-hover:opacity-50 transition duration-1000"></div>
+                {/* Gradient Border Effect - Blue Theme */}
+                <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 via-blue-600 to-blue-800 blur opacity-25 group-hover:opacity-40 transition duration-1000" style={{ borderRadius: '50%' }}></div>
                 
-                {/* Image Container */}
-                <div className="relative bg-white rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-[1.02]">
+                {/* Oval Image Container */}
+                <div className="relative bg-white overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-[1.02]" style={{ borderRadius: '50%', aspectRatio: '4/5' }}>
                   {/* Subtle Pattern Overlay */}
                   <div className="absolute inset-0 opacity-5" style={{
-                    backgroundImage: `radial-gradient(circle, #000 1px, transparent 1px)`,
+                    backgroundImage: `radial-gradient(circle, #0D47A1 1px, transparent 1px)`,
                     backgroundSize: '20px 20px'
                   }}></div>
                   
                   {/* Image */}
-                  <div className="relative aspect-square">
+                  <div className="relative w-full h-full">
                     <img 
                       src={umeshChavan}
                       alt="मा. उमेश चव्हाण"
                       className="w-full h-full object-cover object-center"
                     />
                     
-                    {/* Subtle Gradient Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-hero-navy/5 via-transparent to-transparent"></div>
+                    {/* Subtle Gradient Overlay - Blue Tint */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-blue-900/5 via-transparent to-transparent"></div>
                   </div>
                 </div>
               </div>
               
-              {/* Additional Decorative Elements */}
-              <div className="absolute -bottom-6 -right-6 w-40 h-40 bg-gradient-to-br from-hero-pink/20 to-transparent rounded-full blur-3xl z-0"></div>
-              <div className="absolute -top-6 -left-6 w-32 h-32 bg-gradient-to-br from-hero-blue/20 to-transparent rounded-full blur-3xl z-0"></div>
+              {/* Additional Decorative Elements - Blue Theme */}
+              <div className="absolute -bottom-6 -right-6 w-40 h-40 bg-gradient-to-br from-hero-blue/15 to-transparent rounded-full blur-3xl z-0"></div>
+              <div className="absolute -top-6 -left-6 w-32 h-32 bg-gradient-to-br from-blue-600/15 to-transparent rounded-full blur-3xl z-0"></div>
             </div>
           </div>
         </div>
