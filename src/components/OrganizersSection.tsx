@@ -6,7 +6,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import umeshChavan from "@/assets/umesh-chavan.png";
+import umeshChavan from "@/assets/umesh-chavan-new.png";
 import bhanupratapBarge from "@/assets/bhanupratap-barge.png";
 import rajendraKadam from "@/assets/rajendra-kadam.png";
 import aparnaSathe from "@/assets/aparna-sathe.png";
@@ -77,31 +77,65 @@ const OrganizersSection = () => {
               </div>
             </div>
 
-            {/* Right Column - Photo with Abstract Background */}
-            <div className="relative flex justify-center items-center">
-              {/* Abstract Background Shape */}
-              <div className="absolute inset-0 flex justify-center items-center">
-                <svg viewBox="0 0 500 500" className="w-full h-full opacity-30">
+            {/* Right Column - Photo with Enhanced Effects */}
+            <div className="relative flex justify-center items-center min-h-[500px]">
+              {/* Multiple Decorative Background Shapes */}
+              <div className="absolute inset-0 flex justify-center items-center overflow-hidden">
+                {/* Primary Abstract Shape */}
+                <svg viewBox="0 0 500 500" className="absolute w-full h-full opacity-20">
+                  <defs>
+                    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" style={{ stopColor: '#E91E63', stopOpacity: 0.3 }} />
+                      <stop offset="100%" style={{ stopColor: '#2196F3', stopOpacity: 0.3 }} />
+                    </linearGradient>
+                  </defs>
                   <path
-                    d="M250,50 Q400,100 450,250 Q400,400 250,450 Q100,400 50,250 Q100,100 250,50"
-                    fill="#F8F9FA"
+                    d="M250,30 Q420,80 470,250 Q420,420 250,470 Q80,420 30,250 Q80,80 250,30"
+                    fill="url(#gradient1)"
                     stroke="none"
                   />
-                  <circle cx="250" cy="250" r="180" fill="#F8F9FA" opacity="0.5" />
+                  <circle cx="250" cy="250" r="200" fill="url(#gradient1)" opacity="0.4" />
                 </svg>
+                
+                {/* Secondary Circular Shape */}
+                <div className="absolute w-96 h-96 bg-gradient-to-br from-hero-pink/20 to-hero-blue/20 rounded-full blur-3xl"></div>
               </div>
               
-              {/* Image */}
-              <div className="relative z-10 aspect-square rounded-2xl overflow-hidden shadow-2xl max-w-md">
-                <img 
-                  src={umeshChavan}
-                  alt="मा. उमेश चव्हाण"
-                  className="w-full h-full object-cover"
-                />
+              {/* Floating Decorative Circles */}
+              <div className="absolute top-10 right-10 w-20 h-20 bg-hero-pink/30 rounded-full blur-2xl animate-pulse"></div>
+              <div className="absolute bottom-16 left-10 w-24 h-24 bg-hero-blue/30 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+              <div className="absolute top-1/3 left-5 w-16 h-16 bg-purple-400/20 rounded-full blur-xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+              
+              {/* Main Image Container with Enhanced Effects */}
+              <div className="relative z-10 max-w-md w-full">
+                {/* Gradient Border Effect */}
+                <div className="absolute -inset-1 bg-gradient-to-r from-hero-pink via-purple-500 to-hero-blue rounded-3xl blur opacity-30 group-hover:opacity-50 transition duration-1000"></div>
+                
+                {/* Image Container */}
+                <div className="relative bg-white rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-[1.02]">
+                  {/* Subtle Pattern Overlay */}
+                  <div className="absolute inset-0 opacity-5" style={{
+                    backgroundImage: `radial-gradient(circle, #000 1px, transparent 1px)`,
+                    backgroundSize: '20px 20px'
+                  }}></div>
+                  
+                  {/* Image */}
+                  <div className="relative aspect-square">
+                    <img 
+                      src={umeshChavan}
+                      alt="मा. उमेश चव्हाण"
+                      className="w-full h-full object-cover object-center"
+                    />
+                    
+                    {/* Subtle Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-hero-navy/5 via-transparent to-transparent"></div>
+                  </div>
+                </div>
               </div>
               
-              {/* Decorative Element */}
-              <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-hero-pink rounded-full opacity-20 blur-3xl z-0"></div>
+              {/* Additional Decorative Elements */}
+              <div className="absolute -bottom-6 -right-6 w-40 h-40 bg-gradient-to-br from-hero-pink/20 to-transparent rounded-full blur-3xl z-0"></div>
+              <div className="absolute -top-6 -left-6 w-32 h-32 bg-gradient-to-br from-hero-blue/20 to-transparent rounded-full blur-3xl z-0"></div>
             </div>
           </div>
         </div>
