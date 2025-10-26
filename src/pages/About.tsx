@@ -99,8 +99,8 @@ const About = () => {
             आमची टीम
           </h2>
 
-          {/* Team Grid - 2 columns */}
-          <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+          {/* Team Grid - 3 columns */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {/* Card 1 */}
             <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <div className="flex items-center">
