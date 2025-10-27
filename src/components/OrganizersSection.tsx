@@ -217,7 +217,7 @@ const OrganizersSection = () => {
             >
               <CarouselContent className="-ml-4">
                 {teamMembers.map((member, index) => (
-                  <CarouselItem key={index} className="pl-4 md:basis-1/3 lg:basis-1/5 mb-8">
+                  <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3 mb-8">
                     <Card className="overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-shadow duration-300">
                       <CardContent className="p-0">
                         {/* Image Section with Unique Gradient Background */}
