@@ -7,13 +7,26 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import umeshChavan from "@/assets/umesh-chavan-new.png";
-import bhanupratapBarge from "@/assets/bhanupratap-barge.png";
-import rajendraKadam from "@/assets/rajendra-kadam.png";
-import aparnaSathe from "@/assets/aparna-sathe.png";
-import iqbalShaikh from "@/assets/iqbal-shaikh.png";
+import bhanupratapBarge from "@/assets/team-bhanupratap-barge.png";
+import milindGaikwad from "@/assets/team-milind-gaikwad.png";
+import janmohammadPathan from "@/assets/team-janmohammad-pathan.png";
+import aparnaSathe from "@/assets/team-aparna-sathe.png";
+import iqbalShaikh from "@/assets/team-iqbal-shaikh.png";
+import aashishGandhi from "@/assets/team-aashish-gandhi.png";
+import rahulHulawale from "@/assets/team-rahul-hulawale.png";
+import rajendraKadam from "@/assets/team-rajendra-kadam.png";
+import sangeetaPatil from "@/assets/team-sangeeta-patil.png";
+import sanjayAalhat from "@/assets/team-sanjay-aalhat.png";
+import sureshFale from "@/assets/team-suresh-fale.png";
 
 const OrganizersSection = () => {
   const teamMembers = [
+    {
+      name: "मा. उमेश चव्हाण",
+      role: "संस्थापक अध्यक्ष",
+      image: umeshChavan,
+      bgColor: "bg-gradient-to-br from-indigo-400 to-indigo-600"
+    },
     {
       name: "श्री. भानुप्रताप बर्गे",
       role: "माजी सहा. पोलीस आयुक्त",
@@ -21,28 +34,64 @@ const OrganizersSection = () => {
       bgColor: "bg-gradient-to-br from-blue-400 to-blue-600"
     },
     {
-      name: "श्री. राजेंद्र कदम",
-      role: "समन्वयक, रुग्ण हक्क परिषद",
-      image: rajendraKadam,
-      bgColor: "bg-gradient-to-br from-pink-400 to-pink-600"
+      name: "श्री. मिलिंद गायकवाड",
+      role: "माजी सहा. पोलीस आयुक्त",
+      image: milindGaikwad,
+      bgColor: "bg-gradient-to-br from-cyan-400 to-cyan-600"
     },
     {
-      name: "सौ. अपर्णा मारणे-साठ्ये",
-      role: "पुणे शहराध्यक्षा, रुग्ण हक्क परिषद",
+      name: "श्री. जान महंमद पठाण",
+      role: "मा. सहा. पोलीस आयुक्त",
+      image: janmohammadPathan,
+      bgColor: "bg-gradient-to-br from-emerald-400 to-emerald-600"
+    },
+    {
+      name: "सौ. अपर्णा मारणे-साळवे",
+      role: "पुणे शहराध्यक्षा",
       image: aparnaSathe,
       bgColor: "bg-gradient-to-br from-purple-400 to-purple-600"
-    },
-    {
-      name: "श्री. चंद्रशेखर दैठणकर",
-      role: "माजी आय.पी.एस. अधिकारी",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop",
-      bgColor: "bg-gradient-to-br from-teal-400 to-teal-600"
     },
     {
       name: "श्री. इकबाल शेख",
       role: "संचालक, ग्रँड पृथ्वी मेडिकल फाऊंडेशन",
       image: iqbalShaikh,
       bgColor: "bg-gradient-to-br from-orange-400 to-orange-600"
+    },
+    {
+      name: "श्री. आशिष गांधी",
+      role: "उपाध्यक्ष, ग्रँड पृथ्वी मेडिकल फाऊंडेशन",
+      image: aashishGandhi,
+      bgColor: "bg-gradient-to-br from-red-400 to-red-600"
+    },
+    {
+      name: "श्री. राहुल हुलावळे",
+      role: "सदस्य",
+      image: rahulHulawale,
+      bgColor: "bg-gradient-to-br from-pink-400 to-pink-600"
+    },
+    {
+      name: "श्री. राजेंद्र कदम",
+      role: "समन्वयक",
+      image: rajendraKadam,
+      bgColor: "bg-gradient-to-br from-violet-400 to-violet-600"
+    },
+    {
+      name: "सौ. संगिता पाटील",
+      role: "मा. सहा. पोलीस आयुक्त",
+      image: sangeetaPatil,
+      bgColor: "bg-gradient-to-br from-fuchsia-400 to-fuchsia-600"
+    },
+    {
+      name: "श्री. संजय आल्हाट",
+      role: "सदस्य",
+      image: sanjayAalhat,
+      bgColor: "bg-gradient-to-br from-teal-400 to-teal-600"
+    },
+    {
+      name: "श्री. सुरेश फाले",
+      role: "सदस्य",
+      image: sureshFale,
+      bgColor: "bg-gradient-to-br from-amber-400 to-amber-600"
     }
   ];
 
@@ -168,7 +217,7 @@ const OrganizersSection = () => {
             >
               <CarouselContent className="-ml-4">
                 {teamMembers.map((member, index) => (
-                  <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3 mb-8">
+                  <CarouselItem key={index} className="pl-4 md:basis-1/3 lg:basis-1/5 mb-8">
                     <Card className="overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-shadow duration-300">
                       <CardContent className="p-0">
                         {/* Image Section with Unique Gradient Background */}
