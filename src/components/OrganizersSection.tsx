@@ -168,22 +168,30 @@ const OrganizersSection = () => {
             >
               <CarouselContent className="-ml-4">
                 {teamMembers.map((member, index) => (
-                  <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                  <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3 mb-8">
                     <Card className="overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-shadow duration-300">
                       <CardContent className="p-0">
-                        {/* Background Pattern Section */}
-                        <div className="h-64 relative overflow-hidden" style={{
-                          background: '#F8F9FA',
-                          backgroundImage: `
-                            linear-gradient(45deg, #ffffff 25%, transparent 25%),
-                            linear-gradient(-45deg, #ffffff 25%, transparent 25%),
-                            linear-gradient(45deg, transparent 75%, #ffffff 75%),
-                            linear-gradient(-45deg, transparent 75%, #ffffff 75%)
-                          `,
-                          backgroundSize: '20px 20px',
-                          backgroundPosition: '0 0, 0 10px, 10px -10px, -10px 0px'
-                        }}>
-                          <div className="absolute inset-0 bg-gradient-to-br from-transparent to-gray-100/30"></div>
+                        {/* Image Section with Unique Gradient Background */}
+                        <div className={`h-64 relative overflow-hidden ${member.bgColor}`}>
+                          {/* Decorative Background Elements */}
+                          <div className="absolute inset-0">
+                            {/* Abstract shapes for visual interest */}
+                            <div className="absolute top-4 right-4 w-32 h-32 bg-white/20 rounded-full blur-2xl"></div>
+                            <div className="absolute bottom-6 left-6 w-40 h-40 bg-black/10 rounded-full blur-3xl"></div>
+                            <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-white/15 rounded-full blur-xl"></div>
+                          </div>
+                          
+                          {/* Main Team Member Image */}
+                          <div className="relative h-full flex items-center justify-center p-4">
+                            <img 
+                              src={member.image}
+                              alt={member.name}
+                              className="h-full w-full object-contain relative z-10 drop-shadow-2xl"
+                            />
+                          </div>
+                          
+                          {/* Gradient Overlay for smooth transition */}
+                          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/5"></div>
                         </div>
                         
                         {/* White Content Box */}
