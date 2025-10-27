@@ -103,30 +103,45 @@ const OrganizersSection = () => {
               <div className="absolute bottom-16 left-10 w-24 h-24 bg-blue-600/25 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }}></div>
               <div className="absolute top-1/3 left-5 w-16 h-16 bg-blue-400/20 rounded-full blur-xl animate-pulse" style={{ animationDelay: '2s' }}></div>
               
-              {/* Main Image Container with Oval Shape */}
-              <div className="relative z-10 max-w-md w-full">
-                {/* Gradient Border Effect - Blue Theme */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 via-blue-600 to-blue-800 blur opacity-25 group-hover:opacity-40 transition duration-1000" style={{ borderRadius: '50%' }}></div>
-                
-                {/* Oval Image Container */}
-                <div className="relative bg-white overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-[1.02]" style={{ borderRadius: '50%', aspectRatio: '4/5' }}>
-                  {/* Subtle Pattern Overlay */}
-                  <div className="absolute inset-0 opacity-5" style={{
-                    backgroundImage: `radial-gradient(circle, #0D47A1 1px, transparent 1px)`,
-                    backgroundSize: '20px 20px'
-                  }}></div>
+              {/* Main Image Container with Soft Diffused Background */}
+              <div className="relative z-10 max-w-lg w-full">
+                {/* Soft Diffused Background Glow - Multiple Layers */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  {/* Primary soft glow */}
+                  <div 
+                    className="absolute w-[120%] h-[120%]"
+                    style={{
+                      background: 'radial-gradient(ellipse at center, rgba(245, 240, 230, 0.9) 0%, rgba(240, 235, 220, 0.7) 30%, rgba(235, 230, 215, 0.4) 50%, transparent 70%)',
+                      filter: 'blur(60px)'
+                    }}
+                  ></div>
                   
-                  {/* Image */}
-                  <div className="relative w-full h-full">
-                    <img 
-                      src={umeshChavan}
-                      alt="मा. उमेश चव्हाण"
-                      className="w-full h-full object-cover object-center"
-                    />
-                    
-                    {/* Subtle Gradient Overlay - Blue Tint */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-blue-900/5 via-transparent to-transparent"></div>
-                  </div>
+                  {/* Secondary soft glow for depth */}
+                  <div 
+                    className="absolute w-[100%] h-[100%]"
+                    style={{
+                      background: 'radial-gradient(ellipse at center, rgba(250, 245, 235, 0.8) 0%, rgba(245, 240, 230, 0.5) 40%, transparent 65%)',
+                      filter: 'blur(40px)'
+                    }}
+                  ></div>
+                  
+                  {/* Inner glow for more definition */}
+                  <div 
+                    className="absolute w-[80%] h-[80%]"
+                    style={{
+                      background: 'radial-gradient(ellipse at center, rgba(248, 243, 233, 0.6) 0%, rgba(243, 238, 228, 0.3) 50%, transparent 70%)',
+                      filter: 'blur(25px)'
+                    }}
+                  ></div>
+                </div>
+                
+                {/* Image */}
+                <div className="relative">
+                  <img 
+                    src={umeshChavan}
+                    alt="मा. उमेश चव्हाण"
+                    className="w-full h-auto object-contain relative z-10"
+                  />
                 </div>
               </div>
               
