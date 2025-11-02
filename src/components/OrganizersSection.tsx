@@ -7,7 +7,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import umeshChavan from "@/assets/umesh-chavan-new.png";
-import bhanupratapBarge from "@/assets/team-bhanupratap-barge.png";
+import bhanupratapBarge from "@/assets/bhanupratap-barge-new.png";
 import milindGaikwad from "@/assets/team-milind-gaikwad.png";
 import janmohammadPathan from "@/assets/team-janmohammad-pathan.png";
 import aparnaSathe from "@/assets/team-aparna-sathe.png";
