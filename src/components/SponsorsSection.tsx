@@ -1,20 +1,22 @@
+import { Star } from "lucide-react";
+
 const SponsorsSection = () => {
   const sponsors = [
-    { name: "D.Y. Patil Vidyapeeth", logo: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=200&h=100&fit=crop" },
-    { name: "Sahyadri Hospitals", logo: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=200&h=100&fit=crop" },
-    { name: "Ruby Hall Clinic", logo: "https://images.unsplash.com/photo-1583912267550-a87697c6e547?w=200&h=100&fit=crop" },
-    { name: "Kohinoor Group", logo: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=200&h=100&fit=crop" },
-    { name: "Janata Sahakari Bank Ltd., Pune", logo: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=200&h=100&fit=crop" },
-    { name: "DPES (Dhole Patil Education Society)", logo: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=200&h=100&fit=crop" },
-    { name: "Venky's", logo: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=200&h=100&fit=crop" },
-    { name: "Punit Balan Group", logo: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=200&h=100&fit=crop" },
-    { name: "Jehangir Hospital", logo: "https://images.unsplash.com/photo-1632833239869-a37e3a5806d2?w=200&h=100&fit=crop" },
-    { name: "Panchshil", logo: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=200&h=100&fit=crop" },
-    { name: "Lokseva College of Pharmacy", logo: "https://images.unsplash.com/photo-1562774053-701939374585?w=200&h=100&fit=crop" },
-    { name: "Ranka Jewellers", logo: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=200&h=100&fit=crop" },
-    { name: "Kinetic Wisdom", logo: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=100&fit=crop" },
-    { name: "Naiknavare Developers", logo: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=200&h=100&fit=crop" },
-    { name: "Galaxy Care Hospital", logo: "https://images.unsplash.com/photo-1587370560942-ad2a04eabb6d?w=200&h=100&fit=crop" }
+    "D.Y. Patil Vidyapeeth",
+    "Sahyadri Hospitals",
+    "Ruby Hall Clinic",
+    "Kohinoor Group",
+    "Janata Sahakari Bank Ltd., Pune",
+    "DPES (Dhole Patil Education Society)",
+    "Venky's",
+    "Punit Balan Group",
+    "Jehangir Hospital",
+    "Panchshil",
+    "Lokseva College of Pharmacy",
+    "Ranka Jewellers",
+    "Kinetic Wisdom",
+    "Naiknavare Developers",
+    "Galaxy Care Hospital"
   ];
 
   const partners = [
@@ -41,17 +43,20 @@ const SponsorsSection = () => {
             आमचे सन्माननीय प्रायोजक
           </h3>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
             {sponsors.map((sponsor, index) => (
               <div 
                 key={index}
-                className="bg-white rounded-lg border-2 border-gray-200 p-6 flex items-center justify-center hover:border-hero-pink hover:shadow-xl transition-all duration-300 hover:scale-105"
+                className="flex items-center gap-3 p-3 hover:bg-white rounded-lg transition-all duration-300"
               >
-                <img 
-                  src={sponsor.logo}
-                  alt={sponsor.name}
-                  className="w-full h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                <Star 
+                  className="text-hero-pink flex-shrink-0" 
+                  size={20} 
+                  fill="currentColor"
                 />
+                <span className="text-hero-navy font-body text-base md:text-lg">
+                  {sponsor}
+                </span>
               </div>
             ))}
           </div>
