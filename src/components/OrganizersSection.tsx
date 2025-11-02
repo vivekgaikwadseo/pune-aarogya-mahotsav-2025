@@ -217,11 +217,20 @@ const OrganizersSection = () => {
             >
               <CarouselContent className="-ml-4">
                 {teamMembers.map((member, index) => (
-                  <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3 mb-8">
+                  <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/4 mb-8">
                     <Card className="overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-shadow duration-300">
                       <CardContent className="p-0">
                         {/* Image Section with Unique Gradient Background */}
                         <div className={`h-64 relative overflow-hidden ${member.bgColor}`}>
+                          {/* White Dotted Pattern Background */}
+                          <div 
+                            className="absolute inset-0 opacity-30"
+                            style={{
+                              backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)',
+                              backgroundSize: '20px 20px'
+                            }}
+                          ></div>
+                          
                           {/* Decorative Background Elements */}
                           <div className="absolute inset-0">
                             {/* Abstract shapes for visual interest */}
