@@ -22,12 +22,6 @@ import sureshFale from "@/assets/team-suresh-fale.png";
 const OrganizersSection = () => {
   const teamMembers = [
     {
-      name: "मा. उमेश चव्हाण",
-      role: "संस्थापक अध्यक्ष",
-      image: umeshChavan,
-      bgColor: "bg-gradient-to-br from-indigo-400 to-indigo-600"
-    },
-    {
       name: "श्री. भानुप्रताप बर्गे",
       role: "माजी सहा. पोलीस आयुक्त",
       image: bhanupratapBarge,
