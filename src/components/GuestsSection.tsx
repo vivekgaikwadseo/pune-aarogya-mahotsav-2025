@@ -38,6 +38,21 @@ import siddharth from "@/assets/guest-siddharth-shirole.png";
 import sunilKulkarni from "@/assets/guest-sunil-kulkarni.png";
 
 const GuestsSection = () => {
+  const bgColors = [
+    "bg-gradient-to-br from-blue-400 to-blue-600",
+    "bg-gradient-to-br from-cyan-400 to-cyan-600",
+    "bg-gradient-to-br from-emerald-400 to-emerald-600",
+    "bg-gradient-to-br from-purple-400 to-purple-600",
+    "bg-gradient-to-br from-orange-400 to-orange-600",
+    "bg-gradient-to-br from-red-400 to-red-600",
+    "bg-gradient-to-br from-pink-400 to-pink-600",
+    "bg-gradient-to-br from-violet-400 to-violet-600",
+    "bg-gradient-to-br from-fuchsia-400 to-fuchsia-600",
+    "bg-gradient-to-br from-teal-400 to-teal-600",
+    "bg-gradient-to-br from-amber-400 to-amber-600",
+    "bg-gradient-to-br from-indigo-400 to-indigo-600",
+  ];
+
   const guests = [
     {
       name: "मा. ना. श्री. देवेंद्रजी फडणवीस",
@@ -213,20 +228,42 @@ const GuestsSection = () => {
             {guests.map((guest, index) => (
               <CarouselItem
                 key={index}
-                className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
+                className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/2 lg:basis-1/3"
               >
                 <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
-                  {/* Large Top Image - 70% */}
-                  <div className="relative h-64 overflow-hidden rounded-t-2xl bg-[#F5F5F5]">
-                    <img
-                      src={guest.image}
-                      alt={guest.name}
-                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
-                    />
+                  {/* Large Top Image with Colorful Gradient Background - 70% */}
+                  <div className={`relative h-64 overflow-hidden rounded-t-2xl ${bgColors[index % bgColors.length]}`}>
+                    {/* White Dotted Pattern Background */}
+                    <div 
+                      className="absolute inset-0 opacity-30"
+                      style={{
+                        backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)',
+                        backgroundSize: '20px 20px'
+                      }}
+                    ></div>
+                    
+                    {/* Decorative Background Elements */}
+                    <div className="absolute inset-0">
+                      <div className="absolute top-4 right-4 w-32 h-32 bg-white/20 rounded-full blur-2xl"></div>
+                      <div className="absolute bottom-6 left-6 w-40 h-40 bg-black/10 rounded-full blur-3xl"></div>
+                      <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-white/15 rounded-full blur-xl"></div>
+                    </div>
+                    
+                    {/* Main Guest Image */}
+                    <div className="relative h-56 flex items-center justify-center overflow-hidden">
+                      <img
+                        src={guest.image}
+                        alt={guest.name}
+                        className="h-full w-full object-contain relative z-10 drop-shadow-2xl group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    
+                    {/* Gradient Overlay for smooth transition */}
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/5"></div>
                   </div>
 
                   {/* Bottom White Box - 30% */}
-                  <div className="bg-white p-3 rounded-b-2xl">
+                  <div className="bg-white p-3 rounded-b-2xl rounded-t-3xl -mt-2">
                     <div className="flex items-start gap-2">
                       {/* Small Circular Avatar */}
                       <div className="flex-shrink-0">
