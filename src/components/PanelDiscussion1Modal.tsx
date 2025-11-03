@@ -87,77 +87,57 @@ END:VCALENDAR`;
 
         {/* Scrollable Content Area */}
         <div className="overflow-y-auto flex-1">
-          {/* Three Column Layout */}
-          <div className="grid md:grid-cols-[35%_30%_35%] gap-6 bg-gray-50 p-6">
+          {/* Two Column Layout */}
+          <div className="grid md:grid-cols-[40%_60%] gap-6 bg-gray-50 p-6">
             
-            {/* Left Column (35%) - Image Card */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden h-[420px]">
+            {/* Left Column (40%) - Event Image */}
+            <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <img src={eventPanelDiscussion} alt="परिसंवाद" className="w-full h-full object-cover" />
             </div>
 
-            {/* Center Column (30%) - Main Speaker Card */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-[420px]">
-            <div className="bg-bright-pink px-4 py-2">
-              <h3 className="text-sm font-bold text-white text-center">प्रमुख वक्ते</h3>
-            </div>
-              <div className="flex-shrink-0">
-                <img src={speakerAmitesh} alt="अमितेश कुमार" className="w-full h-[300px] object-contain" />
-              </div>
-              <div className="p-2 flex flex-col items-center bg-white">
-                <h4 className="font-bold text-hero-navy text-center text-base mb-2">
-                  मा. अमितेश कुमार
-                </h4>
-                <p className="text-sm text-hero-grey text-center">
-                  पोलीस आयुक्त, पुणे शहर
+            {/* Right Column (60%) - Event Details */}
+            <div className="bg-white rounded-lg shadow-md p-6 space-y-6">
+              <div>
+                <h3 className="text-2xl font-bold text-hero-navy mb-4">परिसंवाद १ - अंमलीपदार्थ मुक्त महाराष्ट्र करुया !</h3>
+                <p className="text-hero-grey leading-relaxed mb-6">
+                  अंमलीपदार्थांच्या वाढत्या समस्येवर चर्चा करण्यासाठी आणि महाराष्ट्राला मुक्त करण्याच्या उपायांवर विचार करण्यासाठी या महत्त्वपूर्ण परिसंवादाला उपस्थित राहा.
                 </p>
               </div>
-            </div>
 
-            {/* Right Column (35%) - Details Card */}
-            <div className="bg-white rounded-lg shadow-md p-6 space-y-4 h-[420px] flex flex-col mr-6">
-              
-            <div className="bg-bright-pink px-4 py-2 -mx-6 -mt-6 mb-2 rounded-t-lg">
-              <h3 className="text-sm font-bold text-white text-center">कार्यक्रमाचा तपशील</h3>
-            </div>
-
-              {/* Event Details */}
-              <div className="space-y-3">
-                <div className="bg-white rounded-lg shadow-sm p-3 border border-gray-100">
-                  <div className="flex items-start gap-3">
-                    <Calendar className="w-6 h-6 text-bright-pink flex-shrink-0 mt-1" />
-                    <div>
-                      <p className="text-xs font-bold text-hero-grey uppercase mb-1">तारीख</p>
-                      <p className="text-sm text-hero-navy">रविवार, १९ ऑक्टोबर २०२५</p>
-                    </div>
+              {/* Event Info */}
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <Calendar className="w-5 h-5 text-bright-pink flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="text-xs font-semibold text-hero-grey uppercase">तारीख</p>
+                    <p className="text-hero-navy font-medium">रविवार, १९ ऑक्टोबर २०२५</p>
                   </div>
                 </div>
                 
-                <div className="bg-white rounded-lg shadow-sm p-3 border border-gray-100">
-                  <div className="flex items-start gap-3">
-                    <Clock className="w-6 h-6 text-bright-pink flex-shrink-0 mt-1" />
-                    <div>
-                      <p className="text-xs font-bold text-hero-grey uppercase mb-1">वेळ</p>
-                      <p className="text-sm text-hero-navy">सकाळी ११:३० वा</p>
-                    </div>
+                <div className="flex items-start gap-3">
+                  <Clock className="w-5 h-5 text-bright-pink flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="text-xs font-semibold text-hero-grey uppercase">वेळ</p>
+                    <p className="text-hero-navy font-medium">सकाळी ११:३० वा</p>
                   </div>
                 </div>
                 
-                <div className="bg-white rounded-lg shadow-sm p-3 border border-gray-100">
-                  <div className="flex items-start gap-3">
-                    <MapPin className="w-6 h-6 text-bright-pink flex-shrink-0 mt-1" />
-                    <div>
-                      <p className="text-xs font-bold text-hero-grey uppercase mb-1">स्थळ</p>
-                      <p className="text-sm text-hero-navy">बालगंधर्व रंगमंदिर, पुणे</p>
-                    </div>
+                <div className="flex items-start gap-3">
+                  <MapPin className="w-5 h-5 text-bright-pink flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="text-xs font-semibold text-hero-grey uppercase">स्थळ</p>
+                    <p className="text-hero-navy font-medium">बालगंधर्व रंगमंदिर, पुणे</p>
                   </div>
                 </div>
               </div>
 
-              {/* Action Links */}
-              <div className="border-t border-gray-200 pt-4 space-y-3 mt-auto">
-                {/* Social Media Share */}
+              {/* Divider */}
+              <div className="border-t border-gray-200"></div>
+
+              {/* Action Buttons */}
+              <div className="space-y-4">
                 <div>
-                  <p className="text-xs font-bold text-hero-grey uppercase mb-2">शेअर करा</p>
+                  <p className="text-xs font-semibold text-hero-grey uppercase mb-3">शेअर करा</p>
                   <div className="flex gap-3">
                     <button onClick={() => handleShare('facebook')} className="p-2 text-gray-600 hover:text-bright-pink transition-colors" aria-label="Share on Facebook">
                       <Facebook className="w-5 h-5" />
@@ -174,10 +154,9 @@ END:VCALENDAR`;
                   </div>
                 </div>
                 
-                {/* Add to Calendar */}
-                <button onClick={handleAddToCalendar} className="flex items-center gap-3 text-bright-pink hover:text-hero-navy transition-colors w-full">
+                <button onClick={handleAddToCalendar} className="flex items-center gap-2 text-bright-pink hover:text-hero-navy transition-colors">
                   <CalendarPlus className="w-5 h-5" />
-                  <span className="text-sm font-semibold">Add to Calendar</span>
+                  <span className="font-semibold">Add to Calendar</span>
                 </button>
               </div>
             </div>
@@ -192,6 +171,7 @@ END:VCALENDAR`;
                 प्रमुख वक्ते
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <GuestCard image={speakerAmitesh} name="मा. अमितेश कुमार" title="पोलीस आयुक्त, पुणे शहर" />
                 <GuestCard image={speakerPravinPatil} name="मा. प्रविण पाटील" title="पोलीस उपमहानिरीक्षक, अंमलीपदार्थ विरोधी टास्क फोर्स, महाराष्ट्र" />
               </div>
             </div>
