@@ -13,11 +13,11 @@ import ramesh from "@/assets/guest-ramesh-naik.png";
 import kolhe from "@/assets/award-recipients-kolhe.png";
 import chandrakant from "@/assets/award-chandrakant-patil.png";
 import ramdas from "@/assets/award-ramdas-athawale.png";
-import jabbar from "@/assets/award-jabbar-patel.png";
-import prashant from "@/assets/award-prashant-damle.png";
-import amitesh from "@/assets/speaker-amitesh-kumar.png";
-import pravinPatil from "@/assets/speaker-pravin-patil.png";
-import pravinTarde from "@/assets/speaker-pravin-tarde.jpg";
+import jabbar from "@/assets/award-jabbar-patel-new.png";
+import prashant from "@/assets/award-prashant-damle-new.png";
+import amitesh from "@/assets/speaker-amitesh-kumar-new.png";
+import pravinPatil from "@/assets/speaker-pravin-patil-new.png";
+import pravinTarde from "@/assets/speaker-pravin-tarde-new.png";
 import jagannath from "@/assets/speaker-jagannath-dixit.png";
 import pramodJog from "@/assets/speaker-pramod-jog.png";
 import pradeep from "@/assets/speaker-pradeep-avte.png";
@@ -202,7 +202,7 @@ const GuestsSection = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-[#FFF0F7]" style={{ boxShadow: 'inset 0 2px 8px rgba(0, 0, 0, 0.06), inset 0 -2px 8px rgba(0, 0, 0, 0.06)' }}>
+    <section className="py-16 md:py-24 bg-[#F3F4F6]" style={{ boxShadow: 'inset 0 2px 8px rgba(0, 0, 0, 0.06), inset 0 -2px 8px rgba(0, 0, 0, 0.06)' }}>
       <div className="container mx-auto px-4 md:px-8 lg:px-12">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -250,11 +250,11 @@ const GuestsSection = () => {
                     </div>
                     
                     {/* Main Guest Image */}
-                    <div className="relative h-56 flex items-center justify-center overflow-hidden">
+                    <div className="relative h-56 flex items-end justify-center overflow-hidden">
                       <img
                         src={guest.image}
                         alt={guest.name}
-                        className="h-full w-full object-contain relative z-10 drop-shadow-2xl group-hover:scale-105 transition-transform duration-300"
+                        className="h-full w-full object-contain object-bottom relative z-10 drop-shadow-2xl group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
                     
