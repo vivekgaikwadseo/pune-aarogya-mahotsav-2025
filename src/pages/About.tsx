@@ -91,6 +91,111 @@ const About = () => {
         </div>
       </section>
 
+      {/* Organizer's Portfolio Section */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Column - Text */}
+            <div className="space-y-6">
+              <h3 className="text-2xl md:text-3xl font-bold text-hero-navy">
+                आयोजकांविषयी
+              </h3>
+              <h2 className="text-3xl md:text-4xl font-bold text-hero-navy">
+                मा. उमेश चव्हाण
+              </h2>
+              <p className="text-xl font-semibold text-hero-pink">
+                संस्थापक अध्यक्ष, रुग्ण हक्क परिषद, महाराष्ट्र प्रदेश
+              </p>
+              <div className="space-y-4 text-hero-grey leading-relaxed">
+                <p>
+                  मा. उमेश चव्हाण यांनी महाराष्ट्रातील रुग्णांच्या हक्कांसाठी आणि आरोग्य क्षेत्रातील 
+                  सुधारणांसाठी अथक प्रयत्न केले आहेत. त्यांच्या नेतृत्वाखाली रुग्ण हक्क परिषदने 
+                  अनेक महत्त्वपूर्ण उपक्रम राबवले आहेत.
+                </p>
+                <p>
+                  आरोग्य साक्षरता वाढवणे आणि सामान्य नागरिकांना योग्य आरोग्य सेवा मिळावी यासाठी 
+                  त्यांनी विविध उपक्रम आयोजित केले आहेत. पुणे आरोग्य महोत्सव हा त्यांच्या या 
+                  दृष्टीकोनाचा एक महत्त्वपूर्ण भाग आहे.
+                </p>
+              </div>
+            </div>
+
+            {/* Right Column - Photo with Enhanced Effects */}
+            <div className="relative flex justify-center items-center min-h-[500px]">
+              {/* Multiple Decorative Background Shapes */}
+              <div className="absolute inset-0 flex justify-center items-center overflow-hidden">
+                {/* Primary Abstract Shape */}
+                <svg viewBox="0 0 500 500" className="absolute w-full h-full opacity-20">
+                  <defs>
+                    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" style={{ stopColor: '#2196F3', stopOpacity: 0.4 }} />
+                      <stop offset="50%" style={{ stopColor: '#1976D2', stopOpacity: 0.3 }} />
+                      <stop offset="100%" style={{ stopColor: '#0D47A1', stopOpacity: 0.4 }} />
+                    </linearGradient>
+                  </defs>
+                  <ellipse cx="250" cy="250" rx="220" ry="200" fill="url(#gradient1)" opacity="0.5" />
+                  <ellipse cx="250" cy="250" rx="180" ry="160" fill="url(#gradient1)" opacity="0.3" />
+                </svg>
+                
+                {/* Secondary Circular Shape */}
+                <div className="absolute w-96 h-96 bg-gradient-to-br from-hero-blue/15 to-blue-900/15 rounded-full blur-3xl"></div>
+              </div>
+              
+              {/* Floating Decorative Circles - Blue Theme */}
+              <div className="absolute top-10 right-10 w-20 h-20 bg-hero-blue/25 rounded-full blur-2xl animate-pulse"></div>
+              <div className="absolute bottom-16 left-10 w-24 h-24 bg-blue-600/25 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+              <div className="absolute top-1/3 left-5 w-16 h-16 bg-blue-400/20 rounded-full blur-xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+              
+              {/* Main Image Container with Soft Diffused Background */}
+              <div className="relative z-10 max-w-lg w-full">
+                {/* Soft Diffused Background Glow - Multiple Layers */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  {/* Primary soft glow */}
+                  <div 
+                    className="absolute w-[120%] h-[120%]"
+                    style={{
+                      background: 'radial-gradient(ellipse at center, rgba(245, 240, 230, 0.9) 0%, rgba(240, 235, 220, 0.7) 30%, rgba(235, 230, 215, 0.4) 50%, transparent 70%)',
+                      filter: 'blur(60px)'
+                    }}
+                  ></div>
+                  
+                  {/* Secondary soft glow for depth */}
+                  <div 
+                    className="absolute w-[100%] h-[100%]"
+                    style={{
+                      background: 'radial-gradient(ellipse at center, rgba(250, 245, 235, 0.8) 0%, rgba(245, 240, 230, 0.5) 40%, transparent 65%)',
+                      filter: 'blur(40px)'
+                    }}
+                  ></div>
+                  
+                  {/* Inner glow for more definition */}
+                  <div 
+                    className="absolute w-[80%] h-[80%]"
+                    style={{
+                      background: 'radial-gradient(ellipse at center, rgba(248, 243, 233, 0.6) 0%, rgba(243, 238, 228, 0.3) 50%, transparent 70%)',
+                      filter: 'blur(25px)'
+                    }}
+                  ></div>
+                </div>
+                
+                {/* Image */}
+                <div className="relative">
+                  <img 
+                    src={teamUmeshChavan}
+                    alt="मा. उमेश चव्हाण"
+                    className="w-full h-auto object-contain relative z-10"
+                  />
+                </div>
+              </div>
+              
+              {/* Additional Decorative Elements - Blue Theme */}
+              <div className="absolute -bottom-6 -right-6 w-40 h-40 bg-gradient-to-br from-hero-blue/15 to-transparent rounded-full blur-3xl z-0"></div>
+              <div className="absolute -top-6 -left-6 w-32 h-32 bg-gradient-to-br from-blue-600/15 to-transparent rounded-full blur-3xl z-0"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Our Team Section */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-white to-gray-50">
         <div className="container mx-auto px-4">
