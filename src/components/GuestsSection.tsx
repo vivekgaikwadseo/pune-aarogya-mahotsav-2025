@@ -254,7 +254,7 @@ const GuestsSection = () => {
                       <img
                         src={guest.image}
                         alt={guest.name}
-                        className="max-h-full w-auto object-contain relative z-10 drop-shadow-2xl group-hover:scale-105 transition-transform duration-300"
+                        className="max-h-full max-w-full object-contain relative z-10 drop-shadow-2xl group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
                     
