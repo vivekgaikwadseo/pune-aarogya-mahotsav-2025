@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import conceptHealthArts from "@/assets/concept-doctors-patients-justice.jpg";
+import conceptHealthArts from "@/assets/concept-doctors-patients-handshake.jpg";
 import teamUmeshChavan from "@/assets/team-umesh-chavan.png";
 import teamBhanupratapBarge from "@/assets/team-bhanupratap-barge.png";
 import teamMilindGaikwad from "@/assets/team-milind-gaikwad.png";
