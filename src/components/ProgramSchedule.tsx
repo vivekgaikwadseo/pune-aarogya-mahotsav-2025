@@ -9,6 +9,7 @@ import BookLaunchModal from "@/components/BookLaunchModal";
 import ConcludingCeremonyModal from "@/components/ConcludingCeremonyModal";
 import PanelDiscussion2Modal from "@/components/PanelDiscussion2Modal";
 import LectureSessionModal from "@/components/LectureSessionModal";
+import StressFreeLifeModal from "@/components/StressFreeLifeModal";
 import eventHealthCamp from "@/assets/event-health-camp.jpg";
 import eventInauguration from "@/assets/event-inauguration.jpg";
 import eventPanelDiscussion from "@/assets/event-panel-discussion.jpg";
@@ -101,6 +102,7 @@ const ProgramSchedule = () => {
   const [showConcludingCeremonyModal, setShowConcludingCeremonyModal] = useState(false);
   const [showPanelDiscussion2Modal, setShowPanelDiscussion2Modal] = useState(false);
   const [showLectureModal, setShowLectureModal] = useState(false);
+  const [showStressFreeModal, setShowStressFreeModal] = useState(false);
 
   const events = [
     {
@@ -224,6 +226,7 @@ const ProgramSchedule = () => {
                 event.title === "पुस्तक प्रकाशन समारंभ" ||
                 event.title === "परिसंवाद २: आरोग्य व्यवस्थेपुढील आव्हाने" ||
                 event.title === "विशेष व्याख्यान सत्र" ||
+                event.title === "विशेष कार्यक्रम : तणाव मुक्त जीवन" ||
                 event.title === "समारोप"
               }
               onDetailsClick={() => {
@@ -243,6 +246,8 @@ const ProgramSchedule = () => {
                   setShowPanelDiscussion2Modal(true);
                 } else if (event.title === "विशेष व्याख्यान सत्र") {
                   setShowLectureModal(true);
+                } else if (event.title === "विशेष कार्यक्रम : तणाव मुक्त जीवन") {
+                  setShowStressFreeModal(true);
                 } else if (event.title === "समारोप") {
                   setShowConcludingCeremonyModal(true);
                 }
@@ -289,6 +294,11 @@ const ProgramSchedule = () => {
       <LectureSessionModal
         open={showLectureModal}
         onOpenChange={setShowLectureModal}
+      />
+
+      <StressFreeLifeModal
+        open={showStressFreeModal}
+        onOpenChange={setShowStressFreeModal}
       />
     </section>
   );
