@@ -54,14 +54,12 @@ const Souvenir = () => {
       <main className="flex-1">
         {/* Hero Header Section */}
         <section className="relative bg-hero-navy py-20 overflow-hidden">
-          {/* Dot pattern overlay */}
-          <div 
-            className="absolute inset-0 opacity-20"
-            style={{
-              backgroundImage: `radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px)`,
-              backgroundSize: '20px 20px'
-            }}
-          />
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute inset-0" style={{
+              backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)',
+              backgroundSize: '24px 24px'
+            }} />
+          </div>
           
           <div className="container mx-auto px-4 relative z-10">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center font-heading">
@@ -71,24 +69,8 @@ const Souvenir = () => {
         </section>
 
         {/* Content Section */}
-        <section className="relative bg-white py-12 overflow-hidden">
-          {/* Animated Background Shapes */}
-          <div className="absolute inset-0 pointer-events-none">
-            {/* Blue Circle */}
-            <div className="absolute top-20 right-20 w-16 h-16 bg-hero-blue rounded-full opacity-80 animate-float" />
-            
-            {/* Pink Rectangle */}
-            <div className="absolute bottom-32 left-20 w-20 h-12 bg-hero-pink rounded-lg opacity-70 animate-float-slow" />
-            
-            {/* Pink Zig-Zag */}
-            <div className="absolute top-1/2 left-1/4 animate-float">
-              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 10 L10 0 L20 10 L30 0 L40 10 L50 0 L60 10" stroke="#FF0080" strokeWidth="3" fill="none" opacity="0.6"/>
-              </svg>
-            </div>
-          </div>
-          
-          <div className="container mx-auto px-4 max-w-5xl relative z-10">
+        <section className="bg-white py-12">
+          <div className="container mx-auto px-4 max-w-5xl">
             <h2 className="text-2xl md:text-3xl font-semibold text-hero-navy text-center mb-12 font-heading">
               "आरोग्य, सेवा आणि साहित्य यांचा भव्य संगम"
             </h2>
@@ -109,11 +91,11 @@ const Souvenir = () => {
             </div>
 
             {/* Article Cards List */}
-            <div className="space-y-6">
+            <div className="space-y-8">
               {filteredArticles.map((article) => (
                 <div 
                   key={article.id}
-                  className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow py-4 px-6 flex items-center gap-4 md:gap-6"
+                  className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow py-3 px-6 flex items-center gap-4 md:gap-6"
                 >
                   {/* Number Circle */}
                   <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#FF0080] flex items-center justify-center">
