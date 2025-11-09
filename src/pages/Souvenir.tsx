@@ -252,7 +252,7 @@ const Souvenir = () => {
               {filteredArticles.map((article) => (
                 <div 
                   key={article.id}
-                  className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow py-3 px-6 grid grid-cols-1 md:grid-cols-[10%_50%_30%_10%] gap-4 items-center"
+                  className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow py-3 px-6 grid grid-cols-1 md:grid-cols-[60px_2fr_1.2fr_auto] gap-4 items-center"
                 >
                   {/* Column 1: Number Circle (10%) */}
                   <div className="w-12 h-12 rounded-full bg-[#FF0080] flex items-center justify-center mx-auto">
