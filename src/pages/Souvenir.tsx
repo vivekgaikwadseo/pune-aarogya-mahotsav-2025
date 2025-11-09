@@ -7,7 +7,7 @@ const Souvenir = () => {
       <Navigation />
       <main className="flex-1">
         {/* Hero Header Section */}
-        <section className="relative bg-navy py-20 overflow-hidden">
+        <section className="relative bg-hero-navy py-20 overflow-hidden">
           {/* Dot pattern overlay */}
           <div 
             className="absolute inset-0 opacity-20"
@@ -27,7 +27,7 @@ const Souvenir = () => {
         {/* Content Section */}
         <section className="bg-white py-12">
           <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-semibold text-navy text-center mb-12 font-heading">
+            <h2 className="text-2xl md:text-3xl font-semibold text-hero-navy text-center mb-12 font-heading">
               "आरोग्य, सेवा आणि साहित्य यांचा भव्य संगम"
             </h2>
             
