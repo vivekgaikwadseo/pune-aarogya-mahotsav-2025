@@ -252,22 +252,22 @@ const Souvenir = () => {
               {filteredArticles.map((article) => (
                 <div 
                   key={article.id}
-                  className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow py-3 px-6 flex items-center gap-4 md:gap-6"
+                  className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow py-3 px-6 grid grid-cols-1 md:grid-cols-[10%_50%_30%_10%] gap-4 items-center"
                 >
-                  {/* Number Circle */}
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#FF0080] flex items-center justify-center">
+                  {/* Column 1: Number Circle (10%) */}
+                  <div className="w-12 h-12 rounded-full bg-[#FF0080] flex items-center justify-center mx-auto">
                     <span className="text-white font-bold text-lg">{article.number}</span>
                   </div>
 
-                  {/* Topic Title */}
-                  <div className="flex-shrink-0 min-w-[140px]">
-                    <h3 className="text-lg md:text-xl font-bold text-hero-navy font-heading">
+                  {/* Column 2: Topic Title (50%) */}
+                  <div>
+                    <h3 className="text-lg md:text-xl font-bold text-hero-navy font-heading break-words">
                       {article.topic}
                     </h3>
                   </div>
 
-                  {/* Author Info */}
-                  <div className="flex items-center gap-3 flex-1 min-w-0">
+                  {/* Column 3: Author Info (30%) */}
+                  <div className="flex items-center gap-3">
                     {article.authorImage ? (
                       <img 
                         src={article.authorImage} 
@@ -279,15 +279,15 @@ const Souvenir = () => {
                         <User className="w-6 h-6 text-gray-500" />
                       </div>
                     )}
-                    <span className="text-sm md:text-base text-gray-700 truncate">
+                    <span className="text-sm md:text-base text-gray-700 break-words">
                       {article.author}
                     </span>
                   </div>
 
-                  {/* Read More Link */}
+                  {/* Column 4: Read More Link (10%) */}
                   <a 
                     href="#" 
-                    className="flex-shrink-0 text-[#000F93] font-semibold hover:underline whitespace-nowrap text-sm md:text-base"
+                    className="text-[#000F93] font-semibold hover:underline whitespace-nowrap text-sm md:text-base text-right"
                   >
                     पुढे वाचा »
                   </a>
