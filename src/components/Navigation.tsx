@@ -11,6 +11,7 @@ const Navigation = () => {
     { path: "/about", label: "आमच्या विषयी" },
     { path: "/health-camp", label: "भव्य आरोग्य शिबिर" },
     { path: "/events", label: "कार्यक्रम" },
+    { path: "/souvenir", label: "स्मरणिका" },
     { path: "/guests", label: "पाहुणे आणि मान्यवर" },
     { path: "/organizers", label: "आयोजक आणि प्रायोजक" },
     { path: "/contact", label: "संपर्क" },
