@@ -8,6 +8,7 @@ import devendaraImage from "@/assets/devandra-0904_d_PhotoGrid-removebg-preview.
 import devendaraFeaturedImage from "@/assets/devendra-fadnavis-new.png";
 import sanjayOakImage from "@/assets/guest-sanjay-oak.png";
 import umeshChavanImage from "@/assets/umesh-chavan-new.png";
+import emblemImage from "@/assets/emblem-of-india.png";
 
 interface Article {
   id: string;
@@ -53,6 +54,9 @@ const relatedArticles = [
     number: "०२",
     topic: "संपादकीय",
     author: "डॉ. अविनाश भोंडवे",
+    excerpt: "संपादक डॉ. अविनाश भोंडवे यांचे आरोग्य साहित्य संमेलनाबद्दल विचार आणि या उपक्रमाचे महत्त्व...",
+    image: "/placeholder.svg",
+    authorImage: null,
     filterKey: "संपादकीय - डॉ. अविनाश भोंडवे"
   },
   {
@@ -60,6 +64,8 @@ const relatedArticles = [
     number: "०३",
     topic: "अध्यक्षीय भाषण",
     author: "डॉ. संजय ओक, संमेलनाध्यक्ष",
+    excerpt: "संमेलनाध्यक्ष डॉ. संजय ओक यांचे आरोग्य क्षेत्रातील सेवा आणि अनुभवावर आधारित विचार...",
+    image: "/placeholder.svg",
     authorImage: sanjayOakImage,
     filterKey: "अध्यक्षीय भाषण - डॉ. संजय ओक, संमेलनाध्यक्ष"
   },
@@ -68,6 +74,8 @@ const relatedArticles = [
     number: "०४",
     topic: "रुग्ण हक्क परिषदेच्या रुग्णांच्या सेवेसाठी एक सामाजिक क्रांती",
     author: "उमेश चव्हाण, स्वागताध्यक्ष",
+    excerpt: "स्वागताध्यक्ष उमेश चव्हाण यांचे रुग्ण हक्क परिषदेच्या सामाजिक कार्यावर विचार...",
+    image: "/placeholder.svg",
     authorImage: umeshChavanImage,
     filterKey: "रुग्ण हक्क परिषदेच्या रुग्णांच्या सेवेसाठी एक सामाजिक क्रांती - उमेश चव्हाण, स्वागताध्यक्ष"
   }
@@ -112,51 +120,51 @@ const ArticleDetail = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50">
+    <div className="min-h-screen flex flex-col bg-white">
       <Navigation />
       
       <main className="flex-1">
-        {/* Immersive Header */}
-        <section className="bg-hero-navy py-16 px-4">
-          <div className="container mx-auto max-w-4xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 font-heading">
+        {/* Main Article Container */}
+        <div className="bg-[#F8F9FA] rounded-xl shadow-lg mx-auto my-8 max-w-[1100px] overflow-hidden">
+          
+          {/* Article Header */}
+          <div className="bg-white px-8 py-10 border-b border-gray-200">
+            <h1 className="text-4xl md:text-5xl font-bold text-hero-navy mb-4 font-heading">
               {article.topic}
             </h1>
-            <div className="text-gray-300 text-lg">
-              <span>लेखक: {article.author}</span>
+            <div className="text-gray-600 text-base">
+              <span className="font-semibold">लेखक:</span> {article.author}
               {article.authorTitle && <span> | {article.authorTitle}</span>}
               <span> | {article.date}</span>
             </div>
           </div>
-        </section>
 
-        {/* Featured Image */}
-        {article.featuredImage && (
-          <section className="relative h-[400px] md:h-[500px] overflow-hidden">
-            <img 
-              src={article.featuredImage} 
-              alt={article.topic}
-              className="w-full h-full object-cover"
-            />
-          </section>
-        )}
+          {/* Featured Image */}
+          {article.featuredImage && (
+            <div className="px-8 pt-6">
+              <img 
+                src={article.featuredImage} 
+                alt={article.topic}
+                className="w-full h-auto max-h-[400px] object-contain rounded-lg"
+              />
+            </div>
+          )}
 
-        {/* Main Content */}
-        <section className="py-12 px-4">
-          <div className="container mx-auto max-w-3xl">
+          {/* Main Content */}
+          <div className="px-8 pb-8">
+            
             {/* Official Emblem */}
-            <div className="text-center mb-12">
-              <div className="inline-block mb-4">
-                {/* Placeholder for emblem - using text representation */}
-                <div className="w-24 h-24 mx-auto mb-3 flex items-center justify-center">
-                  <div className="text-6xl">🦁</div>
-                </div>
-                <p className="text-xl font-bold text-hero-navy">सत्यमेव जयते</p>
-              </div>
+            <div className="text-center mb-8 mt-8">
+              <img 
+                src={emblemImage} 
+                alt="Emblem of India"
+                className="w-20 h-20 mx-auto mb-2 object-contain"
+              />
+              <p className="text-lg font-bold text-hero-navy">सत्यमेव जयते</p>
             </div>
 
             {/* Article Text */}
-            <article className="prose prose-lg max-w-none">
+            <article className="prose prose-lg max-w-none mb-8">
               <div className="text-lg leading-relaxed text-gray-800 font-body whitespace-pre-line">
                 {article.content}
               </div>
@@ -164,23 +172,24 @@ const ArticleDetail = () => {
 
             {/* PDF Download Card */}
             {article.pdfLink && (
-              <div className="mt-12 border-t-4 border-accent-pink bg-white rounded-lg shadow-md p-6">
-                <div className="flex items-center justify-between flex-wrap gap-4">
-                  <div className="flex items-center gap-4">
-                    <FileDown className="w-12 h-12 text-accent-pink" />
-                    <div>
-                      <p className="text-lg font-semibold text-hero-navy mb-1">
-                        मूळ पत्राची प्रत पाहण्यासाठी:
-                      </p>
-                      <p className="text-sm text-gray-600">संपूर्ण दस्तऐवज डाउनलोड करा</p>
-                    </div>
+              <div className="bg-white rounded-lg border-t-4 border-accent-pink p-6 mb-8 shadow-md">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-accent-pink/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Share2 className="w-6 h-6 text-accent-pink" />
                   </div>
-                  <a href={article.pdfLink} download target="_blank" rel="noopener noreferrer">
-                    <Button className="bg-accent-pink hover:bg-accent-pink/90 text-white font-semibold">
-                      <FileDown className="w-4 h-4 mr-2" />
-                      PDF डाउनलोड करा
-                    </Button>
-                  </a>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-hero-navy mb-2">
+                      मूळ पत्राची प्रत पाहण्यासाठी:
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      देवेंद्र फडणवीस यांचे मूळ शुभेच्छा पत्र डाउनलोड करा
+                    </p>
+                    <a href={article.pdfLink} download target="_blank" rel="noopener noreferrer">
+                      <Button className="bg-accent-pink hover:bg-accent-pink/90 text-white">
+                        PDF डाउनलोड करा
+                      </Button>
+                    </a>
+                  </div>
                 </div>
               </div>
             )}
@@ -221,7 +230,8 @@ const ArticleDetail = () => {
             </div>
 
             {/* Author Bio Box */}
-            <div className="mt-12 bg-gray-100 rounded-lg p-6">
+            <div className="bg-gray-100 rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-hero-navy mb-4">लेखकाबद्दल</h3>
               <div className="flex items-start gap-4">
                 {article.authorImage ? (
                   <img 
@@ -246,7 +256,7 @@ const ArticleDetail = () => {
               </div>
             </div>
           </div>
-        </section>
+        </div>
 
         {/* Read Next Section */}
         <section className="py-16 px-4 bg-white">
@@ -255,46 +265,59 @@ const ArticleDetail = () => {
               पुढील लेख वाचा
             </h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {relatedArticles.map((relatedArticle) => (
-                <Link
+                <div
                   key={relatedArticle.id}
-                  to="/souvenir"
-                  className="group"
+                  className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all overflow-hidden group"
                 >
-                  <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all p-6 h-full border-2 border-transparent hover:border-accent-pink">
-                    <div className="w-12 h-12 rounded-full bg-accent-pink flex items-center justify-center mb-4 mx-auto">
-                      <span className="text-white font-bold text-lg">{relatedArticle.number}</span>
-                    </div>
-                    
-                    <h3 className="text-lg font-bold text-hero-navy text-center mb-4 font-heading min-h-[60px]">
+                  {/* Card Image */}
+                  <div className="h-48 overflow-hidden">
+                    <img 
+                      src={relatedArticle.image} 
+                      alt={relatedArticle.topic}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  
+                  {/* Card Content */}
+                  <div className="p-6">
+                    {/* Article Title */}
+                    <h3 className="text-xl font-bold text-hero-navy mb-3 font-heading line-clamp-2">
                       {relatedArticle.topic}
                     </h3>
                     
-                    <div className="flex items-center justify-center gap-3 mb-4">
+                    {/* Excerpt */}
+                    <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+                      {relatedArticle.excerpt}
+                    </p>
+                    
+                    {/* Author Info */}
+                    <div className="flex items-center gap-3 mb-4">
                       {relatedArticle.authorImage ? (
                         <img 
                           src={relatedArticle.authorImage} 
                           alt={relatedArticle.author}
-                          className="w-10 h-10 rounded-full object-cover flex-shrink-0"
+                          className="w-10 h-10 rounded-full object-cover"
                         />
                       ) : (
-                        <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center flex-shrink-0">
-                          <User className="w-6 h-6 text-gray-500" />
+                        <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
+                          <User className="w-5 h-5 text-gray-500" />
                         </div>
                       )}
-                      <span className="text-sm text-gray-700 text-center">
+                      <span className="text-sm text-gray-700 font-medium">
                         {relatedArticle.author}
                       </span>
                     </div>
                     
-                    <div className="text-center">
-                      <span className="text-hero-navy font-semibold group-hover:underline">
-                        पुढे वाचा »
-                      </span>
-                    </div>
+                    {/* Read More Button */}
+                    <Link to="/souvenir">
+                      <Button className="bg-accent-pink hover:bg-accent-pink/90 text-white w-full">
+                        पुढे वाचा
+                      </Button>
+                    </Link>
                   </div>
-                </Link>
+                </div>
               ))}
             </div>
           </div>
