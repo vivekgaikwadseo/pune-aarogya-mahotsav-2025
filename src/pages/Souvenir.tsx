@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -285,12 +286,18 @@ const Souvenir = () => {
                   </div>
 
                   {/* Column 4: Read More Link (10%) */}
-                  <a 
-                    href="#" 
-                    className="text-[#000F93] font-semibold hover:underline whitespace-nowrap text-sm md:text-base text-right"
-                  >
-                    पुढे वाचा »
-                  </a>
+                  {article.id === "1" ? (
+                    <Link 
+                      to="/article/shubhechha-sandesh"
+                      className="text-[#000F93] font-semibold hover:underline whitespace-nowrap text-sm md:text-base text-right"
+                    >
+                      पुढे वाचा »
+                    </Link>
+                  ) : (
+                    <span className="text-gray-400 whitespace-nowrap text-sm md:text-base text-right">
+                      लवकरच येत आहे
+                    </span>
+                  )}
                 </div>
               ))}
             </div>
