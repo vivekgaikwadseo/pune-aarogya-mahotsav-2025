@@ -174,20 +174,20 @@ const ArticleDetail = () => {
 
         {/* Featured Image - Overlapping Hero */}
         {article.featuredImage && (
-          <div className="container mx-auto max-w-[800px] -mt-24 relative z-20">
+          <div className="mx-auto max-w-[800px] -mt-24 relative z-20">
             <div className="bg-white overflow-hidden">
               <img 
                 src={article.featuredImage}
                 alt={article.topic}
-                className="w-full h-auto max-h-[400px] object-contain"
+                className="block w-full h-auto max-h-[400px] object-contain"
               />
             </div>
           </div>
         )}
 
       {/* Main Content Container - Light Grey Background */}
-      <div className="container mx-auto max-w-[800px] px-4 py-12">
-        <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+      <div className="mx-auto max-w-[800px] pt-0 pb-12">
+        <div className="bg-white rounded-b-2xl rounded-t-none shadow-lg p-8 md:p-12">
           {/* Official Emblem */}
           <div className="text-center mb-8">
             <img 
