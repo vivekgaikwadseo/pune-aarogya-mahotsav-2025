@@ -10,6 +10,7 @@ import {
   FileDown
 } from "lucide-react";
 import emblemImage from "@/assets/emblem-of-india-new.png";
+import featuredImage from "@/assets/devendra-fadnavis-featured.png";
 import devendaraFadnavisImage from "@/assets/devendra-fadnavis-new.png";
 import sanjayOakImage from "@/assets/guest-sanjay-oak.png";
 import umeshChavanImage from "@/assets/umesh-chavan-new.png";
@@ -25,6 +26,7 @@ interface Article {
   date: string;
   content: string;
   pdfLink?: string;
+  featuredImage?: string;
 }
 
 // Mock article data - in real app, this would come from a backend/CMS
@@ -35,6 +37,7 @@ const articles: Record<string, Article> = {
     author: "देवेंद्र फडणवीस",
     authorTitle: "मुख्यमंत्री, महाराष्ट्र राज्य",
     authorImage: devendaraFadnavisImage,
+    featuredImage: featuredImage,
     authorBio: "माननीय देवेंद्र फडणवीस हे महाराष्ट्राचे मुख्यमंत्री आहेत. त्यांनी राज्याच्या विकासासाठी अनेक महत्त्वाचे उपक्रम राबवले आहेत.",
     date: "१९ ऑक्टोबर २०२५",
     content: `पुणे येथे 'पहिले आरोग्य साहित्य संमेलन' आयोजित करण्यात आले आहे, याचा मला अतिशय आनंद झाला आहे.
@@ -127,7 +130,7 @@ const ArticleDetail = () => {
       
       <main className="flex-1 bg-white">
         {/* Hero Header Section with Dark Navy Background */}
-        <section className="relative bg-hero-navy py-20 px-4 overflow-hidden">
+        <section className="relative bg-hero-navy pt-20 pb-32 px-4 overflow-hidden">
           {/* Square Pattern Overlay */}
           <div 
             className="absolute inset-0 opacity-10"
@@ -139,19 +142,52 @@ const ArticleDetail = () => {
           
           {/* Content */}
           <div className="container mx-auto max-w-4xl relative z-10 text-center text-white">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 font-heading">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 font-heading">
               {article.topic}
             </h1>
-            <div className="text-white/90 text-base md:text-lg">
-              <span className="font-semibold">लेखक:</span> {article.author}
-              {article.authorTitle && <span>, {article.authorTitle}</span>}
-              <span> | {article.date}</span>
+            
+            {/* Author Info - Redesigned with circular photo */}
+            <div className="flex items-center justify-center gap-4 text-white/90">
+              {/* Circular Author Photo */}
+              {article.authorImage && (
+                <img 
+                  src={article.authorImage}
+                  alt={article.author}
+                  className="w-12 h-12 rounded-full object-cover border-2 border-white/30"
+                />
+              )}
+              
+              {/* Metadata */}
+              <div className="text-left">
+                <div className="text-sm md:text-base">
+                  <span className="font-semibold">लेखक: {article.author}</span>
+                </div>
+                {article.authorTitle && (
+                  <div className="text-xs md:text-sm text-white/70">
+                    {article.authorTitle} | {article.date}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Main Content Container */}
-        <div className="container mx-auto max-w-4xl px-4 py-12">
+        {/* Featured Image - Overlapping Hero */}
+        {article.featuredImage && (
+          <div className="container mx-auto max-w-[1100px] px-4 -mt-24 relative z-20">
+            <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
+              <img 
+                src={article.featuredImage}
+                alt={article.topic}
+                className="w-full h-auto max-h-[400px] object-cover"
+              />
+            </div>
+          </div>
+        )}
+
+      {/* Main Content Container - Light Grey Background */}
+      <div className="container mx-auto max-w-[1100px] px-4 py-12">
+        <div className="bg-[#F8F9FA] rounded-2xl shadow-lg p-8 md:p-12">
           {/* Official Emblem */}
           <div className="text-center mb-8">
             <img 
@@ -163,12 +199,14 @@ const ArticleDetail = () => {
           </div>
 
           {/* Article Content */}
-          <div className="prose prose-lg max-w-none mb-8">
-            {article.content.split('\n\n').map((paragraph, index) => (
-              <p key={index} className="text-gray-700 leading-relaxed mb-4 text-justify">
-                {paragraph}
-              </p>
-            ))}
+          <div className="bg-white rounded-lg p-6 md:p-8 mb-8">
+            <div className="prose prose-lg max-w-none">
+              {article.content.split('\n\n').map((paragraph, index) => (
+                <p key={index} className="text-gray-700 leading-relaxed mb-4 text-justify">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
           </div>
 
           {/* PDF Embed Section */}
@@ -189,22 +227,22 @@ const ArticleDetail = () => {
               
               {/* Download Link */}
               <div className="text-center">
-                <a 
-                  href={article.pdfLink} 
-                  download 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-accent-pink hover:text-accent-pink/80 font-semibold inline-flex items-center gap-2"
-                >
-                  <FileDown className="w-5 h-5" />
-                  PDF डाउनलोड करा
-                </a>
+                  <a 
+                    href={article.pdfLink} 
+                    download 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-accent-pink hover:text-accent-pink/80 font-semibold inline-flex items-center gap-2"
+                  >
+                    <FileDown className="w-5 h-5" />
+                    PDF डाउनलोड करा
+                  </a>
+                </div>
               </div>
-            </div>
-          )}
+            )}
 
           {/* Share Section */}
-          <div className="mt-12 pt-8 border-t border-gray-200 mb-12">
+          <div className="bg-white rounded-lg p-6 mb-8">
             <h3 className="text-xl font-semibold text-hero-navy mb-4">शेअर करा</h3>
             <div className="flex gap-4">
               <Button
@@ -260,6 +298,7 @@ const ArticleDetail = () => {
             </div>
           </div>
         </div>
+      </div>
       </main>
 
       {/* Read Next Section */}
@@ -325,8 +364,8 @@ const ArticleDetail = () => {
                 </div>
               </div>
             ))}
+            </div>
           </div>
-        </div>
       </section>
 
       <Footer />
