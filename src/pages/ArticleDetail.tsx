@@ -174,7 +174,7 @@ const ArticleDetail = () => {
 
         {/* Featured Image - Overlapping Hero */}
         {article.featuredImage && (
-          <div className="container mx-auto max-w-[800px] px-4 -mt-24 relative z-20">
+          <div className="container mx-auto max-w-[800px] px-0 -mt-24 relative z-20">
             <div className="bg-white overflow-hidden">
               <img 
                 src={article.featuredImage}
