@@ -125,10 +125,10 @@ const ArticleDetail = () => {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="min-h-screen flex flex-col bg-[#F8F9FA]">
       <Navigation />
       
-      <main className="flex-1 bg-white">
+      <main className="flex-1 bg-[#F8F9FA]">
         {/* Hero Header Section with Dark Navy Background */}
         <section className="relative bg-hero-navy pt-20 pb-32 px-4 overflow-hidden">
           {/* Square Pattern Overlay */}
@@ -174,20 +174,20 @@ const ArticleDetail = () => {
 
         {/* Featured Image - Overlapping Hero */}
         {article.featuredImage && (
-          <div className="container mx-auto max-w-[1100px] px-4 -mt-24 relative z-20">
-            <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
+          <div className="container mx-auto max-w-[800px] px-4 -mt-24 relative z-20">
+            <div className="bg-white overflow-hidden">
               <img 
                 src={article.featuredImage}
                 alt={article.topic}
-                className="w-full h-auto max-h-[400px] object-cover"
+                className="w-full h-auto max-h-[400px] object-contain"
               />
             </div>
           </div>
         )}
 
       {/* Main Content Container - Light Grey Background */}
-      <div className="container mx-auto max-w-[1100px] px-4 py-12">
-        <div className="bg-[#F8F9FA] rounded-2xl shadow-lg p-8 md:p-12">
+      <div className="container mx-auto max-w-[800px] px-4 py-12">
+        <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
           {/* Official Emblem */}
           <div className="text-center mb-8">
             <img 
@@ -302,7 +302,7 @@ const ArticleDetail = () => {
       </main>
 
       {/* Read Next Section */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-[#F8F9FA]">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl font-bold text-hero-navy text-center mb-12 font-heading">
             पुढील लेख वाचा
