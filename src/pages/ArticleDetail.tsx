@@ -133,7 +133,7 @@ const ArticleDetail = () => {
             </h1>
             
             {/* Author Info - Single line with circular photo */}
-            <div className="flex items-center justify-center gap-3 text-white/90 text-sm md:text-base">
+            <div className="flex items-center justify-center gap-3 text-white/90 text-sm md:text-base mb-6">
               {/* Circular Author Photo */}
               {article.authorImage && <img src={article.authorImage} alt={article.author} className="w-12 h-12 rounded-full object-cover border-2 border-white/30" />}
               
@@ -150,19 +150,19 @@ const ArticleDetail = () => {
                 <span className="text-white/80">{article.date}</span>
               </div>
             </div>
+
+            {/* Breadcrumb Navigation */}
+            <div className="flex justify-center">
+              <Link 
+                to="/souvenir" 
+                className="text-white/90 hover:text-white hover:underline text-sm font-medium inline-flex items-center gap-1"
+              >
+                <ChevronLeft className="w-4 h-4" />
+                स्मरणिका मुख्य पान
+              </Link>
+            </div>
           </div>
         </section>
-
-        {/* Top Navigation - Breadcrumb */}
-        <div className="mx-auto max-w-[800px] px-4 mt-6 mb-4 relative z-30">
-          <Link 
-            to="/souvenir" 
-            className="text-[#FF0080] hover:underline text-sm font-medium inline-flex items-center gap-1"
-          >
-            <ChevronLeft className="w-4 h-4" />
-            स्मरणिका मुख्य पान
-          </Link>
-        </div>
 
         {/* Featured Image - Overlapping Hero */}
         {article.featuredImage && <div className="mx-auto max-w-[800px] -mt-24 relative z-20">
