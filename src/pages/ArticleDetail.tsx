@@ -202,20 +202,20 @@ const ArticleDetail = () => {
           {/* Share Section */}
           <div className="bg-white rounded-lg p-6 mb-8">
             <h3 className="text-xl font-semibold text-hero-navy mb-4">शेअर करा</h3>
-            <div className="flex gap-4 flex-wrap">
-              <Button onClick={() => handleShare('facebook')} className="bg-[#1877F2] hover:bg-[#1877F2]/90 text-white rounded-full">
+          <div className="flex gap-4 flex-wrap">
+              <Button onClick={() => handleShare('facebook')} size="lg" className="bg-[#1877F2] hover:bg-[#1877F2]/90 text-white rounded-full min-w-[140px]">
                 <Facebook className="w-5 h-5 mr-2" />
                 Facebook
               </Button>
-              <Button onClick={() => handleShare('x')} className="bg-black hover:bg-black/90 text-white rounded-full">
+              <Button onClick={() => handleShare('x')} size="lg" className="bg-black hover:bg-black/90 text-white rounded-full min-w-[140px]">
                 <X className="w-5 h-5 mr-2" />
                 X
               </Button>
-              <Button onClick={() => handleShare('whatsapp')} className="bg-[#25D366] hover:bg-[#25D366]/90 text-white rounded-full">
+              <Button onClick={() => handleShare('whatsapp')} size="lg" className="bg-[#25D366] hover:bg-[#25D366]/90 text-white rounded-full min-w-[140px]">
                 <Share2 className="w-5 h-5 mr-2" />
                 WhatsApp
               </Button>
-              <Button onClick={() => handleShare('instagram')} className="bg-[#E4405F] hover:bg-[#E4405F]/90 text-white rounded-full">
+              <Button onClick={() => handleShare('instagram')} size="lg" className="bg-[#E4405F] hover:bg-[#E4405F]/90 text-white rounded-full min-w-[140px]">
                 <Instagram className="w-5 h-5 mr-2" />
                 Instagram
               </Button>
