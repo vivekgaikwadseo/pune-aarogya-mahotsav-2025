@@ -262,8 +262,8 @@ const ArticleDetail = () => {
                       </span>
                     </div>
                     
-                    {/* Read More Link - Bright Blue */}
-                    <Link to="/souvenir" className="text-[#000F93] hover:text-[#000F93]/80 font-medium text-sm transition-colors inline-flex items-center gap-1 mt-auto mx-0 px-0 my-[10px]">
+                    {/* Read More Link - Grey */}
+                    <Link to="/souvenir" className="text-[#555555] hover:text-[#555555]/80 font-medium text-sm transition-colors inline-flex items-center gap-1 mt-auto mx-0 px-0 my-[10px]">
                       पुढे वाचा
                       <ChevronRight className="w-4 h-4" />
                     </Link>
