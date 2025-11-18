@@ -150,16 +150,15 @@ const ArticleDetail = () => {
           </div>
         </section>
 
-        {/* Featured Image - Overlapping Hero */}
-        {article.featuredImage && <div className="mx-auto max-w-[800px] -mt-24 relative z-20">
-            <div className="bg-white overflow-hidden">
+      {/* Main Content Container - Light Grey Background */}
+      <div className="mx-auto max-w-[800px] -mt-24 pt-0 pb-12">
+        <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+          {/* Featured Image - Full Width */}
+          {article.featuredImage && (
+            <div className="-mx-8 md:-mx-12 -mt-8 md:-mt-12 mb-8 md:mb-12">
               <img src={article.featuredImage} alt={article.topic} className="block w-full h-auto max-h-[400px] object-contain" />
             </div>
-          </div>}
-
-      {/* Main Content Container - Light Grey Background */}
-      <div className="mx-auto max-w-[800px] pt-0 pb-12">
-        <div className="bg-white rounded-b-2xl rounded-t-none shadow-lg p-8 md:p-12">
+          )}
           {/* Official Emblem */}
           <div className="text-center mb-8">
             <img src={emblemImage} alt="Emblem of India" className="w-20 h-20 mx-auto mb-2 object-contain" />
