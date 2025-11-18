@@ -309,7 +309,7 @@ const ArticleDetail = () => {
               {relatedArticles.slice(0, 2).map((relatedArticle) => (
                 <div
                   key={relatedArticle.id}
-                  className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all overflow-hidden group border border-gray-100"
+                  className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all overflow-hidden group border border-gray-100 flex flex-col"
                 >
                   {/* Card Image */}
                   <div className="h-40 overflow-hidden">
@@ -321,7 +321,7 @@ const ArticleDetail = () => {
                   </div>
                   
                   {/* Card Content */}
-                  <div className="p-5 flex flex-col h-full">
+                  <div className="p-5 flex flex-col flex-1">
                     {/* Article Title - Bright Pink */}
                     <h3 className="text-lg font-bold text-[#FF0080] mb-2 font-heading line-clamp-2">
                       {relatedArticle.topic}
