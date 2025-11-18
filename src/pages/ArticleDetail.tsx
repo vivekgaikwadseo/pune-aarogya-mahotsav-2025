@@ -132,19 +132,22 @@ const ArticleDetail = () => {
               {article.topic}
             </h1>
             
-            {/* Author Info - Redesigned with circular photo */}
-            <div className="flex items-center justify-center gap-4 text-white/90">
+            {/* Author Info - Single line with circular photo */}
+            <div className="flex items-center justify-center gap-3 text-white/90 text-sm md:text-base">
               {/* Circular Author Photo */}
               {article.authorImage && <img src={article.authorImage} alt={article.author} className="w-12 h-12 rounded-full object-cover border-2 border-white/30" />}
               
-              {/* Metadata */}
-              <div className="text-left">
-                <div className="text-sm md:text-base">
-                  <span className="font-semibold">लेखक: {article.author}</span>
-                </div>
-                {article.authorTitle && <div className="text-xs md:text-sm text-white/70">
-                    {article.authorTitle} | {article.date}
-                  </div>}
+              {/* Metadata - All on one line */}
+              <div className="flex items-center gap-2">
+                <span className="font-semibold">लेखक: {article.author}</span>
+                {article.authorTitle && (
+                  <>
+                    <span className="text-white/50">•</span>
+                    <span className="text-white/80">{article.authorTitle}</span>
+                  </>
+                )}
+                <span className="text-white/50">|</span>
+                <span className="text-white/80">{article.date}</span>
               </div>
             </div>
           </div>
