@@ -155,7 +155,7 @@ const ArticleDetail = () => {
             <div className="flex justify-center">
               <Link 
                 to="/souvenir" 
-                className="text-white/90 hover:text-white hover:underline text-sm font-medium inline-flex items-center gap-1"
+                className="text-[#FF0080] hover:text-[#FF0080]/80 hover:underline text-sm font-medium inline-flex items-center gap-1"
               >
                 <ChevronLeft className="w-4 h-4" />
                 स्मरणिका मुख्य पान
