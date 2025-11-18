@@ -182,8 +182,12 @@ const ArticleDetail = () => {
               </h3>
               
               {/* Embedded PDF */}
-              <div className="w-full h-[600px] border border-gray-200 rounded-lg overflow-hidden mb-4">
-                <iframe src={article.pdfLink} className="w-full h-full" title="शुभेच्छा पत्र" />
+              <div className="w-full h-[800px] border border-gray-200 rounded-lg overflow-hidden mb-4">
+                <iframe 
+                  src={`${article.pdfLink}#toolbar=0&navpanes=0&scrollbar=1&view=FitH`} 
+                  className="w-full h-full" 
+                  title="शुभेच्छा पत्र" 
+                />
               </div>
               
               {/* Download Link */}
