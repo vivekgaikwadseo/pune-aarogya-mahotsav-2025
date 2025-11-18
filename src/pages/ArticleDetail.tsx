@@ -154,7 +154,7 @@ const ArticleDetail = () => {
         </section>
 
         {/* Top Navigation - Breadcrumb */}
-        <div className="mx-auto max-w-[800px] px-4 mt-6 mb-4">
+        <div className="mx-auto max-w-[800px] px-4 mt-6 mb-4 relative z-30">
           <Link 
             to="/souvenir" 
             className="text-[#FF0080] hover:underline text-sm font-medium inline-flex items-center gap-1"
