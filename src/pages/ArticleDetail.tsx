@@ -7,7 +7,8 @@ import {
   Twitter, 
   Share2, 
   User,
-  FileDown
+  FileDown,
+  ChevronRight
 } from "lucide-react";
 import emblemImage from "@/assets/emblem-of-india-new.png";
 import featuredImage from "@/assets/devendra-fadnavis-featured.png";
@@ -297,76 +298,75 @@ const ArticleDetail = () => {
               </div>
             </div>
           </div>
+
+          {/* Read Next Section - Moved Inside White Container */}
+          <div className="mt-12 pt-8 border-t border-gray-200">
+            <h2 className="text-2xl font-bold text-hero-navy text-center mb-8 font-heading">
+              पुढील लेख वाचा
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {relatedArticles.map((relatedArticle) => (
+                <div
+                  key={relatedArticle.id}
+                  className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all overflow-hidden group border border-gray-100"
+                >
+                  {/* Card Image */}
+                  <div className="h-40 overflow-hidden">
+                    <img 
+                      src={relatedArticle.image} 
+                      alt={relatedArticle.topic}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  
+                  {/* Card Content */}
+                  <div className="p-5">
+                    {/* Article Title - Bright Pink */}
+                    <h3 className="text-lg font-bold text-[#FF0080] mb-2 font-heading line-clamp-2">
+                      {relatedArticle.topic}
+                    </h3>
+                    
+                    {/* Excerpt - Light Pink */}
+                    <p className="text-[#FFC0CB] text-sm mb-3 line-clamp-2">
+                      {relatedArticle.excerpt}
+                    </p>
+                    
+                    {/* Author Info */}
+                    <div className="flex items-center gap-2 mb-3">
+                      {relatedArticle.authorImage ? (
+                        <img 
+                          src={relatedArticle.authorImage} 
+                          alt={relatedArticle.author}
+                          className="w-8 h-8 rounded-full object-cover"
+                        />
+                      ) : (
+                        <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
+                          <User className="w-4 h-4 text-gray-400" />
+                        </div>
+                      )}
+                      {/* Author Name - Light Pink */}
+                      <span className="text-sm text-[#FFC0CB] font-medium">
+                        {relatedArticle.author}
+                      </span>
+                    </div>
+                    
+                    {/* Read More Link - Bright Pink */}
+                    <Link 
+                      to="/souvenir"
+                      className="text-[#FF0080] hover:text-[#CC0066] font-medium text-sm transition-colors inline-flex items-center gap-1"
+                    >
+                      पुढे वाचा
+                      <ChevronRight className="w-4 h-4" />
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
       </main>
-
-      {/* Read Next Section */}
-      <section className="py-16 px-4 bg-[#F8F9FA]">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold text-hero-navy text-center mb-12 font-heading">
-            पुढील लेख वाचा
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {relatedArticles.map((relatedArticle) => (
-              <div
-                key={relatedArticle.id}
-                className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all overflow-hidden group"
-              >
-                {/* Card Image */}
-                <div className="h-48 overflow-hidden">
-                  <img 
-                    src={relatedArticle.image} 
-                    alt={relatedArticle.topic}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                
-                {/* Card Content */}
-                <div className="p-6">
-                  {/* Article Title - Bright Pink */}
-                  <h3 className="text-xl font-bold text-[#FF0080] mb-3 font-heading line-clamp-2">
-                    {relatedArticle.topic}
-                  </h3>
-                  
-                  {/* Excerpt - Light Pink */}
-                  <p className="text-[#FFC0CB] text-sm mb-4 line-clamp-2">
-                    {relatedArticle.excerpt}
-                  </p>
-                  
-                  {/* Author Info */}
-                  <div className="flex items-center gap-3 mb-4">
-                    {relatedArticle.authorImage ? (
-                      <img 
-                        src={relatedArticle.authorImage} 
-                        alt={relatedArticle.author}
-                        className="w-10 h-10 rounded-full object-cover"
-                      />
-                    ) : (
-                      <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
-                        <User className="w-5 h-5 text-gray-400" />
-                      </div>
-                    )}
-                    {/* Author Name - Light Pink */}
-                    <span className="text-sm text-[#FFC0CB] font-medium">
-                      {relatedArticle.author}
-                    </span>
-                  </div>
-                  
-                  {/* Read More Link - Bright Pink */}
-                  <Link 
-                    to="/souvenir"
-                    className="text-[#FF0080] hover:text-[#FF0080]/80 font-semibold inline-flex items-center group-hover:gap-2 transition-all"
-                  >
-                    पुढे वाचा »
-                  </Link>
-                </div>
-              </div>
-            ))}
-            </div>
-          </div>
-      </section>
 
       <Footer />
     </div>
