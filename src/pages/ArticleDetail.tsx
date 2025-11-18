@@ -153,6 +153,17 @@ const ArticleDetail = () => {
           </div>
         </section>
 
+        {/* Top Navigation - Breadcrumb */}
+        <div className="mx-auto max-w-[800px] px-4 mt-6 mb-4">
+          <Link 
+            to="/souvenir" 
+            className="text-[#FF0080] hover:underline text-sm font-medium inline-flex items-center gap-1"
+          >
+            <ChevronLeft className="w-4 h-4" />
+            स्मरणिका मुख्य पान
+          </Link>
+        </div>
+
         {/* Featured Image - Overlapping Hero */}
         {article.featuredImage && <div className="mx-auto max-w-[800px] -mt-24 relative z-20">
             <div className="bg-white overflow-hidden">
@@ -202,19 +213,6 @@ const ArticleDetail = () => {
                 </div>
               </div>}
 
-          {/* Bottom Navigation Button */}
-          <div className="text-center my-8">
-            <Link to="/souvenir">
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="border-2 border-[#000F93] text-[#000F93] hover:bg-[#000F93] hover:text-white font-semibold px-8"
-              >
-                सर्व लेख पहा
-              </Button>
-            </Link>
-          </div>
-
           {/* Share Section */}
           <div className="bg-white rounded-lg p-6 mb-8">
             <h3 className="text-xl font-semibold text-hero-navy mb-4">शेअर करा</h3>
@@ -253,17 +251,6 @@ const ArticleDetail = () => {
                 {article.authorBio && <p className="text-gray-700 leading-relaxed">{article.authorBio}</p>}
               </div>
             </div>
-          </div>
-
-          {/* Top Navigation - Breadcrumb */}
-          <div className="mt-6 mb-4">
-            <Link 
-              to="/souvenir" 
-              className="text-[#FF0080] hover:underline text-sm font-medium inline-flex items-center gap-1"
-            >
-              <ChevronLeft className="w-4 h-4" />
-              स्मरणिका मुख्य पान
-            </Link>
           </div>
 
           {/* Read Next Section - Moved Inside White Container */}
@@ -309,6 +296,19 @@ const ArticleDetail = () => {
                     </Link>
                   </div>
                 </div>)}
+            </div>
+            
+            {/* Bottom Navigation Button */}
+            <div className="text-center mt-8">
+              <Link to="/souvenir">
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  className="border-2 border-[#000F93] text-[#000F93] hover:bg-[#000F93] hover:text-white font-semibold px-8"
+                >
+                  सर्व लेख पहा
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
