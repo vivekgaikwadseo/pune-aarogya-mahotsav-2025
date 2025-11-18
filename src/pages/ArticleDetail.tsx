@@ -2,7 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Facebook, X, Share2, User, FileDown, ChevronRight, Instagram } from "lucide-react";
+import { Facebook, X, Share2, User, FileDown, ChevronRight, Instagram, ChevronLeft } from "lucide-react";
 import emblemImage from "@/assets/emblem-of-india-new.png";
 import featuredImage from "@/assets/devendra-fadnavis-featured.png";
 import devendaraFadnavisImage from "@/assets/devendra-fadnavis-new.png";
@@ -199,6 +199,19 @@ const ArticleDetail = () => {
                 </div>
               </div>}
 
+          {/* Bottom Navigation Button */}
+          <div className="text-center my-8">
+            <Link to="/souvenir">
+              <Button 
+                variant="outline" 
+                size="lg"
+                className="border-2 border-[#000F93] text-[#000F93] hover:bg-[#000F93] hover:text-white font-semibold px-8"
+              >
+                सर्व लेख पहा
+              </Button>
+            </Link>
+          </div>
+
           {/* Share Section */}
           <div className="bg-white rounded-lg p-6 mb-8">
             <h3 className="text-xl font-semibold text-hero-navy mb-4">शेअर करा</h3>
@@ -237,6 +250,17 @@ const ArticleDetail = () => {
                 {article.authorBio && <p className="text-gray-700 leading-relaxed">{article.authorBio}</p>}
               </div>
             </div>
+          </div>
+
+          {/* Top Navigation - Breadcrumb */}
+          <div className="mt-6 mb-4">
+            <Link 
+              to="/souvenir" 
+              className="text-[#FF0080] hover:underline text-sm font-medium inline-flex items-center gap-1"
+            >
+              <ChevronLeft className="w-4 h-4" />
+              स्मरणिका मुख्य पान
+            </Link>
           </div>
 
           {/* Read Next Section - Moved Inside White Container */}
