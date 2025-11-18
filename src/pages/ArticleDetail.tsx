@@ -2,7 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Facebook, Twitter, Share2, User, FileDown, ChevronRight } from "lucide-react";
+import { Facebook, X, Share2, User, FileDown, ChevronRight, Instagram } from "lucide-react";
 import emblemImage from "@/assets/emblem-of-india-new.png";
 import featuredImage from "@/assets/devendra-fadnavis-featured.png";
 import devendaraFadnavisImage from "@/assets/devendra-fadnavis-new.png";
@@ -87,11 +87,16 @@ const ArticleDetail = () => {
       case 'facebook':
         window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank');
         break;
-      case 'twitter':
+      case 'x':
         window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`, '_blank');
         break;
       case 'whatsapp':
         window.open(`https://wa.me/?text=${encodeURIComponent(text + ' ' + url)}`, '_blank');
+        break;
+      case 'instagram':
+        // Instagram doesn't have a direct share URL, so we copy to clipboard
+        navigator.clipboard.writeText(url);
+        alert('Link copied to clipboard! Share it on Instagram.');
         break;
     }
   };
@@ -193,18 +198,22 @@ const ArticleDetail = () => {
           {/* Share Section */}
           <div className="bg-white rounded-lg p-6 mb-8">
             <h3 className="text-xl font-semibold text-hero-navy mb-4">शेअर करा</h3>
-            <div className="flex gap-4">
-              <Button onClick={() => handleShare('facebook')} className="bg-[#1877F2] hover:bg-[#1877F2]/90 text-white">
+            <div className="flex gap-4 flex-wrap">
+              <Button onClick={() => handleShare('facebook')} className="bg-[#1877F2] hover:bg-[#1877F2]/90 text-white rounded-full">
                 <Facebook className="w-5 h-5 mr-2" />
                 Facebook
               </Button>
-              <Button onClick={() => handleShare('twitter')} className="bg-[#1DA1F2] hover:bg-[#1DA1F2]/90 text-white">
-                <Twitter className="w-5 h-5 mr-2" />
-                Twitter
+              <Button onClick={() => handleShare('x')} className="bg-black hover:bg-black/90 text-white rounded-full">
+                <X className="w-5 h-5 mr-2" />
+                X
               </Button>
-              <Button onClick={() => handleShare('whatsapp')} className="bg-[#25D366] hover:bg-[#25D366]/90 text-white">
+              <Button onClick={() => handleShare('whatsapp')} className="bg-[#25D366] hover:bg-[#25D366]/90 text-white rounded-full">
                 <Share2 className="w-5 h-5 mr-2" />
                 WhatsApp
+              </Button>
+              <Button onClick={() => handleShare('instagram')} className="bg-[#E4405F] hover:bg-[#E4405F]/90 text-white rounded-full">
+                <Instagram className="w-5 h-5 mr-2" />
+                Instagram
               </Button>
             </div>
           </div>
