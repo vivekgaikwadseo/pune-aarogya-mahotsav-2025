@@ -305,8 +305,8 @@ const ArticleDetail = () => {
               पुढील लेख वाचा
             </h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {relatedArticles.map((relatedArticle) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {relatedArticles.slice(0, 2).map((relatedArticle) => (
                 <div
                   key={relatedArticle.id}
                   className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all overflow-hidden group border border-gray-100"
@@ -321,14 +321,14 @@ const ArticleDetail = () => {
                   </div>
                   
                   {/* Card Content */}
-                  <div className="p-5">
+                  <div className="p-5 flex flex-col h-full">
                     {/* Article Title - Bright Pink */}
                     <h3 className="text-lg font-bold text-[#FF0080] mb-2 font-heading line-clamp-2">
                       {relatedArticle.topic}
                     </h3>
                     
-                    {/* Excerpt - Light Pink */}
-                    <p className="text-[#FFC0CB] text-sm mb-3 line-clamp-2">
+                    {/* Excerpt - Grey for readability */}
+                    <p className="text-gray-600 text-sm mb-3 line-clamp-2">
                       {relatedArticle.excerpt}
                     </p>
                     
@@ -345,16 +345,16 @@ const ArticleDetail = () => {
                           <User className="w-4 h-4 text-gray-400" />
                         </div>
                       )}
-                      {/* Author Name - Light Pink */}
-                      <span className="text-sm text-[#FFC0CB] font-medium">
+                      {/* Author Name - Dark Navy */}
+                      <span className="text-sm text-hero-navy font-medium">
                         {relatedArticle.author}
                       </span>
                     </div>
                     
-                    {/* Read More Link - Bright Pink */}
+                    {/* Read More Link - Bright Blue */}
                     <Link 
                       to="/souvenir"
-                      className="text-[#FF0080] hover:text-[#CC0066] font-medium text-sm transition-colors inline-flex items-center gap-1"
+                      className="text-[#000F93] hover:text-[#000F93]/80 font-medium text-sm transition-colors inline-flex items-center gap-1 mt-auto"
                     >
                       पुढे वाचा
                       <ChevronRight className="w-4 h-4" />
