@@ -18,6 +18,7 @@ interface Article {
   author: string;
   authorImage?: string;
   filterKey: string;
+  slug?: string;
 }
 
 const articles: Article[] = [
@@ -27,14 +28,16 @@ const articles: Article[] = [
     topic: "शुभेच्छा संदेश",
     author: "मुख्यमंत्री देवेंद्र फडणवीस",
     authorImage: devendaraImage,
-    filterKey: "शुभेच्छा संदेश - मुख्यमंत्री देवेंद्र फडणवीस"
+    filterKey: "शुभेच्छा संदेश - मुख्यमंत्री देवेंद्र फडणवीस",
+    slug: "shubhechha-sandesh"
   },
   {
     id: "2",
     number: "०२",
     topic: "संपादकीय",
     author: "डॉ. अविनाश भोंडवे",
-    filterKey: "संपादकीय - डॉ. अविनाश भोंडवे"
+    filterKey: "संपादकीय - डॉ. अविनाश भोंडवे",
+    slug: "sampadakiya"
   },
   {
     id: "3",
@@ -42,7 +45,8 @@ const articles: Article[] = [
     topic: "अध्यक्षीय भाषण",
     author: "डॉ. संजय ओक, संमेलनाध्यक्ष",
     authorImage: sanjayOakImage,
-    filterKey: "अध्यक्षीय भाषण - डॉ. संजय ओक, संमेलनाध्यक्ष"
+    filterKey: "अध्यक्षीय भाषण - डॉ. संजय ओक, संमेलनाध्यक्ष",
+    slug: "adhyakshiya-bhashan"
   },
   {
     id: "4",
@@ -50,14 +54,16 @@ const articles: Article[] = [
     topic: "रुग्ण हक्क परिषदेच्या रुग्णांच्या सेवेसाठी एक सामाजिक क्रांती",
     author: "उमेश चव्हाण, स्वागताध्यक्ष",
     authorImage: umeshChavanImage,
-    filterKey: "रुग्ण हक्क परिषदेच्या रुग्णांच्या सेवेसाठी एक सामाजिक क्रांती - उमेश चव्हाण, स्वागताध्यक्ष"
+    filterKey: "रुग्ण हक्क परिषदेच्या रुग्णांच्या सेवेसाठी एक सामाजिक क्रांती - उमेश चव्हाण, स्वागताध्यक्ष",
+    slug: "rugna-hakka-parishad"
   },
   {
     id: "5",
     number: "०५",
-    topic: "आरोग्याच्या सुरक्षा कवचाचे नाईन वॉट",
-    author: "डॉ. केयुर सोनि",
-    filterKey: "आरोग्याच्या सुरक्षा कवचाचे नाईन वॉट - डॉ. केयुर सोनि"
+    topic: "आरोग्याचा सखा: रामेश्वर नाईक साहेब",
+    author: "डॉ. केयुर धनंजयराव चौधरी",
+    filterKey: "आरोग्याचा सखा: रामेश्वर नाईक साहेब - डॉ. केयुर धनंजयराव चौधरी",
+    slug: "arogyacha-sakha"
   },
   {
     id: "6",
@@ -286,9 +292,9 @@ const Souvenir = () => {
                   </div>
 
                   {/* Column 4: Read More Link (10%) */}
-                  {article.id === "1" ? (
+                  {article.slug ? (
                     <Link 
-                      to="/article/shubhechha-sandesh"
+                      to={`/article/${article.slug}`}
                       className="text-[#000F93] font-semibold hover:underline whitespace-nowrap text-sm md:text-base text-right"
                     >
                       पुढे वाचा »
