@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -254,6 +255,14 @@ const ArticleDetail = () => {
   // Get previous and next articles for navigation
   const previousArticle = getPreviousArticle(slug);
   const nextArticle = getNextArticle(slug);
+  
+  // Smooth scroll to top when article changes
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }, [slug]);
   const handleShare = (platform: string) => {
     const url = window.location.href;
     const text = article ? `${article.topic} - ${article.author}` : "";
