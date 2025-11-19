@@ -223,6 +223,11 @@ const ArticleDetail = () => {
   } = useParams();
   const article = slug ? articles[slug] : null;
   const relatedArticles = getNextArticles(slug);
+  
+  // Get current article number
+  const currentArticleIndex = allArticles.findIndex(a => a.slug === slug);
+  const currentArticleNumber = currentArticleIndex !== -1 ? allArticles[currentArticleIndex].number : "";
+  const totalArticles = "०५";
   const handleShare = (platform: string) => {
     const url = window.location.href;
     const text = article ? `${article.topic} - ${article.author}` : "";
@@ -271,6 +276,15 @@ const ArticleDetail = () => {
           
           {/* Content */}
           <div className="container mx-auto max-w-4xl relative z-10 text-center text-white">
+            {/* Progress Indicator */}
+            {currentArticleNumber && (
+              <div className="mb-4">
+                <span className="inline-block bg-[#FF0080] text-white px-4 py-2 rounded-full text-sm font-semibold">
+                  लेख {currentArticleNumber} / {totalArticles}
+                </span>
+              </div>
+            )}
+            
             <h1 className="text-4xl md:text-5xl font-bold mb-6 font-heading">
               {article.topic}
             </h1>
