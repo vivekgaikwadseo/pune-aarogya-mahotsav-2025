@@ -349,7 +349,7 @@ const ArticleDetail = () => {
               )}
             </div>
             
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 font-heading">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 mt-12 font-heading">
               {article.topic}
             </h1>
             
