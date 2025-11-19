@@ -157,37 +157,72 @@ const articles: Record<string, Article> = {
   }
 };
 
-// Related articles data for "Read Next" section
-const relatedArticles = [{
-  id: "2",
-  number: "०२",
-  topic: "संपादकीय",
-  author: "डॉ. अविनाश भोंडवे",
-  excerpt: "संपादक डॉ. अविनाश भोंडवे यांचे आरोग्य साहित्य संमेलनाबद्दल विचार आणि या उपक्रमाचे महत्त्व...",
-  image: "/placeholder.svg",
-  authorImage: null
-}, {
-  id: "3",
-  number: "०३",
-  topic: "अध्यक्षीय भाषण",
-  author: "डॉ. संजय ओक, संमेलनाध्यक्ष",
-  excerpt: "संमेलनाध्यक्ष डॉ. संजय ओक यांचे आरोग्य क्षेत्रातील सेवा आणि अनुभवावर आधारित विचार...",
-  image: "/placeholder.svg",
-  authorImage: sanjayOakImage
-}, {
-  id: "4",
-  number: "०४",
-  topic: "रुग्ण हक्क परिषदेच्या रुग्णांच्या सेवेसाठी एक सामाजिक क्रांती",
-  author: "उमेश चव्हाण, स्वागताध्यक्ष",
-  excerpt: "स्वागताध्यक्ष उमेश चव्हाण यांचे रुग्ण हक्क परिषदेच्या सामाजिक कार्यावर विचार...",
-  image: "/placeholder.svg",
-  authorImage: umeshChavanImage
-}];
+// All articles in order for navigation
+const allArticles = [
+  {
+    slug: "shubhechha-sandesh",
+    number: "०१",
+    topic: "शुभेच्छा संदेश",
+    author: "देवेंद्र फडणवीस",
+    excerpt: "महाराष्ट्राचे मुख्यमंत्री देवेंद्र फडणवीस यांचा पहिल्या आरोग्य साहित्य संमेलनासाठी शुभेच्छा संदेश...",
+    authorImage: devendaraFadnavisImage
+  },
+  {
+    slug: "sampadakiya",
+    number: "०२",
+    topic: "संपादकीय",
+    author: "डॉ. अविनाश भोंडवे",
+    excerpt: "साहित्य म्हणजे समाजाचं आरसा असतो आणि आरोग्य हे त्या समाजाच्या जीवनशक्तीचं प्रतिबिंब...",
+    authorImage: avinashBhondweImage
+  },
+  {
+    slug: "adhyakshiya-bhashan",
+    number: "०३",
+    topic: "अध्यक्षीय मनोगत",
+    author: "डॉ. संजय ओक",
+    excerpt: "पहिल्या मराठी आरोग्य संमेलनाच्या अध्यक्षपदाचा सन्मान मिळाल्याबद्दल आभार...",
+    authorImage: sanjayOakImage
+  },
+  {
+    slug: "rugna-hakka-parishad",
+    number: "०४",
+    topic: "रुग्ण हक्क परिषद",
+    author: "उमेश चव्हाण",
+    excerpt: "रुग्णांच्या हक्कांसाठी आणि सामाजिक न्यायासाठी लढणारी एक व्यापक चळवळ...",
+    authorImage: umeshChavanImage
+  },
+  {
+    slug: "arogyacha-sakha",
+    number: "०५",
+    topic: "आरोग्याचा सखा",
+    author: "डॉ. केयुर धनंजयराव चौधरी",
+    excerpt: "मुख्यमंत्री सहाय्यता कक्षाचे प्रमुख रामेश्वर नाईक यांच्या आरोग्य सेवा कार्याचे वर्णन...",
+    authorImage: rameshNaikImage
+  }
+];
+
+// Function to get next articles based on current slug
+const getNextArticles = (currentSlug: string | undefined) => {
+  if (!currentSlug) return [];
+  
+  const currentIndex = allArticles.findIndex(article => article.slug === currentSlug);
+  if (currentIndex === -1) return [];
+  
+  // Get next 2 articles, wrapping around if needed
+  const nextArticles = [];
+  for (let i = 1; i <= 2; i++) {
+    const nextIndex = (currentIndex + i) % allArticles.length;
+    nextArticles.push(allArticles[nextIndex]);
+  }
+  
+  return nextArticles;
+};
 const ArticleDetail = () => {
   const {
     slug
   } = useParams();
   const article = slug ? articles[slug] : null;
+  const relatedArticles = getNextArticles(slug);
   const handleShare = (platform: string) => {
     const url = window.location.href;
     const text = article ? `${article.topic} - ${article.author}` : "";
@@ -370,14 +405,25 @@ const ArticleDetail = () => {
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {relatedArticles.slice(0, 2).map(relatedArticle => <div key={relatedArticle.id} className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all overflow-hidden group border border-gray-100 flex flex-col">
+              {relatedArticles.map(relatedArticle => <div key={relatedArticle.slug} className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all overflow-hidden group border border-gray-100 flex flex-col">
                   {/* Card Image */}
-                  <div className="h-40 overflow-hidden">
-                    <img src={relatedArticle.image} alt={relatedArticle.topic} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <div className="h-40 overflow-hidden bg-gradient-to-br from-hero-navy to-[#1a1a4a]">
+                    {relatedArticle.authorImage && (
+                      <img 
+                        src={relatedArticle.authorImage} 
+                        alt={relatedArticle.topic} 
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-80" 
+                      />
+                    )}
                   </div>
                   
                   {/* Card Content */}
                   <div className="p-5 flex flex-col flex-1">
+                    {/* Article Number Badge */}
+                    <div className="w-8 h-8 rounded-full bg-[#FF0080] flex items-center justify-center mb-3">
+                      <span className="text-white font-bold text-sm">{relatedArticle.number}</span>
+                    </div>
+                    
                     {/* Article Title - Bright Pink */}
                     <h3 className="text-lg font-bold text-[#FF0080] mb-2 font-heading line-clamp-2">
                       {relatedArticle.topic}
@@ -400,7 +446,10 @@ const ArticleDetail = () => {
                     </div>
                     
                     {/* Read More Link - Grey */}
-                    <Link to="/souvenir" className="text-[#555555] hover:text-[#555555]/80 font-medium text-sm transition-colors inline-flex items-center gap-1 mt-auto my-0 mx-0 px-0 py-[10px]">
+                    <Link 
+                      to={`/article/${relatedArticle.slug}`}
+                      className="text-[#555555] hover:text-[#555555]/80 font-medium text-sm transition-colors inline-flex items-center gap-1 mt-auto my-0 mx-0 px-0 py-[10px]"
+                    >
                       पुढे वाचा
                       <ChevronRight className="w-4 h-4" />
                     </Link>
