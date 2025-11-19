@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -256,12 +256,36 @@ const ArticleDetail = () => {
   const previousArticle = getPreviousArticle(slug);
   const nextArticle = getNextArticle(slug);
   
+  // Reading progress state
+  const [readingProgress, setReadingProgress] = useState(0);
+  
   // Smooth scroll to top when article changes
   useEffect(() => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
+  }, [slug]);
+  
+  // Track reading progress
+  useEffect(() => {
+    const handleScroll = () => {
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      const scrollTop = window.scrollY;
+      
+      // Calculate progress percentage
+      const totalScrollableHeight = documentHeight - windowHeight;
+      const progress = (scrollTop / totalScrollableHeight) * 100;
+      
+      setReadingProgress(Math.min(progress, 100));
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    // Initial calculation
+    handleScroll();
+    
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [slug]);
   const handleShare = (platform: string) => {
     const url = window.location.href;
@@ -299,6 +323,14 @@ const ArticleDetail = () => {
   }
   return <div className="min-h-screen flex flex-col bg-[#F8F9FA]">
       <Navigation />
+      
+      {/* Reading Progress Bar */}
+      <div className="fixed top-0 left-0 w-full h-1 bg-gray-200 z-50">
+        <div 
+          className="h-full bg-[#FF0080] transition-all duration-150 ease-out"
+          style={{ width: `${readingProgress}%` }}
+        />
+      </div>
       
       <main className="flex-1 bg-[#F8F9FA]">
         {/* Hero Header Section with Dark Navy Background */}
