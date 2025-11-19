@@ -2,7 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Facebook, X, Share2, User, FileDown, ChevronRight, Instagram, ChevronLeft } from "lucide-react";
+import { Facebook, X, Share2, User, FileDown, ChevronRight, Instagram, ChevronLeft, ArrowLeft, ArrowRight } from "lucide-react";
 import emblemImage from "@/assets/emblem-of-india-new.png";
 import featuredImage from "@/assets/devendra-fadnavis-featured.png";
 import devendaraFadnavisImage from "@/assets/devendra-fadnavis-new.png";
@@ -217,6 +217,28 @@ const getNextArticles = (currentSlug: string | undefined) => {
   
   return nextArticles;
 };
+
+// Function to get previous article
+const getPreviousArticle = (currentSlug: string | undefined) => {
+  if (!currentSlug) return null;
+  
+  const currentIndex = allArticles.findIndex(article => article.slug === currentSlug);
+  if (currentIndex === -1) return null;
+  
+  const prevIndex = currentIndex === 0 ? allArticles.length - 1 : currentIndex - 1;
+  return allArticles[prevIndex];
+};
+
+// Function to get next article
+const getNextArticle = (currentSlug: string | undefined) => {
+  if (!currentSlug) return null;
+  
+  const currentIndex = allArticles.findIndex(article => article.slug === currentSlug);
+  if (currentIndex === -1) return null;
+  
+  const nextIndex = (currentIndex + 1) % allArticles.length;
+  return allArticles[nextIndex];
+};
 const ArticleDetail = () => {
   const {
     slug
@@ -228,6 +250,10 @@ const ArticleDetail = () => {
   const currentArticleIndex = allArticles.findIndex(a => a.slug === slug);
   const currentArticleNumber = currentArticleIndex !== -1 ? allArticles[currentArticleIndex].number : "";
   const totalArticles = "०५";
+  
+  // Get previous and next articles for navigation
+  const previousArticle = getPreviousArticle(slug);
+  const nextArticle = getNextArticle(slug);
   const handleShare = (platform: string) => {
     const url = window.location.href;
     const text = article ? `${article.topic} - ${article.author}` : "";
@@ -276,14 +302,43 @@ const ArticleDetail = () => {
           
           {/* Content */}
           <div className="container mx-auto max-w-4xl relative z-10 text-center text-white">
-            {/* Progress Indicator */}
-            {currentArticleNumber && (
-              <div className="mb-4">
+            {/* Progress Indicator with Navigation Arrows */}
+            <div className="flex items-center justify-center gap-4 mb-4">
+              {/* Previous Article Button */}
+              {previousArticle && (
+                <Link to={`/article/${previousArticle.slug}`}>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="text-white hover:text-[#FF0080] hover:bg-white/10 transition-colors"
+                    title={`पूर्वीचा लेख: ${previousArticle.topic}`}
+                  >
+                    <ArrowLeft className="w-6 h-6" />
+                  </Button>
+                </Link>
+              )}
+              
+              {/* Progress Badge */}
+              {currentArticleNumber && (
                 <span className="inline-block bg-[#FF0080] text-white px-4 py-2 rounded-full text-sm font-semibold">
                   लेख {currentArticleNumber} / {totalArticles}
                 </span>
-              </div>
-            )}
+              )}
+              
+              {/* Next Article Button */}
+              {nextArticle && (
+                <Link to={`/article/${nextArticle.slug}`}>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="text-white hover:text-[#FF0080] hover:bg-white/10 transition-colors"
+                    title={`पुढील लेख: ${nextArticle.topic}`}
+                  >
+                    <ArrowRight className="w-6 h-6" />
+                  </Button>
+                </Link>
+              )}
+            </div>
             
             <h1 className="text-4xl md:text-5xl font-bold mb-6 font-heading">
               {article.topic}
