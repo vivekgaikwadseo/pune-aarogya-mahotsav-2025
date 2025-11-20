@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Facebook, X, Share2, User, FileDown, ChevronRight, Instagram, ChevronLeft, ArrowLeft, ArrowRight } from "lucide-react";
+import { Facebook, X, Share2, User, FileDown, ChevronRight, Instagram, ChevronLeft, ArrowLeft, ArrowRight, Printer } from "lucide-react";
 import emblemImage from "@/assets/emblem-of-india-new.png";
 import featuredImage from "@/assets/devendra-fadnavis-featured.png";
 import devendaraFadnavisImage from "@/assets/devendra-fadnavis-new.png";
@@ -776,6 +776,10 @@ const ArticleDetail = () => {
         break;
     }
   };
+
+  const handlePrint = () => {
+    window.print();
+  };
   if (!article) {
     return <div className="min-h-screen flex flex-col bg-white">
         <Navigation />
@@ -790,8 +794,113 @@ const ArticleDetail = () => {
         <Footer />
       </div>;
   }
-  return <div className="min-h-screen flex flex-col bg-[#F8F9FA]">
-      <Navigation />
+  return <>
+      <style>{`
+        @media print {
+          /* Hide non-essential elements */
+          .no-print,
+          nav,
+          footer,
+          button,
+          .fixed {
+            display: none !important;
+          }
+          
+          /* Optimize page layout */
+          body {
+            background: white !important;
+            margin: 0;
+            padding: 0;
+          }
+          
+          /* Main content styling */
+          main {
+            padding: 0 !important;
+            margin: 0 !important;
+            background: white !important;
+          }
+          
+          /* Hero header for print */
+          .print-header {
+            background: #0B083E !important;
+            color: white !important;
+            padding: 20px !important;
+            margin: 0 0 20px 0 !important;
+            page-break-after: avoid;
+          }
+          
+          /* Article content */
+          .print-content {
+            padding: 20px !important;
+            margin: 0 !important;
+          }
+          
+          /* Featured image */
+          .print-featured-image {
+            max-width: 100% !important;
+            height: auto !important;
+            margin: 20px 0 !important;
+            page-break-inside: avoid;
+          }
+          
+          /* Text optimization */
+          .print-text {
+            font-size: 12pt !important;
+            line-height: 1.6 !important;
+            color: #000 !important;
+          }
+          
+          /* Author box */
+          .print-author-box {
+            border: 1px solid #ddd !important;
+            padding: 15px !important;
+            margin: 20px 0 !important;
+            page-break-inside: avoid;
+          }
+          
+          /* Emblem styling */
+          .print-emblem {
+            text-align: center !important;
+            margin: 20px 0 !important;
+            page-break-inside: avoid;
+          }
+          
+          /* Page breaks */
+          h1, h2, h3 {
+            page-break-after: avoid;
+            page-break-inside: avoid;
+          }
+          
+          p {
+            orphans: 3;
+            widows: 3;
+          }
+          
+          /* Hide interactive elements */
+          .hover\\:scale-110,
+          .hover\\:bg-white\\/10,
+          .transition-transform,
+          .cursor-pointer {
+            transform: none !important;
+          }
+          
+          /* Optimize colors for print */
+          .bg-\\[\\#F8F9FA\\],
+          .bg-white {
+            background: white !important;
+          }
+          
+          /* Ensure proper margins */
+          @page {
+            margin: 1.5cm;
+            size: A4;
+          }
+        }
+      `}</style>
+      <div className="min-h-screen flex flex-col bg-[#F8F9FA]">
+      <div className="no-print">
+        <Navigation />
+      </div>
       
       {/* Reading Progress Bar */}
       <div className="fixed top-0 left-0 w-full h-1 bg-gray-200 z-50">
@@ -803,7 +912,7 @@ const ArticleDetail = () => {
       
       <main className="flex-1 bg-[#F8F9FA]">
         {/* Hero Header Section with Dark Navy Background */}
-        <section className="relative bg-hero-navy pt-20 pb-32 px-4 overflow-hidden">
+        <section className="relative bg-hero-navy pt-20 pb-32 px-4 overflow-hidden print-header no-print">
           {/* Square Pattern Overlay */}
           <div className="absolute inset-0 opacity-10" style={{
           backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 20px, rgba(255,255,255,0.1) 20px, rgba(255,255,255,0.1) 21px),
@@ -887,18 +996,34 @@ const ArticleDetail = () => {
         </section>
 
         {/* Featured Image - Overlapping Hero */}
-        {article.featuredImage && <div className="mx-auto max-w-[800px] -mt-24 relative z-20">
+        {article.featuredImage && <div className="mx-auto max-w-[800px] -mt-24 relative z-20 print-featured-image">
             <div className="bg-white overflow-hidden">
               <img src={article.featuredImage} alt={article.topic} className="block w-full h-auto max-h-[400px] object-contain" />
             </div>
           </div>}
 
       {/* Main Content Container - Light Grey Background */}
-      <div className="mx-auto max-w-[800px] pt-0 pb-12">
+      <div className="mx-auto max-w-[800px] pt-0 pb-12 print-content">
+        {/* Print-only header */}
+        <div className="hidden print:block bg-hero-navy text-white p-6 mb-6 -mx-8 -mt-8">
+          <h1 className="text-3xl font-bold mb-2">{article.topic}</h1>
+          <div className="flex items-center gap-4 text-sm">
+            <span>लेखक: {article.author}</span>
+            {article.authorTitle && (
+              <>
+                <span>•</span>
+                <span>{article.authorTitle}</span>
+              </>
+            )}
+            <span>•</span>
+            <span>{article.date}</span>
+          </div>
+        </div>
+        
         <div className="bg-white rounded-b-2xl rounded-t-none shadow-lg p-8 md:p-12">
           {/* Official Emblem - Only for Chief Minister's article */}
           {slug === "shubhechha-sandesh" && (
-            <div className="text-center mb-8">
+            <div className="text-center mb-8 print-emblem">
               <img src={emblemImage} alt="Emblem of India" className="w-20 h-20 mx-auto mb-2 object-contain" />
               <p className="text-lg font-bold text-hero-navy">सत्यमेव जयते</p>
             </div>
@@ -907,7 +1032,7 @@ const ArticleDetail = () => {
           {/* Article Content */}
           <div className="bg-white rounded-lg p-6 md:p-8 mb-8">
             <div className="prose prose-lg max-w-none">
-              {article.content.split('\n\n').map((paragraph, index) => <p key={index} className="text-gray-700 leading-relaxed mb-4 text-justify">
+              {article.content.split('\n\n').map((paragraph, index) => <p key={index} className="text-gray-700 leading-relaxed mb-4 text-justify print-text">
                   {paragraph}
                 </p>)}
             </div>
@@ -938,7 +1063,7 @@ const ArticleDetail = () => {
               </div>}
 
           {/* Share Section */}
-          <div className="bg-white rounded-lg p-6 mb-8">
+          <div className="bg-white rounded-lg p-6 mb-8 no-print">
             <h3 className="text-xl font-semibold text-hero-navy mb-4">शेअर करा</h3>
           <div className="flex gap-4 flex-wrap">
               <Button onClick={() => handleShare('facebook')} size="lg" className="bg-[#1877F2] hover:bg-[#1877F2]/90 text-white rounded-full min-w-[140px]">
@@ -957,11 +1082,15 @@ const ArticleDetail = () => {
                 <Instagram className="w-5 h-5 mr-2" />
                 Instagram
               </Button>
+              <Button onClick={handlePrint} size="lg" className="bg-[#6B7280] hover:bg-[#6B7280]/90 text-white rounded-full min-w-[140px]">
+                <Printer className="w-5 h-5 mr-2" />
+                प्रिंट करा
+              </Button>
             </div>
           </div>
 
           {/* Author Bio Box */}
-          <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
+          <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm print-author-box">
             <h3 className="text-xl font-semibold text-hero-navy mb-4">लेखकाबद्दल</h3>
             <div className="flex items-start gap-4">
               {article.authorImage ? <div className="w-20 h-20 rounded-full bg-[#F8F9FA] p-1 flex items-center justify-center flex-shrink-0">
@@ -978,7 +1107,7 @@ const ArticleDetail = () => {
           </div>
 
           {/* Read Next Section - Moved Inside White Container */}
-          <div className="mt-12 pt-8 border-t border-gray-200">
+          <div className="mt-12 pt-8 border-t border-gray-200 no-print">
             <h2 className="text-2xl font-bold text-hero-navy text-center mb-8 font-heading">
               पुढील लेख वाचा
             </h2>
@@ -1053,7 +1182,10 @@ const ArticleDetail = () => {
       </div>
       </main>
 
-      <Footer />
-    </div>;
+      <div className="no-print">
+        <Footer />
+      </div>
+    </div>
+    </>;
 };
 export default ArticleDetail;
