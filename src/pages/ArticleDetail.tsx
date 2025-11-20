@@ -726,21 +726,53 @@ const ArticleDetail = () => {
   }, [slug]);
   const handleShare = (platform: string) => {
     const url = window.location.href;
-    const text = article ? `${article.topic} - ${article.author}` : "";
+    
+    if (!article) return;
+    
+    // Create detailed share messages
+    const title = article.topic;
+    const author = article.author;
+    const authorTitle = article.authorTitle || "";
+    
+    // Facebook share text (will appear in the preview)
+    const fbText = `${title} | लेखक: ${author}${authorTitle ? ` (${authorTitle})` : ''}`;
+    
+    // Twitter/X share text (280 char limit, so keep it concise)
+    const twitterText = `📖 ${title}\n\n✍️ ${author}${authorTitle ? ` - ${authorTitle}` : ''}\n\n#आरोग्यसाहित्यसंमेलन #आरोग्य`;
+    
+    // WhatsApp share text (more detailed)
+    const whatsappText = `📚 *${title}*\n\n✍️ लेखक: ${author}${authorTitle ? `\n${authorTitle}` : ''}\n\n🔗 वाचा:`;
+    
+    // Instagram copy text
+    const instagramText = `📖 ${title}\n\n✍️ ${author}${authorTitle ? `\n${authorTitle}` : ''}\n\n🔗 ${url}\n\n#आरोग्यसाहित्यसंमेलन #आरोग्य #मराठी`;
+    
     switch (platform) {
       case 'facebook':
-        window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank');
+        // Facebook with quote parameter for better sharing
+        window.open(
+          `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(fbText)}`,
+          '_blank'
+        );
         break;
       case 'x':
-        window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`, '_blank');
+        window.open(
+          `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(twitterText)}`,
+          '_blank'
+        );
         break;
       case 'whatsapp':
-        window.open(`https://wa.me/?text=${encodeURIComponent(text + ' ' + url)}`, '_blank');
+        window.open(
+          `https://wa.me/?text=${encodeURIComponent(whatsappText + ' ' + url)}`,
+          '_blank'
+        );
         break;
       case 'instagram':
         // Instagram doesn't have a direct share URL, so we copy to clipboard
-        navigator.clipboard.writeText(url);
-        alert('Link copied to clipboard! Share it on Instagram.');
+        navigator.clipboard.writeText(instagramText).then(() => {
+          alert('📋 लिंक आणि माहिती कॉपी केली!\n\nInstagram वर शेअर करण्यासाठी Story किंवा Post मध्ये पेस्ट करा.');
+        }).catch(() => {
+          alert('लिंक कॉपी करण्यात त्रुटी. कृपया पुन्हा प्रयत्न करा.');
+        });
         break;
     }
   };
