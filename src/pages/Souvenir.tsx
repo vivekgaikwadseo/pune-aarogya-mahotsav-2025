@@ -10,6 +10,7 @@ import umeshChavanImage from "@/assets/umesh-chavan-new.png";
 import pravinPatilImage from "@/assets/speaker-pravin-patil-new.png";
 import milindBhoiImage from "@/assets/speaker-milind-bhoi.jpg";
 import amolDevlekarImage from "@/assets/stress-amol-devlekar.png";
+import rituparnaShinde from "@/assets/stress-rituparna-shinde.png";
 
 interface Article {
   id: string;
@@ -68,38 +69,47 @@ const articles: Article[] = [
   {
     id: "6",
     number: "०६",
-    topic: "वजन कमी नाही, आनंदी वाढवा महत्त्वाचे",
-    author: "ऋजुता दिवेकर",
-    filterKey: "वजन कमी नाही, आनंदी वाढवा महत्त्वाचे - ऋजुता दिवेकर"
+    topic: "वजन कमी नाही, आरोग्य वाढवणे महत्त्वाचे",
+    author: "डॉ. ऋतुपर्ण शिंदे",
+    authorImage: rituparnaShinde,
+    filterKey: "वजन कमी नाही, आरोग्य वाढवणे महत्त्वाचे - डॉ. ऋतुपर्ण शिंदे",
+    slug: "vajan-kami-nahi-arogya-vadhvane"
   },
   {
     id: "7",
     number: "०७",
-    topic: "व्यक्तिमत्वमागील आधारस्तंभ भूल-तज्ञ",
-    author: "दीपक पारेख",
-    filterKey: "व्यक्तिमत्वमागील आधारस्तंभ भूल-तज्ञ - दीपक पारेख"
+    topic: "शस्त्रक्रियेतील आधारस्तंभ - भूल - समज, गैरसमज",
+    author: "डॉ. दीपक पोमण",
+    authorImage: sanjayOakImage,
+    filterKey: "शस्त्रक्रियेतील आधारस्तंभ - भूल - समज, गैरसमज - डॉ. दीपक पोमण",
+    slug: "shastrakriyeteel-aadharsatmbha"
   },
   {
     id: "8",
     number: "०८",
-    topic: "शासनाच्या अनेक योजनांची प्रभावी घोडदौड",
-    author: "डॉ. नितीन बोरा",
-    filterKey: "शासनाच्या अनेक योजनांची प्रभावी घोडदौड - डॉ. नितीन बोरा"
+    topic: "शाळांमध्ये अंमली पदार्थांचा प्रवेश: धोक्याची घंटा",
+    author: "डॉ. नितिन बोरा",
+    authorImage: rituparnaShinde,
+    filterKey: "शाळांमध्ये अंमली पदार्थांचा प्रवेश: धोक्याची घंटा - डॉ. नितिन बोरा",
+    slug: "shamli-padarthacha-pravesh"
   },
   {
     id: "9",
     number: "०९",
-    topic: "अंमली पदार्थाच्या विळख्यात शिकलेला...",
-    author: "प्रविण पाटील (आय.पी.एस.)",
+    topic: "अमली पदार्थाचा शिरकाव शालेय जीवनात धोकादायक",
+    author: "श्री. प्रवीण पाटील (आय.पी.एस.)",
     authorImage: pravinPatilImage,
-    filterKey: "अंमली पदार्थाच्या विळख्यात शिकलेला... - प्रविण पाटील (आय.पी.एस.)"
+    filterKey: "अमली पदार्थाचा शिरकाव शालेय जीवनात धोकादायक - श्री. प्रवीण पाटील (आय.पी.एस.)",
+    slug: "amli-padarthacha-shirkav"
   },
   {
     id: "10",
     number: "१०",
-    topic: "बदलते विकार व त्यावर होमिओपॅथी उपचार",
-    author: "डॉ. हेमंत भार्गवकर",
-    filterKey: "बदलते विकार व त्यावर होमिओपॅथी उपचार - डॉ. हेमंत भार्गवकर"
+    topic: "सर्दीचे विकार व त्यावर होमिओपॅथिक उपचार",
+    author: "डॉ. इंद्रयानील बावडेकर",
+    authorImage: umeshChavanImage,
+    filterKey: "सर्दीचे विकार व त्यावर होमिओपॅथिक उपचार - डॉ. इंद्रयानील बावडेकर",
+    slug: "sardiche-viker-homeopathic-upchar"
   },
   {
     id: "11",
