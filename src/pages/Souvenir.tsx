@@ -114,30 +114,38 @@ const articles: Article[] = [
   {
     id: "11",
     number: "११",
-    topic: "अंमली पदार्थांपासून शिकाऊ डॉक्टर...",
-    author: "श्रीरंग पिंपळवटकर",
-    filterKey: "अंमली पदार्थांपासून शिकाऊ डॉक्टर... - श्रीरंग पिंपळवटकर"
+    topic: "उपचारापेक्षा सावधानी बाळगा",
+    author: "डॉ. श्रीधर चिपळुणकर",
+    authorImage: sanjayOakImage,
+    filterKey: "उपचारापेक्षा सावधानी बाळगा - डॉ. श्रीधर चिपळुणकर",
+    slug: "upachar-peksha-saavdhani"
   },
   {
     id: "12",
     number: "१२",
     topic: "उत्तम आरोग्याची गुरुकिल्ली",
-    author: "वेध व वेत्रा श्रध्दा बर्वे",
-    filterKey: "उत्तम आरोग्याची गुरुकिल्ली - वेध व वेत्रा श्रध्दा बर्वे"
+    author: "वैद्य आनंद बर्वे आणि वैद्या ऋचा बर्वे",
+    authorImage: umeshChavanImage,
+    filterKey: "उत्तम आरोग्याची गुरुकिल्ली - वैद्य आनंद बर्वे आणि वैद्या ऋचा बर्वे",
+    slug: "uttam-arogya-gurukilli"
   },
   {
     id: "13",
     number: "१३",
-    topic: "आयुर्वेदिक सौंदर्यशास्त्र",
-    author: "डॉ. अश्विनी गुणाजन बोडके",
-    filterKey: "आयुर्वेदिक सौंदर्यशास्त्र - डॉ. अश्विनी गुणाजन बोडके"
+    topic: "आयुर्वेदिय सौंदर्यप्रसाधने",
+    author: "डॉ. अश्विनी गुलाबराव बोदडे",
+    authorImage: rituparnaShinde,
+    filterKey: "आयुर्वेदिय सौंदर्यप्रसाधने - डॉ. अश्विनी गुलाबराव बोदडे",
+    slug: "ayurvedic-saundaryaprasadhane"
   },
   {
     id: "14",
     number: "१४",
-    topic: "आत्महत्येच्या दिला...",
-    author: "सुहास गायकवाड",
-    filterKey: "आत्महत्येच्या दिला... - सुहास गायकवाड"
+    topic: "आरोग्याचा दिवा : स्त्रियांची जागरुकता",
+    author: "श्री. डॉ. राहुल गारुडकर",
+    authorImage: sanjayOakImage,
+    filterKey: "आरोग्याचा दिवा : स्त्रियांची जागरुकता - श्री. डॉ. राहुल गारुडकर",
+    slug: "arogyacha-diva-striyanchi-jagrukta"
   },
   {
     id: "15",
@@ -145,7 +153,8 @@ const articles: Article[] = [
     topic: "लहान मुलांवर होणारे लैंगिक अत्याचार",
     author: "प्रा.डॉ. मिलिंद भोई",
     authorImage: milindBhoiImage,
-    filterKey: "लहान मुलांवर होणारे लैंगिक अत्याचार - प्रा.डॉ. मिलिंद भोई"
+    filterKey: "लहान मुलांवर होणारे लैंगिक अत्याचार - प्रा.डॉ. मिलिंद भोई",
+    slug: "lahan-mulanvar-honaare-laingik-atyachar"
   },
   {
     id: "16",
