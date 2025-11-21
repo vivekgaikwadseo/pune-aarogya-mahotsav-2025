@@ -636,6 +636,46 @@ const allArticles = [
     author: "डॉ. इंद्रयानील बावडेकर",
     excerpt: "होमिओपॅथिक औषधोपचार हा सर्दीच्या त्रासावर सुरक्षित व परिणामकारक उपाय...",
     authorImage: umeshChavanImage
+  },
+  {
+    slug: "upachar-peksha-saavdhani",
+    number: "११",
+    topic: "उपचारापेक्षा सावधानी बाळगा",
+    author: "डॉ. श्रीधर चिपळुणकर",
+    excerpt: "योग्य मुद्रा आणि व्यायाम यांच्यामुळे अनेक आजार टाळता येतात...",
+    authorImage: sanjayOakImage
+  },
+  {
+    slug: "uttam-arogya-gurukilli",
+    number: "१२",
+    topic: "उत्तम आरोग्याची गुरुकिल्ली",
+    author: "वैद्य आनंद बर्वे आणि वैद्या ऋचा बर्वे",
+    excerpt: "विद्यार्थ्यांसाठी आरोग्य आणि शैक्षणिक यश यांचा समतोल कसा साधायचा...",
+    authorImage: umeshChavanImage
+  },
+  {
+    slug: "ayurvedic-saundaryaprasadhane",
+    number: "१३",
+    topic: "आयुर्वेदिय सौंदर्यप्रसाधने",
+    author: "डॉ. अश्विनी गुलाबराव बोदडे",
+    excerpt: "घरच्या घरी शास्त्रोक्त पद्धतीने सौंदर्य प्रसाधने कशी बनवावी...",
+    authorImage: rituparnaShinde
+  },
+  {
+    slug: "arogyacha-diva-striyanchi-jagrukta",
+    number: "१४",
+    topic: "आरोग्याचा दिवा : स्त्रियांची जागरुकता",
+    author: "श्री. डॉ. राहुल गारुडकर",
+    excerpt: "पीसीओडी आणि स्त्रियांचे आरोग्य - जीवनशैलीतील बदल महत्त्वाचे...",
+    authorImage: sanjayOakImage
+  },
+  {
+    slug: "lahan-mulanvar-honaare-laingik-atyachar",
+    number: "१५",
+    topic: "लहान मुलांवर होणारे लैंगिक अत्याचार",
+    author: "प्रा.डॉ. मिलिंद भोई",
+    excerpt: "मुलांच्या सुरक्षिततेसाठी पालक आणि समाजाची जबाबदारी...",
+    authorImage: umeshChavanImage
   }
 ];
 
@@ -687,7 +727,7 @@ const ArticleDetail = () => {
   // Get current article number
   const currentArticleIndex = allArticles.findIndex(a => a.slug === slug);
   const currentArticleNumber = currentArticleIndex !== -1 ? allArticles[currentArticleIndex].number : "";
-  const totalArticles = "०५";
+  const totalArticles = "१५";
   
   // Get previous and next articles for navigation
   const previousArticle = getPreviousArticle(slug);
