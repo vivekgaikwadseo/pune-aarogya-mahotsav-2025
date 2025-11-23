@@ -20,6 +20,8 @@ interface Article {
   authorImage?: string;
   filterKey: string;
   slug?: string;
+  isDownloadCard?: boolean;
+  downloadLink?: string;
 }
 
 const articles: Article[] = [
@@ -167,59 +169,68 @@ const articles: Article[] = [
   {
     id: "17",
     number: "१७",
-    topic: "काव्य विभाग",
-    author: "कॉलिन्स डेव्हिड जोगी",
-    filterKey: "काव्य विभाग - कॉलिन्स डेव्हिड जोगी"
+    topic: "अवयवदान पवित्र दान",
+    author: "कविवर्य देवेंद्र औटी",
+    filterKey: "अवयवदान पवित्र दान - कविवर्य देवेंद्र औटी",
+    slug: "avayavdan-pavitra-dan"
   },
   {
     id: "18",
     number: "१८",
-    topic: "आरोग्यातील पर्यटन - कलर्स डेव्हिड जोगी",
-    author: "कॉलिन्स डेव्हिड जोगी",
-    filterKey: "आरोग्यातील पर्यटन - कलर्स डेव्हिड जोगी - कॉलिन्स डेव्हिड जोगी"
+    topic: "डॉ. वैदेही भंडारे",
+    author: "डॉ. वैदेही भंडारे",
+    filterKey: "डॉ. वैदेही भंडारे - डॉ. वैदेही भंडारे",
+    slug: "dr-vaidehi-bhandare"
   },
   {
     id: "19",
     number: "१९",
-    topic: "डॉ. फेरेटी मंडले",
-    author: "डॉ. फेरेटी मंडले",
-    filterKey: "डॉ. फेरेटी मंडले - डॉ. फेरेटी मंडले"
+    topic: "डॉ. अमोल देवळेकर (एम.डी.)",
+    author: "डॉ. अमोल देवळेकर",
+    authorImage: amolDevlekarImage,
+    filterKey: "डॉ. अमोल देवळेकर (एम.डी.) - डॉ. अमोल देवळेकर",
+    slug: "dr-amol-devlekar"
   },
   {
     id: "20",
     number: "२०",
-    topic: "डॉ. अमोल देवळेकर (एम.डी.)",
-    author: "(लेखक)",
-    authorImage: amolDevlekarImage,
-    filterKey: "डॉ. अमोल देवळेकर (एम.डी.) - (लेखक)"
+    topic: "लक्ष्मण शिंदे – अंगणातील तुळस",
+    author: "लक्ष्मण शिंदे",
+    filterKey: "लक्ष्मण शिंदे – अंगणातील तुळस - लक्ष्मण शिंदे",
+    slug: "lakshman-shinde-tulsi"
   },
   {
     id: "21",
     number: "२१",
-    topic: "अंमलीमुक्त तुरुंग",
-    author: "लक्ष्मण शिंदे",
-    filterKey: "अंमलीमुक्त तुरुंग - लक्ष्मण शिंदे"
+    topic: "किशोर मोगल – देहदान",
+    author: "किशोर मोगल",
+    filterKey: "किशोर मोगल – देहदान - किशोर मोगल",
+    slug: "kishor-mogal-dehdan"
   },
   {
     id: "22",
     number: "२२",
-    topic: "डेहराडून - किशोर गोयल",
-    author: "किशोर गोयल",
-    filterKey: "डेहराडून - किशोर गोयल - किशोर गोयल"
+    topic: "बाळकृष्ण बाचल – आरोग्यम धनसंपदा",
+    author: "बाळकृष्ण बाचल",
+    filterKey: "बाळकृष्ण बाचल – आरोग्यम धनसंपदा - बाळकृष्ण बाचल",
+    slug: "balkrishna-bachal-arogyam"
   },
   {
     id: "23",
     number: "२३",
-    topic: "आरोग्यम् धनसंपदा",
-    author: "बाळकृष्ण बाचल",
-    filterKey: "आरोग्यम् धनसंपदा - बाळकृष्ण बाचल"
+    topic: "बाळकृष्ण बाचल – विडंबन गीत",
+    author: "बाळकृष्ण मुरलीधर बाचल",
+    filterKey: "बाळकृष्ण बाचल – विडंबन गीत - बाळकृष्ण मुरलीधर बाचल",
+    slug: "balkrishna-bachal-vidamban"
   },
   {
     id: "24",
     number: "२४",
-    topic: "पाळणे चालती हॉस्टेलची वाट",
-    author: "(लेखक)",
-    filterKey: "पाळणे चालती हॉस्टेलची वाट - (लेखक)"
+    topic: "संपूर्ण स्मरणिका",
+    author: "यशोदीप पब्लिकेशन्स",
+    filterKey: "संपूर्ण स्मरणिका - यशोदीप पब्लिकेशन्स",
+    isDownloadCard: true,
+    downloadLink: "/pdfs/smarnika-complete.pdf"
   }
 ];
 
@@ -274,9 +285,9 @@ const Souvenir = () => {
               </Select>
             </div>
 
-            {/* Article Cards List */}
+            {/* Article Cards List - First 16 Articles */}
             <div className="space-y-8">
-              {filteredArticles.map((article) => (
+              {filteredArticles.slice(0, 16).map((article) => (
                 <div 
                   key={article.id}
                   className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow py-3 px-6 grid grid-cols-1 md:grid-cols-[60px_2fr_1.2fr_auto] gap-4 items-center"
@@ -327,6 +338,78 @@ const Souvenir = () => {
                 </div>
               ))}
             </div>
+
+            {/* Poetry Section Heading */}
+            {filteredArticles.length > 16 && (
+              <>
+                <h2 className="text-3xl md:text-4xl font-bold text-center mt-16 mb-12" style={{ color: '#FF0080' }}>
+                  काव्य विभाग
+                </h2>
+
+                {/* Poetry Articles (17-24) */}
+                <div className="space-y-8">
+                  {filteredArticles.slice(16).map((article) => (
+                    <div 
+                      key={article.id}
+                      className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow py-3 px-6 grid grid-cols-1 md:grid-cols-[60px_2fr_1.2fr_auto] gap-4 items-center"
+                    >
+                      {/* Column 1: Number Circle (10%) */}
+                      <div className="w-12 h-12 rounded-full bg-[#FF0080] flex items-center justify-center mx-auto">
+                        <span className="text-white font-bold text-lg">{article.number}</span>
+                      </div>
+
+                      {/* Column 2: Topic Title (50%) */}
+                      <div>
+                        <h3 className="text-lg md:text-xl font-bold text-hero-navy font-heading break-words">
+                          {article.topic}
+                        </h3>
+                      </div>
+
+                      {/* Column 3: Author Info (30%) */}
+                      <div className="flex items-center gap-3">
+                        {article.authorImage ? (
+                          <img 
+                            src={article.authorImage} 
+                            alt={article.author}
+                            className="w-10 h-10 rounded-full object-cover flex-shrink-0"
+                          />
+                        ) : (
+                          <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center flex-shrink-0">
+                            <User className="w-6 h-6 text-gray-500" />
+                          </div>
+                        )}
+                        <span className="text-sm md:text-base text-gray-700 break-words">
+                          {article.author}
+                        </span>
+                      </div>
+
+                      {/* Column 4: Read More / Download Link */}
+                      {article.isDownloadCard ? (
+                        <a
+                          href={article.downloadLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[#000F93] font-semibold hover:underline whitespace-nowrap text-sm md:text-base text-right"
+                        >
+                          PDF डाउनलोड करा
+                        </a>
+                      ) : article.slug ? (
+                        <Link 
+                          to={`/article/${article.slug}`}
+                          className="text-[#000F93] font-semibold hover:underline whitespace-nowrap text-sm md:text-base text-right"
+                        >
+                          पुढे वाचा »
+                        </Link>
+                      ) : (
+                        <span className="text-gray-400 whitespace-nowrap text-sm md:text-base text-right">
+                          लवकरच येत आहे
+                        </span>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
           </div>
         </section>
       </main>
