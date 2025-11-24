@@ -229,8 +229,7 @@ const articles: Article[] = [
     topic: "संपूर्ण स्मरणिका",
     author: "यशोदीप पब्लिकेशन्स",
     filterKey: "संपूर्ण स्मरणिका - यशोदीप पब्लिकेशन्स",
-    isDownloadCard: true,
-    downloadLink: "/pdfs/smarnika-complete.pdf"
+    slug: "sampurna-smaranika"
   }
 ];
 

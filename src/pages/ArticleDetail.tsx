@@ -4,6 +4,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Facebook, X, Share2, User, FileDown, ChevronRight, Instagram, ChevronLeft, ArrowLeft, ArrowRight, Printer } from "lucide-react";
+import PDFViewer from "@/components/PDFViewer";
 import emblemImage from "@/assets/emblem-of-india-new.png";
 import featuredImage from "@/assets/devendra-fadnavis-featured.png";
 import devendaraFadnavisImage from "@/assets/devendra-fadnavis-new.png";
@@ -1103,6 +1104,17 @@ const articles: Record<string, Article> = {
 विद्यानगर, (टिळकनगर), पुणे ४११०३२  
 मो. ९३७ ३३ १० ९२९  
 ई-मेल: balkrishna.bachal@gmail.com`
+  },
+  "sampurna-smaranika": {
+    id: "24",
+    topic: "संपूर्ण आरोग्य संदेश स्मरणिका",
+    author: "यशोदीप पब्लिकेशन्स",
+    authorTitle: "प्रकाशक",
+    authorImage: undefined,
+    authorBio: "यशोदीप पब्लिकेशन्स - पुणे आरोग्य महोत्सवाच्या स्मरणिकेचे प्रकाशक. आरोग्य साहित्य संमेलनाच्या सर्व कार्यवृत्तांचे संकलन आणि प्रकाशन.",
+    date: "१९ ऑक्टोबर २०२५",
+    content: "", // Content will be replaced with PDF viewer
+    pdfLink: "/pdfs/smarnika-complete.pdf"
   }
 };
 
@@ -1291,6 +1303,14 @@ const allArticles = [
     author: "बाळकृष्ण मुरलीधर बाचल",
     excerpt: "पाऊले चालती हॉटेलची वाट, सकस आहाराचे दूर करून ताट...",
     authorImage: undefined
+  },
+  {
+    slug: "sampurna-smaranika",
+    number: "२४",
+    topic: "संपूर्ण आरोग्य संदेश स्मरणिका",
+    author: "यशोदीप पब्लिकेशन्स",
+    excerpt: "संपूर्ण स्मरणिकेचे संवादात्मक डिजिटल स्वरूप - सर्व लेख आणि कविता एका ठिकाणी...",
+    authorImage: undefined
   }
 ];
 
@@ -1342,7 +1362,7 @@ const ArticleDetail = () => {
   // Get current article number
   const currentArticleIndex = allArticles.findIndex(a => a.slug === slug);
   const currentArticleNumber = currentArticleIndex !== -1 ? allArticles[currentArticleIndex].number : "";
-  const totalArticles = "१५";
+  const totalArticles = "२४";
   
   // Get previous and next articles for navigation
   const previousArticle = getPreviousArticle(slug);
@@ -1684,14 +1704,20 @@ const ArticleDetail = () => {
             </div>
           )}
 
-          {/* Article Content */}
-          <div className="bg-white rounded-lg p-6 md:p-8 mb-8">
-            <div className="prose prose-lg max-w-none">
-              {article.content.split('\n\n').map((paragraph, index) => <p key={index} className="text-gray-700 leading-relaxed mb-4 text-justify print-text">
-                  {paragraph}
-                </p>)}
+          {/* Article Content - Show PDF Viewer for complete souvenir, regular content for others */}
+          {slug === "sampurna-smaranika" ? (
+            <div className="mb-8">
+              <PDFViewer pdfUrl="/pdfs/smarnika-complete.pdf" />
             </div>
-          </div>
+          ) : (
+            <div className="bg-white rounded-lg p-6 md:p-8 mb-8">
+              <div className="prose prose-lg max-w-none">
+                {article.content.split('\n\n').map((paragraph, index) => <p key={index} className="text-gray-700 leading-relaxed mb-4 text-justify print-text">
+                    {paragraph}
+                  </p>)}
+              </div>
+            </div>
+          )}
 
           {/* PDF Embed Section */}
           {article.pdfLink && <div className="bg-white rounded-lg border-t-4 border-accent-pink p-6 mb-8 shadow-md">
@@ -1764,7 +1790,7 @@ const ArticleDetail = () => {
           {/* Read Next Section - Moved Inside White Container */}
           <div className="mt-12 pt-8 border-t border-gray-200 no-print">
             <h2 className="text-2xl font-bold text-hero-navy text-center mb-8 font-heading">
-              पुढील लेख वाचा
+              {slug === "sampurna-smaranika" ? "संमेलनातील इतर साहित्य वाचा" : "पुढील लेख वाचा"}
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
