@@ -1113,8 +1113,7 @@ const articles: Record<string, Article> = {
     authorImage: undefined,
     authorBio: "यशोदीप पब्लिकेशन्स - पुणे आरोग्य महोत्सवाच्या स्मरणिकेचे प्रकाशक. आरोग्य साहित्य संमेलनाच्या सर्व कार्यवृत्तांचे संकलन आणि प्रकाशन.",
     date: "१९ ऑक्टोबर २०२५",
-    content: "", // Content will be replaced with PDF viewer
-    pdfLink: "/pdfs/smarnika-complete.pdf"
+    content: "" // Content will be replaced with download CTA
   }
 };
 
@@ -1704,10 +1703,24 @@ const ArticleDetail = () => {
             </div>
           )}
 
-          {/* Article Content - Show PDF Viewer for complete souvenir, regular content for others */}
+          {/* Article Content - Show Download CTA for complete souvenir, regular content for others */}
           {slug === "sampurna-smaranika" ? (
-            <div className="mb-8">
-              <PDFViewer pdfUrl="/pdfs/smarnika-complete.pdf" />
+            <div className="mb-8 text-center py-12 px-6 bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 font-heading">
+                स्मरणिकेची मूळ प्रत डाउनलोड करा
+              </h2>
+              <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+                संपूर्ण आरोग्य संदेश स्मरणिका डाउनलोड करा आणि वाचा
+              </p>
+              <a
+                href="/pdfs/smarnika-complete.pdf"
+                download
+                className="inline-flex items-center gap-3 px-8 py-4 text-lg font-semibold text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                style={{ backgroundColor: '#FF0080' }}
+              >
+                <FileDown className="w-6 h-6" />
+                संपूर्ण स्मरणिका PDF डाउनलोड करा
+              </a>
             </div>
           ) : (
             <div className="bg-white rounded-lg p-6 md:p-8 mb-8">
