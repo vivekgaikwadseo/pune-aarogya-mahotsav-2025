@@ -8,10 +8,11 @@ import chandrakant from "@/assets/award-chandrakant-patil.png";
 import ramdas from "@/assets/award-ramdas-athawale.png";
 import ramesh from "@/assets/guest-ramesh-naik.png";
 import jabbar from "@/assets/award-jabbar-patel-new.png";
-import prashant from "@/assets/award-prashant-damle-new.png";
-import amitesh from "@/assets/speaker-amitesh-kumar-new.png";
+import prashant from "@/assets/guest-prashant-damle.png";
+import amitesh from "@/assets/guest-amitesh-kumar.png";
 import pravinPatil from "@/assets/speaker-pravin-patil-new.png";
-import pravinTarde from "@/assets/speaker-pravin-tarde-new.png";
+import pravinTarde from "@/assets/guest-pravin-tarde.png";
+import kolheCouple from "@/assets/guest-kolhe-couple.png";
 import mohan from "@/assets/guest-mohan-agashe.png";
 
 const Guests = () => {
@@ -74,7 +75,7 @@ const Guests = () => {
     {
       name: "पद्मश्री डॉ. स्मिता आणि डॉ. रविंद्र कोल्हे",
       title: "पुरस्काराचे मानकरी",
-      image: null,
+      image: kolheCouple,
     },
     {
       name: "डॉ. मोहन आगाशे",
