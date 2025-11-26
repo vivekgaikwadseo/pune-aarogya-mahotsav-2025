@@ -16,6 +16,7 @@ import kolheCouple from "@/assets/guest-kolhe-couple.png";
 import mohan from "@/assets/guest-mohan-agashe.png";
 import truptiDesai from "@/assets/guest-trupti-desai.png";
 import girishOak from "@/assets/guest-girish-oak.png";
+import sunitarajePawar from "@/assets/guest-sunitaraje-pawar.png";
 
 const Guests = () => {
   const guests = [
@@ -93,6 +94,11 @@ const Guests = () => {
       name: "मा. ना. श्री. गिरीश ओक",
       title: "अभिनेते",
       image: girishOak,
+    },
+    {
+      name: "मा. ना. सुनिताराजे पवार",
+      title: "लेखक",
+      image: sunitarajePawar,
     },
   ];
 
