@@ -14,6 +14,8 @@ import pravinPatil from "@/assets/speaker-pravin-patil-new.png";
 import pravinTarde from "@/assets/guest-pravin-tarde.png";
 import kolheCouple from "@/assets/guest-kolhe-couple.png";
 import mohan from "@/assets/guest-mohan-agashe.png";
+import truptiDesai from "@/assets/guest-trupti-desai.png";
+import girishOak from "@/assets/guest-girish-oak.png";
 
 const Guests = () => {
   const guests = [
@@ -81,6 +83,16 @@ const Guests = () => {
       name: "डॉ. मोहन आगाशे",
       title: "जेष्ठ अभिनेते",
       image: mohan,
+    },
+    {
+      name: "मा. ना. तृप्ती देसाई",
+      title: "सामाजिक कार्यकर्ते",
+      image: truptiDesai,
+    },
+    {
+      name: "मा. ना. श्री. गिरीश ओक",
+      title: "अभिनेते",
+      image: girishOak,
     },
   ];
 
