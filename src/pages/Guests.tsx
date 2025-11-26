@@ -19,87 +19,88 @@ const Guests = () => {
     {
       name: "मा. ना. श्री. देवेंद्रजी फडणवीस",
       title: "मुख्यमंत्री, महाराष्ट्र राज्य",
-      image: devendra
+      image: devendra,
     },
     {
       name: "मा. डॉ. संजय ओक",
       title: "संमेलनाध्यक्ष",
-      image: sanjayOak
+      image: sanjayOak,
     },
     {
       name: "मा. ना. श्री. मुरलीधर मोहोळ",
       title: "केंद्रीय राज्य मंत्री, खासदार",
-      image: murlidhar
+      image: murlidhar,
     },
     {
       name: "मा. ना. श्री. पुनीत बालन",
       title: "भारतीय उद्योजक, चित्रपट निर्माते, सामाजिक कार्यकर्ते",
-      image: chandrakant
+      image: chandrakant,
     },
     {
-      name: "मा. डॉ. रामदास आठवले",
-      title: "केंद्रीय राज्यमंत्री",
-      image: ramdas
+      name: "मा. ना. श्री. चंद्रकांतदादा पाटील",
+      title: "मंत्री, उच्च व तंत्र शिक्षण",
+      image: ramdas,
     },
     {
       name: "मा. श्री. रमेश नाईक",
       title: "मुख्यमंत्री सहा. निधी कक्ष प्रमुख",
-      image: ramesh
+      image: ramesh,
     },
     {
       name: "डॉ. जब्बार पटेल",
       title: "जेष्ठ सिने दिग्दर्शक",
-      image: jabbar
+      image: jabbar,
     },
     {
       name: "मा. प्रशांत दामले",
       title: "अभिनेते",
-      image: prashant
+      image: prashant,
     },
     {
       name: "मा. अमितेश कुमार",
       title: "पोलीस आयुक्त, पुणे शहर",
-      image: amitesh
+      image: amitesh,
     },
     {
       name: "मा. प्रविण पाटील",
       title: "पोलीस उपमहानिरीक्षक",
-      image: pravinPatil
+      image: pravinPatil,
     },
     {
       name: "मा. प्रविण तरडे",
       title: "प्रसिद्ध सिने दिग्दर्शक",
-      image: pravinTarde
+      image: pravinTarde,
     },
     {
       name: "पद्मश्री डॉ. स्मिता आणि डॉ. रविंद्र कोल्हे",
       title: "पुरस्काराचे मानकरी",
-      image: null
+      image: null,
     },
     {
       name: "डॉ. मोहन आगाशे",
       title: "जेष्ठ अभिनेते",
-      image: mohan
-    }
+      image: mohan,
+    },
   ];
 
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
-      
+
       {/* Page Header Banner */}
       <section className="relative bg-hero-navy py-16 md:py-24 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)',
-            backgroundSize: '24px 24px'
-          }} />
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: "radial-gradient(circle, white 1px, transparent 1px)",
+              backgroundSize: "24px 24px",
+            }}
+          />
         </div>
-        
+
         <div className="container mx-auto px-4 relative z-10">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center">
-            पाहुणे आणि मान्यवर
-          </h1>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center">पाहुणे आणि मान्यवर</h1>
         </div>
       </section>
 
@@ -108,13 +109,13 @@ const Guests = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {guests.map((guest, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
               >
                 <div className="aspect-square overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
                   {guest.image ? (
-                    <img 
+                    <img
                       src={guest.image}
                       alt={guest.name}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
@@ -124,12 +125,8 @@ const Guests = () => {
                   )}
                 </div>
                 <div className="p-5 text-center">
-                  <h3 className="text-lg font-bold text-hero-navy mb-2 leading-tight">
-                    {guest.name}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    {guest.title}
-                  </p>
+                  <h3 className="text-lg font-bold text-hero-navy mb-2 leading-tight">{guest.name}</h3>
+                  <p className="text-sm text-muted-foreground">{guest.title}</p>
                 </div>
               </div>
             ))}
