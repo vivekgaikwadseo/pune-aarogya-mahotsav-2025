@@ -32,7 +32,7 @@ const Guests = () => {
       image: murlidhar
     },
     {
-      name: "मा. ना. श्री. चंद्रकांतदादा पाटील",
+      name: "मा. ना. श्री. पुनीत बालन",
       title: "मंत्री, उच्च व तंत्र शिक्षण",
       image: chandrakant
     },
