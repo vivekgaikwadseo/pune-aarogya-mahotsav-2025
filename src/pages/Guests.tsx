@@ -1,13 +1,13 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { UserCircle } from "lucide-react";
-import devendra from "@/assets/devandra-0904_d_PhotoGrid-removebg-preview.png";
+import devendra from "@/assets/guest-devendra-fadnavis.png";
 import sanjayOak from "@/assets/guest-sanjay-oak.png";
 import murlidhar from "@/assets/guest-murlidhar-mohol.png";
-import chandrakant from "@/assets/award-chandrakant-patil.png";
-import ramdas from "@/assets/award-ramdas-athawale.png";
+import punitBalan from "@/assets/guest-punit-balan.png";
+import chandrakant from "@/assets/guest-chandrakant-patil.png";
 import ramesh from "@/assets/guest-ramesh-naik.png";
-import jabbar from "@/assets/award-jabbar-patel-new.png";
+import jabbar from "@/assets/guest-jabbar-patel.png";
 import prashant from "@/assets/guest-prashant-damle.png";
 import amitesh from "@/assets/guest-amitesh-kumar.png";
 import pravinPatil from "@/assets/speaker-pravin-patil-new.png";
@@ -38,12 +38,12 @@ const Guests = () => {
     {
       name: "मा. ना. श्री. पुनीत बालन",
       title: "भारतीय उद्योजक, चित्रपट निर्माते, सामाजिक कार्यकर्ते",
-      image: chandrakant,
+      image: punitBalan,
     },
     {
       name: "मा. ना. श्री. चंद्रकांतदादा पाटील",
       title: "मंत्री, उच्च व तंत्र शिक्षण",
-      image: ramdas,
+      image: chandrakant,
     },
     {
       name: "मा. श्री. रमेश नाईक",
