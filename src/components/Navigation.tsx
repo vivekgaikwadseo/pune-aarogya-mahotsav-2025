@@ -1,6 +1,13 @@
 import { Link, useLocation } from "react-router-dom";
-import { Heart, Menu, X } from "lucide-react";
+import { Heart, Menu } from "lucide-react";
 import { useState } from "react";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 const Navigation = () => {
   const location = useLocation();
@@ -50,43 +57,48 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-white hover:bg-white/10 rounded-md p-2 transition-colors"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
-          </button>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden py-4 space-y-1 bg-[#FF0080]">
-            {navItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                onClick={() => setIsMenuOpen(false)}
-                className={`
-                  block px-4 py-2 text-white font-medium rounded-md
-                  transition-all duration-200
-                  hover:bg-white/10 hover:font-semibold
-                  ${location.pathname === item.path 
-                    ? 'font-bold bg-white/10' 
-                    : ''
-                  }
-                `}
-              >
-                {item.label}
-              </Link>
-            ))}
+          {/* Mobile Menu Sheet */}
+          <div className="md:hidden">
+            <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
+              <SheetTrigger asChild>
+                <button
+                  className="text-white hover:bg-white/10 rounded-md p-2 transition-colors"
+                  aria-label="Toggle menu"
+                >
+                  <Menu className="h-6 w-6" />
+                </button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[280px] sm:w-[320px] bg-white">
+                <SheetHeader>
+                  <SheetTitle className="text-left text-hero-navy flex items-center gap-2">
+                    <Heart className="h-5 w-5 text-hero-pink" />
+                    <span>मेनू</span>
+                  </SheetTitle>
+                </SheetHeader>
+                <nav className="mt-8 flex flex-col gap-2">
+                  {navItems.map((item) => (
+                    <Link
+                      key={item.path}
+                      to={item.path}
+                      onClick={() => setIsMenuOpen(false)}
+                      className={`
+                        px-4 py-3 rounded-lg font-medium
+                        transition-all duration-200
+                        hover:bg-hero-pink/10 hover:text-hero-pink
+                        ${location.pathname === item.path 
+                          ? 'bg-hero-pink text-white font-bold' 
+                          : 'text-hero-navy'
+                        }
+                      `}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </nav>
+              </SheetContent>
+            </Sheet>
           </div>
-        )}
+        </div>
       </div>
     </nav>
   );
