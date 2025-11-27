@@ -96,7 +96,7 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Text */}
-            <div className="space-y-6">
+            <div className="space-y-6 order-2 lg:order-1">
               <h3 className="text-2xl md:text-3xl font-bold text-hero-navy">
                 आयोजकांविषयी
               </h3>
@@ -121,7 +121,7 @@ const About = () => {
             </div>
 
             {/* Right Column - Photo with Enhanced Effects */}
-            <div className="relative flex justify-center items-center min-h-[500px]">
+            <div className="relative flex justify-center items-center min-h-[500px] order-1 lg:order-2">
               {/* Multiple Decorative Background Shapes */}
               <div className="absolute inset-0 flex justify-center items-center overflow-hidden">
                 {/* Primary Abstract Shape */}
