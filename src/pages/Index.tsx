@@ -23,9 +23,9 @@ const Index = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative py-8 md:py-12 lg:py-16 pb-16 md:pb-20 lg:pb-24 overflow-hidden bg-white" style={{ clipPath: 'polygon(0 0, 100% 0, 100% 92%, 0 100%)' }}>
-        {/* Floating Animated Colored Shapes */}
-        <div className="absolute inset-0 z-5 pointer-events-none">
+      <section className="relative py-8 md:py-12 lg:py-16 pb-16 md:pb-20 lg:pb-24 overflow-x-hidden overflow-hidden bg-white" style={{ clipPath: 'polygon(0 0, 100% 0, 100% 92%, 0 100%)' }}>
+        {/* Floating Animated Colored Shapes - Hidden on mobile */}
+        <div className="absolute inset-0 z-5 pointer-events-none hidden lg:block">
           {/* Blue Circle */}
           <div className="absolute top-20 right-20 w-16 h-16 bg-hero-blue rounded-full opacity-80 animate-float"></div>
           
@@ -108,24 +108,24 @@ const Index = () => {
             </div>
             
             {/* Right Column - 50% Chief Minister Section */}
-            <div className="relative flex flex-col items-center justify-start pt-0 min-h-[400px] md:min-h-[450px]">
+            <div className="relative flex flex-col items-center justify-start pt-0 min-h-[400px] md:min-h-[450px] w-full px-4 lg:px-0">
               {/* Pink Blob Background - Positioned Behind */}
               <div 
-                className="absolute top-1/3 left-1/2 -translate-x-1/2 w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-hero-pastel-pink -z-10"
+                className="absolute top-1/3 left-1/2 -translate-x-1/2 w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-hero-pastel-pink -z-10"
                 style={{ borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%' }}
               />
               
               {/* Large CM Image - Prominent & Overflowing */}
-              <div className="relative z-10 w-full max-w-md flex justify-center">
+              <div className="relative z-10 w-full max-w-[280px] sm:max-w-sm md:max-w-md flex justify-center">
                 <img 
                   src={chiefGuestPhoto}
                   alt="मा. ना. श्री. देवेंद्रजी फडणवीस"
-                  className="h-[280px] md:h-[320px] lg:h-[360px] w-auto object-contain"
+                  className="h-[240px] sm:h-[280px] md:h-[320px] lg:h-[360px] w-auto object-contain"
                 />
               </div>
               
-              {/* Decorative Deep Pink Plus Sign */}
-              <div className="absolute top-4 right-4 md:top-6 md:right-8 text-hero-deep-pink text-5xl md:text-6xl font-bold transform rotate-12 z-20">
+              {/* Decorative Deep Pink Plus Sign - Hidden on mobile */}
+              <div className="hidden lg:block absolute top-4 right-4 md:top-6 md:right-8 text-hero-deep-pink text-5xl md:text-6xl font-bold transform rotate-12 z-20">
                 +
               </div>
               
