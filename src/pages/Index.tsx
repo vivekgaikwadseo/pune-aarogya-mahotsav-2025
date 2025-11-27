@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Calendar, MapPin } from "lucide-react";
-import CountdownTimer from "@/components/CountdownTimer";
+
 import WhyJoinSection from "@/components/WhyJoinSection";
 import ProgramSchedule from "@/components/ProgramSchedule";
 import ConceptSection from "@/components/ConceptSection";
@@ -75,12 +75,14 @@ const Index = () => {
                 </div>
               </div>
               
-              {/* Countdown Timer */}
-              <div className="space-y-3 pt-3">
-                <h3 className="text-xl md:text-2xl font-semibold text-hero-navy">
-                  सोहळा सुरु होण्यास...
+              {/* Post-Event Message */}
+              <div className="space-y-3 pt-3 bg-hero-box-bg border border-hero-blue rounded-lg p-4 md:p-5">
+                <h3 className="text-2xl md:text-3xl font-bold text-hero-navy">
+                  संमेलन यशस्वीरित्या संपन्न!
                 </h3>
-                <CountdownTimer />
+                <p className="text-base md:text-lg text-hero-grey">
+                  पुढील उपक्रमांची माहिती लवकरच प्रकाशित केली जाईल.
+                </p>
               </div>
               
               {/* CTA Buttons */}
@@ -90,7 +92,7 @@ const Index = () => {
                     size="lg" 
                     className="bg-hero-pink hover:bg-hero-pink/90 text-white text-lg px-8 w-full sm:w-auto font-medium"
                   >
-                    भव्य आरोग्य शिबिर माहिती
+                    संमेलनाचे क्षणचित्रे पहा
                   </Button>
                 </Link>
                 <Link to="/events">
@@ -99,7 +101,7 @@ const Index = () => {
                     variant="outline"
                     className="border-2 border-hero-blue text-hero-blue hover:bg-hero-blue hover:text-white text-lg px-8 w-full sm:w-auto font-medium transition-all duration-300"
                   >
-                    संपूर्ण वेळापत्रक पहा
+                    आरोग्य संदेश स्मरणिका डाउनलोड करा
                   </Button>
                 </Link>
               </div>
