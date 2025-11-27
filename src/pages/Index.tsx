@@ -23,7 +23,7 @@ const Index = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative py-8 md:py-12 lg:py-16 pb-16 md:pb-20 lg:pb-24 overflow-x-hidden overflow-hidden bg-white" style={{ clipPath: 'polygon(0 0, 100% 0, 100% 92%, 0 100%)' }}>
+      <section className="relative py-8 md:py-12 lg:py-16 pb-16 md:pb-20 lg:pb-24 overflow-x-hidden bg-white w-full" style={{ clipPath: 'polygon(0 0, 100% 0, 100% 92%, 0 100%)' }}>
         {/* Floating Animated Colored Shapes - Hidden on mobile */}
         <div className="absolute inset-0 z-5 pointer-events-none hidden lg:block">
           {/* Blue Circle */}
@@ -48,58 +48,58 @@ const Index = () => {
         </div>
         
         {/* Main Content */}
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-6 sm:px-8 md:px-12 lg:px-16 relative z-10 max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
             
             {/* Left Column - 50% Content Section */}
-            <div className="space-y-3 md:space-y-4">
+            <div className="space-y-3 md:space-y-4 w-full">
               {/* Main Headline */}
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-hero-navy leading-tight whitespace-nowrap">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-hero-navy leading-tight break-words">
                 पुणे आरोग्य महोत्सव
               </h1>
               
               {/* Sub-headline */}
-              <h2 className="text-2xl md:text-3xl lg:text-4xl text-hero-navy font-medium">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-hero-navy font-medium break-words">
                 महाराष्ट्रातील <span className="text-[#FF0080]">पहिले</span> आरोग्य साहित्य संमेलन
               </h2>
               
               {/* Information Block with Icons */}
-              <div className="space-y-2 pt-2">
-                <div className="flex items-center gap-3 text-base md:text-lg">
-                  <Calendar className="w-5 h-5 md:w-6 md:h-6 text-hero-blue flex-shrink-0" />
-                  <span className="text-hero-navy font-medium">रविवार, १९ ऑक्टोबर २०२५, सकाळी ९ वा</span>
+              <div className="space-y-2 pt-2 w-full">
+                <div className="flex items-start gap-3 text-sm sm:text-base md:text-lg">
+                  <Calendar className="w-5 h-5 md:w-6 md:h-6 text-hero-blue flex-shrink-0 mt-0.5" />
+                  <span className="text-hero-navy font-medium break-words flex-1">रविवार, १९ ऑक्टोबर २०२५, सकाळी ९ वा</span>
                 </div>
-                <div className="flex items-center gap-3 text-base md:text-lg">
-                  <MapPin className="w-5 h-5 md:w-6 md:h-6 text-hero-blue flex-shrink-0" />
-                  <span className="text-hero-navy font-medium">स्थळ: बालगंधर्व रंगमंदिर, पुणे</span>
+                <div className="flex items-start gap-3 text-sm sm:text-base md:text-lg">
+                  <MapPin className="w-5 h-5 md:w-6 md:h-6 text-hero-blue flex-shrink-0 mt-0.5" />
+                  <span className="text-hero-navy font-medium break-words flex-1">स्थळ: बालगंधर्व रंगमंदिर, पुणे</span>
                 </div>
               </div>
               
               {/* Post-Event Message */}
-              <div className="space-y-3 pt-3 bg-hero-box-bg border border-hero-blue rounded-lg p-4 md:p-5">
-                <h3 className="text-2xl md:text-3xl font-bold text-hero-navy">
+              <div className="space-y-3 pt-3 bg-hero-box-bg border border-hero-blue rounded-lg p-4 md:p-5 w-full">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-hero-navy break-words">
                   संमेलन यशस्वीरित्या संपन्न!
                 </h3>
-                <p className="text-base md:text-lg text-hero-grey">
+                <p className="text-sm sm:text-base md:text-lg text-hero-grey break-words">
                   पुढील उपक्रमांची माहिती लवकरच प्रकाशित केली जाईल.
                 </p>
               </div>
               
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3 pt-3">
-                <Link to="/health-camp">
+              <div className="flex flex-col sm:flex-row gap-3 pt-3 w-full">
+                <Link to="/health-camp" className="w-full sm:w-auto">
                   <Button 
                     size="lg" 
-                    className="bg-hero-pink hover:bg-hero-pink/90 text-white text-lg px-8 w-full sm:w-auto font-medium"
+                    className="bg-hero-pink hover:bg-hero-pink/90 text-white text-base sm:text-lg px-6 sm:px-8 w-full font-medium"
                   >
                     संमेलनाचे क्षणचित्रे पहा
                   </Button>
                 </Link>
-                <Link to="/events">
+                <Link to="/events" className="w-full sm:w-auto">
                   <Button 
                     size="lg" 
                     variant="outline"
-                    className="border-2 border-hero-blue text-hero-blue hover:bg-hero-blue hover:text-white text-lg px-8 w-full sm:w-auto font-medium transition-all duration-300"
+                    className="border-2 border-hero-blue text-hero-blue hover:bg-hero-blue hover:text-white text-base sm:text-lg px-6 sm:px-8 w-full font-medium transition-all duration-300 whitespace-normal"
                   >
                     आरोग्य संदेश स्मरणिका डाउनलोड करा
                   </Button>
@@ -108,19 +108,19 @@ const Index = () => {
             </div>
             
             {/* Right Column - 50% Chief Minister Section */}
-            <div className="relative flex flex-col items-center justify-start pt-0 min-h-[400px] md:min-h-[450px] w-full px-4 lg:px-0">
+            <div className="relative flex flex-col items-center justify-start pt-4 lg:pt-0 min-h-[350px] sm:min-h-[400px] md:min-h-[450px] w-full max-w-full">
               {/* Pink Blob Background - Positioned Behind */}
               <div 
-                className="absolute top-1/3 left-1/2 -translate-x-1/2 w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-hero-pastel-pink -z-10"
+                className="absolute top-1/3 left-1/2 -translate-x-1/2 w-40 h-40 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 bg-hero-pastel-pink -z-10"
                 style={{ borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%' }}
               />
               
               {/* Large CM Image - Prominent & Overflowing */}
-              <div className="relative z-10 w-full max-w-[280px] sm:max-w-sm md:max-w-md flex justify-center">
+              <div className="relative z-10 w-full max-w-[200px] sm:max-w-[240px] md:max-w-[280px] lg:max-w-sm xl:max-w-md flex justify-center">
                 <img 
                   src={chiefGuestPhoto}
                   alt="मा. ना. श्री. देवेंद्रजी फडणवीस"
-                  className="h-[240px] sm:h-[280px] md:h-[320px] lg:h-[360px] w-auto object-contain"
+                  className="h-[200px] sm:h-[240px] md:h-[280px] lg:h-[320px] xl:h-[360px] w-auto object-contain"
                 />
               </div>
               
@@ -130,11 +130,11 @@ const Index = () => {
               </div>
               
               {/* Name and Title - Below Image */}
-              <div className="mt-2 md:mt-3 text-center space-y-2 z-10">
-                <h3 className="text-2xl md:text-3xl font-bold text-hero-navy">
+              <div className="mt-2 md:mt-3 text-center space-y-1 z-10 px-2 w-full">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-hero-navy break-words">
                   मा. ना. श्री. देवेंद्रजी फडणवीस
                 </h3>
-                <p className="text-base md:text-lg text-hero-grey">
+                <p className="text-sm sm:text-base md:text-lg text-hero-grey break-words">
                   मुख्यमंत्री, महाराष्ट्र राज्य
                 </p>
               </div>
