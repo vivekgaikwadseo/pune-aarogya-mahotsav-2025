@@ -6,36 +6,22 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import devendra from "@/assets/devendra-fadnavis-new.png";
+import devendra from "@/assets/guest-devendra-fadnavis.png";
+import sanjayOak from "@/assets/guest-sanjay-oak.png";
 import murlidhar from "@/assets/guest-murlidhar-mohol.png";
-import sanjay from "@/assets/guest-sanjay-oak.png";
+import punitBalan from "@/assets/guest-punit-balan.png";
+import chandrakant from "@/assets/guest-chandrakant-patil.png";
 import ramesh from "@/assets/guest-ramesh-naik.png";
-import kolhe from "@/assets/award-recipients-kolhe.png";
-import chandrakant from "@/assets/award-chandrakant-patil.png";
-import ramdas from "@/assets/award-ramdas-athawale.png";
-import jabbar from "@/assets/award-jabbar-patel-new.png";
-import prashant from "@/assets/award-prashant-damle-new.png";
-import amitesh from "@/assets/speaker-amitesh-kumar-new.png";
+import jabbar from "@/assets/guest-jabbar-patel.png";
+import prashant from "@/assets/guest-prashant-damle.png";
+import amitesh from "@/assets/guest-amitesh-kumar.png";
 import pravinPatil from "@/assets/speaker-pravin-patil-new.png";
-import pravinTarde from "@/assets/speaker-pravin-tarde-new.png";
-import jagannath from "@/assets/speaker-jagannath-dixit.png";
-import pramodJog from "@/assets/speaker-pramod-jog.png";
-import pradeep from "@/assets/speaker-pradeep-avte.png";
-import madhuri from "@/assets/felicitation-madhuri-misal.png";
-import bhagwan from "@/assets/felicitation-bhagwan-pawar.png";
-import hemant from "@/assets/felicitation-hemant-rasane.png";
-import dheeraj from "@/assets/felicitation-dheeraj-ghate.png";
-import sunita from "@/assets/book-launch-sunita-pawar.png";
-import vijayBaviskar from "@/assets/panel2-vijay-baviskar.png";
-import suresh from "@/assets/panel2-suresh-vishwakarma.png";
-import rameshPardeshi from "@/assets/panel2-ramesh-pardeshi.png";
-import jitendra from "@/assets/concluding-jitendra-dudi.png";
-import megha from "@/assets/concluding-megha-kulkarni.png";
-import navkishor from "@/assets/concluding-navkishor-ram.png";
+import pravinTarde from "@/assets/guest-pravin-tarde.png";
+import kolheCouple from "@/assets/guest-kolhe-couple.png";
 import mohan from "@/assets/guest-mohan-agashe.png";
-import meghraj from "@/assets/guest-meghraj-bhosale.png";
-import siddharth from "@/assets/guest-siddharth-shirole.png";
-import sunilKulkarni from "@/assets/guest-sunil-kulkarni.png";
+import truptiDesai from "@/assets/guest-trupti-desai.png";
+import girishOak from "@/assets/guest-girish-oak.png";
+import sunitarajePawar from "@/assets/guest-sunitaraje-pawar.png";
 
 const GuestsSection = () => {
   const guests = [
@@ -45,19 +31,19 @@ const GuestsSection = () => {
       image: devendra,
     },
     {
+      name: "मा. डॉ. संजय ओक",
+      title: "संमेलनाध्यक्ष",
+      image: sanjayOak,
+    },
+    {
       name: "मा. ना. श्री. मुरलीधर मोहोळ",
       title: "केंद्रीय राज्य मंत्री, खासदार",
       image: murlidhar,
     },
     {
-      name: "मा. डॉ. संजय ओक",
-      title: "संमेलनाध्यक्ष",
-      image: sanjay,
-    },
-    {
-      name: "मा. श्री. रमेश नाईक",
-      title: "मुख्यमंत्री सहा. निधी कक्ष प्रमुख",
-      image: ramesh,
+      name: "मा. ना. श्री. पुनीत बालन",
+      title: "भारतीय उद्योजक, चित्रपट निर्माते, सामाजिक कार्यकर्ते",
+      image: punitBalan,
     },
     {
       name: "मा. ना. श्री. चंद्रकांतदादा पाटील",
@@ -65,9 +51,9 @@ const GuestsSection = () => {
       image: chandrakant,
     },
     {
-      name: "मा. डॉ. रामदास आठवले",
-      title: "केंद्रीय राज्यमंत्री",
-      image: ramdas,
+      name: "मा. श्री. रमेश नाईक",
+      title: "मुख्यमंत्री सहा. निधी कक्ष प्रमुख",
+      image: ramesh,
     },
     {
       name: "डॉ. जब्बार पटेल",
@@ -95,74 +81,9 @@ const GuestsSection = () => {
       image: pravinTarde,
     },
     {
-      name: "डॉ. जगन्नाथ दीक्षित",
-      title: "प्रसिद्ध आहारतज्ञ",
-      image: jagannath,
-    },
-    {
-      name: "डॉ. प्रमोद जोग",
-      title: "प्रसिद्ध बालरोगतज्ञ",
-      image: pramodJog,
-    },
-    {
-      name: "डॉ. प्रदिप आवटे",
-      title: "सहा. आरोग्य संचालक",
-      image: pradeep,
-    },
-    {
-      name: "मा. ना. माधुरीताई मिसाळ",
-      title: "राज्यमंत्री, महाराष्ट्र राज्य",
-      image: madhuri,
-    },
-    {
-      name: "डॉ. भगवान पवार",
-      title: "उपसंचालक, आरोग्य मंत्रालय",
-      image: bhagwan,
-    },
-    {
-      name: "मा. श्री. हेमंत रासने",
-      title: "आमदार, कसबा",
-      image: hemant,
-    },
-    {
-      name: "मा. श्री. धीरज घाटे",
-      title: "शहराध्यक्ष, भाजपा, पुणे",
-      image: dheeraj,
-    },
-    {
-      name: "मा. सुनीताताई पवार",
-      title: "प्रमुख कार्यवाह म. सा. परिषद",
-      image: sunita,
-    },
-    {
-      name: "मा. विजय बाविस्कर",
-      title: "समूह संपादक, लोकमत",
-      image: vijayBaviskar,
-    },
-    {
-      name: "मा. सुरेश विश्वकर्मा",
-      title: "सिने अभिनेते",
-      image: suresh,
-    },
-    {
-      name: "मा. रमेश परदेशी",
-      title: "सिने अभिनेते",
-      image: rameshPardeshi,
-    },
-    {
-      name: "मा. जितेंद्र डुडी",
-      title: "जिल्हाधिकारी, पुणे",
-      image: jitendra,
-    },
-    {
-      name: "मा. प्रा. मेघाताई कुलकर्णी",
-      title: "उपाध्यक्ष, भाजपा",
-      image: megha,
-    },
-    {
-      name: "मा. नवकिशोर राम",
-      title: "आयुक्त, पुणे मनपा",
-      image: navkishor,
+      name: "पद्मश्री डॉ. स्मिता आणि डॉ. रविंद्र कोल्हे",
+      title: "पुरस्काराचे मानकरी",
+      image: kolheCouple,
     },
     {
       name: "डॉ. मोहन आगाशे",
@@ -170,19 +91,19 @@ const GuestsSection = () => {
       image: mohan,
     },
     {
-      name: "श्री. मेघराजराजे भोसले",
-      title: "अध्यक्ष, अ. भा. चित्रपट महामंडळ",
-      image: meghraj,
+      name: "मा. ना. तृप्ती देसाई",
+      title: "सामाजिक कार्यकर्ते",
+      image: truptiDesai,
     },
     {
-      name: "श्री. सिद्धार्थ शिरोळे",
-      title: "आमदार",
-      image: siddharth,
+      name: "मा. ना. श्री. गिरीश ओक",
+      title: "अभिनेते",
+      image: girishOak,
     },
     {
-      name: "श्री. सुनील कुलकर्णी",
-      title: "अध्यक्ष, ग्रँड मेडिकल फाऊंडेशन",
-      image: sunilKulkarni,
+      name: "मा. ना. सुनिताराजे पवार",
+      title: "लेखक",
+      image: sunitarajePawar,
     },
   ];
 
@@ -213,43 +134,19 @@ const GuestsSection = () => {
             {guests.map((guest, index) => (
               <CarouselItem
                 key={index}
-                className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/2 lg:basis-1/3"
+                className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/2 lg:basis-1/4"
               >
-                <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
-                  {/* Large Top Image with Clean Grey Background - 70% */}
-                  <div className="relative h-64 overflow-hidden rounded-t-2xl bg-gradient-to-br from-gray-200 via-gray-100 to-gray-200">
-                    {/* Main Guest Image */}
-                    <div className="relative h-full flex items-center justify-center p-4">
-                      <img
-                        src={guest.image}
-                        alt={guest.name}
-                        className="max-h-full max-w-full object-contain drop-shadow-lg group-hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
+                <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
+                  <div className="aspect-square overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+                    <img
+                      src={guest.image}
+                      alt={guest.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
-
-                  {/* Bottom White Box - 30% */}
-                  <div className="bg-white p-3 rounded-b-2xl rounded-t-3xl -mt-2">
-                    <div className="flex items-start gap-2">
-                      {/* Small Circular Avatar */}
-                      <div className="flex-shrink-0">
-                        <img
-                          src={guest.image}
-                          alt={guest.name}
-                          className="w-10 h-10 rounded-full object-cover border-2 border-gray-100"
-                        />
-                      </div>
-
-                      {/* Name and Title */}
-                      <div className="flex-1 min-w-0">
-                        <h3 className="text-sm font-bold text-hero-navy leading-tight mb-1 break-words">
-                          {guest.name}
-                        </h3>
-                        <p className="text-xs text-gray-600 leading-tight break-words">
-                          {guest.title}
-                        </p>
-                      </div>
-                    </div>
+                  <div className="p-5 text-center">
+                    <h3 className="text-lg font-bold text-hero-navy mb-2 leading-tight">{guest.name}</h3>
+                    <p className="text-sm text-muted-foreground">{guest.title}</p>
                   </div>
                 </div>
               </CarouselItem>
