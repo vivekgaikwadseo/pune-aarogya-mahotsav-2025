@@ -2,7 +2,7 @@ import { useState, useRef, forwardRef } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 import HTMLFlipBook from 'react-pageflip';
 import { Button } from '@/components/ui/button';
-import { ChevronLeft, ChevronRight, Maximize2, Minimize2 } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Maximize2, Minimize2, ZoomIn, ZoomOut } from 'lucide-react';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
 
@@ -35,6 +35,7 @@ export default function FlipBookViewer({ pdfUrl }: FlipBookViewerProps) {
   const [numPages, setNumPages] = useState<number>(0);
   const [currentPage, setCurrentPage] = useState<number>(0);
   const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
+  const [zoom, setZoom] = useState<number>(1);
   const bookRef = useRef<any>(null);
 
   // Calculate page width based on screen size
@@ -74,6 +75,18 @@ export default function FlipBookViewer({ pdfUrl }: FlipBookViewerProps) {
 
   const onFlip = (e: any) => {
     setCurrentPage(e.data);
+  };
+
+  const handleZoomIn = () => {
+    setZoom((prev) => Math.min(prev + 0.2, 2));
+  };
+
+  const handleZoomOut = () => {
+    setZoom((prev) => Math.max(prev - 0.2, 0.6));
+  };
+
+  const handleResetZoom = () => {
+    setZoom(1);
   };
 
   return (
@@ -133,10 +146,45 @@ export default function FlipBookViewer({ pdfUrl }: FlipBookViewerProps) {
           {isFullscreen ? <Minimize2 className="h-4 w-4" /> : <Maximize2 className="h-4 w-4" />}
           {isFullscreen ? 'सामान्य दृश्य' : 'पूर्ण स्क्रीन'}
         </Button>
+
+        <div className="w-px h-8 bg-border" />
+
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={handleZoomOut}
+          disabled={zoom <= 0.6}
+          className="gap-2"
+        >
+          <ZoomOut className="h-4 w-4" />
+        </Button>
+
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={handleResetZoom}
+          disabled={zoom === 1}
+          className="px-3"
+        >
+          {Math.round(zoom * 100)}%
+        </Button>
+
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={handleZoomIn}
+          disabled={zoom >= 2}
+          className="gap-2"
+        >
+          <ZoomIn className="h-4 w-4" />
+        </Button>
       </div>
 
       {/* FlipBook */}
-      <div className="flipbook-container relative">
+      <div 
+        className="flipbook-container relative transition-transform duration-300" 
+        style={{ transform: `scale(${zoom})` }}
+      >
         <Document
           file={pdfUrl}
           onLoadSuccess={onDocumentLoadSuccess}
