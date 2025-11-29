@@ -6,6 +6,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 import umeshChavan from "@/assets/umesh-chavan-new.png";
 import bhanupratapBarge from "@/assets/bhanupratap-barge-new.png";
 import milindGaikwad from "@/assets/team-milind-gaikwad.png";
@@ -196,6 +197,11 @@ const OrganizersSection = () => {
                 align: "start",
                 loop: true,
               }}
+              plugins={[
+                Autoplay({
+                  delay: 3000,
+                }),
+              ]}
               className="w-full"
             >
               <CarouselContent className="-ml-4">
