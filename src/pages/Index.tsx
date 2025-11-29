@@ -22,7 +22,7 @@ const Index = () => {
 
       {/* Hero Section */}
       <section
-        className="relative py-4 md:py-6 lg:py-8 pb-8 md:pb-10 lg:pb-12 overflow-x-hidden bg-white w-full"
+        className="relative py-6 md:py-8 lg:py-10 pb-6 md:pb-8 lg:pb-10 overflow-hidden bg-white w-full max-h-screen"
         style={{
           clipPath: "polygon(0 0, 100% 0, 100% 92%, 0 100%)",
         }}
@@ -140,11 +140,11 @@ const Index = () => {
               </div>
 
               {/* Name and Title - Below Image */}
-              <div className="mt-2 md:mt-3 text-center space-y-1 z-10 px-2 w-full">
-                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-hero-navy break-words">
+              <div className="mt-1 md:mt-2 text-center space-y-0.5 z-10 px-2 w-full">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-hero-navy break-words">
                   मा. ना. श्री. देवेंद्रजी फडणवीस
                 </h3>
-                <p className="text-sm sm:text-base md:text-lg text-hero-grey break-words">
+                <p className="text-xs sm:text-sm md:text-base text-hero-grey break-words">
                   मुख्यमंत्री, महाराष्ट्र राज्य
                 </p>
               </div>
