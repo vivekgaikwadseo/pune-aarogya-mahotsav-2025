@@ -268,8 +268,10 @@ const articles: Record<string, Article> = {
     topic: "शस्त्रक्रियेतील आधारस्तंभ - भूल - समज, गैरसमज",
     author: "डॉ. दीपक पोमण",
     authorTitle: "एम.डी. (भूलतज्ञ)",
-    authorImage: sanjayOakImage, // Placeholder - update with correct image
-    featuredImage: sanjayOakImage, // Placeholder - update with correct image
+    authorImage: sanjayOakImage,
+    // Placeholder - update with correct image
+    featuredImage: sanjayOakImage,
+    // Placeholder - update with correct image
     authorBio: "डॉ. दीपक पोमण हे अनुभवी भूलतज्ञ आहेत आणि शस्त्रक्रिया सुरक्षिततेसाठी कार्यरत आहेत.",
     date: "१९ ऑक्टोबर २०२५",
     content: `शस्त्रक्रिया म्हटलं की अनेकांच्या मनात पहिला विचार येतो तो म्हणजे 'भूल'. हा विषय सामान्य लोकांसाठी अनेकदा भीती आणि गोंधळाचा असतो. पण, खरं सांगायचं तर, भूल हे आधुनिक शस्त्रक्रिया शास्त्राचं एक असं अविभाज्य अंग आहे, ज्याशिवाय आजकाल कोणतीही मोठी शस्त्रक्रिया सुरक्षितपणे आणि वेदनाविरहित पूर्ण होऊ शकत नाही.
@@ -357,8 +359,10 @@ const articles: Record<string, Article> = {
     topic: "शाळांमध्ये अंमली पदार्थांचा प्रवेश: धोक्याची घंटा",
     author: "डॉ. नितिन बोरा",
     authorTitle: "समुपदेशक",
-    authorImage: rituparnaShinde, // Placeholder - update with correct image
-    featuredImage: rituparnaShinde, // Placeholder - update with correct image
+    authorImage: rituparnaShinde,
+    // Placeholder - update with correct image
+    featuredImage: rituparnaShinde,
+    // Placeholder - update with correct image
     authorBio: "डॉ. नितिन बोरा हे समुपदेशक आहेत आणि अमली पदार्थ विरोधी मोहिमेसाठी कार्यरत आहेत.",
     date: "१९ ऑक्टोबर २०२५",
     content: `भारतात अंमली पदार्थांची सावली आता शाळांच्या अंगणापर्यंत पसरत आहे. लहान वयात नशेच्या जाळ्यात अडकलेली पिढी म्हणजे राष्ट्राचे भविष्य अंधारात हरवणे होय. हे फक्त व्यसन नाही, ही एक मूक महामारी आहे, जी निरागसतेचा श्वास गुदमरवते, आशेची पाखरे तोडते.
@@ -481,8 +485,10 @@ const articles: Record<string, Article> = {
     topic: "सर्दीचे विकार व त्यावर होमिओपॅथिक उपचार",
     author: "डॉ. इंद्रयानील बावडेकर",
     authorTitle: "एम.डी. (होमिओपॅथी)",
-    authorImage: umeshChavanImage, // Placeholder - update with correct image
-    featuredImage: umeshChavanImage, // Placeholder - update with correct image
+    authorImage: umeshChavanImage,
+    // Placeholder - update with correct image
+    featuredImage: umeshChavanImage,
+    // Placeholder - update with correct image
     authorBio: "डॉ. इंद्रयानील बावडेकर हे एम.डी. (होमिओपॅथी) आहेत आणि होमिओपॅथिक उपचारांसाठी प्रसिद्ध आहेत।",
     date: "१९ ऑक्टोबर २०२५",
     content: `सर्दी हा जगभरात सर्वाधिक प्रमाणात आढळणारा आणि प्रत्येक वयोगटाला त्रास देणारा आजार आहे। वर्षातून अनेक वेळा हा त्रास होऊ शकतो। आजार किरकोळ स्वरूपाचा असला तरी त्याने निर्माण होणारे अस्वस्थपण, कामकाजात होणारी अडचण आणि वारंवार होणाऱ्या तक्रारी यामुळे सर्दीला वैद्यकीय दृष्टीने महत्त्व आहे। होमिओपॅथिक औषधोपचार हा सर्दीच्या त्रासावर सुरक्षित, परिणामकारक व सौम्य उपाय ठरू शकतो।
@@ -1118,225 +1124,196 @@ const articles: Record<string, Article> = {
 };
 
 // All articles in order for navigation
-const allArticles = [
-  {
-    slug: "shubhechha-sandesh",
-    number: "०१",
-    topic: "शुभेच्छा संदेश",
-    author: "देवेंद्र फडणवीस",
-    excerpt: "महाराष्ट्राचे मुख्यमंत्री देवेंद्र फडणवीस यांचा पहिल्या आरोग्य साहित्य संमेलनासाठी शुभेच्छा संदेश...",
-    authorImage: devendaraFadnavisImage
-  },
-  {
-    slug: "sampadakiya",
-    number: "०२",
-    topic: "संपादकीय",
-    author: "डॉ. अविनाश भोंडवे",
-    excerpt: "साहित्य म्हणजे समाजाचं आरसा असतो आणि आरोग्य हे त्या समाजाच्या जीवनशक्तीचं प्रतिबिंब...",
-    authorImage: avinashBhondweImage
-  },
-  {
-    slug: "adhyakshiya-bhashan",
-    number: "०३",
-    topic: "अध्यक्षीय मनोगत",
-    author: "डॉ. संजय ओक",
-    excerpt: "पहिल्या मराठी आरोग्य संमेलनाच्या अध्यक्षपदाचा सन्मान मिळाल्याबद्दल आभार...",
-    authorImage: sanjayOakImage
-  },
-  {
-    slug: "rugna-hakka-parishad",
-    number: "०४",
-    topic: "रुग्ण हक्क परिषद",
-    author: "उमेश चव्हाण",
-    excerpt: "रुग्णांच्या हक्कांसाठी आणि सामाजिक न्यायासाठी लढणारी एक व्यापक चळवळ...",
-    authorImage: umeshChavanImage
-  },
-  {
-    slug: "arogyacha-sakha",
-    number: "०५",
-    topic: "आरोग्याचा सखा",
-    author: "डॉ. केयुर धनंजयराव चौधरी",
-    excerpt: "मुख्यमंत्री सहाय्यता कक्षाचे प्रमुख रामेश्वर नाईक यांच्या आरोग्य सेवा कार्याचे वर्णन...",
-    authorImage: rameshNaikImage
-  },
-  {
-    slug: "vajan-kami-nahi-arogya-vadhvane",
-    number: "०६",
-    topic: "वजन कमी नाही, आरोग्य वाढवणे महत्त्वाचे",
-    author: "डॉ. ऋतुपर्ण शिंदे",
-    excerpt: "स्थूलता कमी करणे म्हणजे फक्त वजन कमी करणे नाही, तर आरोग्य वाढवणे आहे...",
-    authorImage: rituparnaShinde
-  },
-  {
-    slug: "shastrakriyeteel-aadharsatmbha",
-    number: "०७",
-    topic: "शस्त्रक्रियेतील आधारस्तंभ - भूल - समज, गैरसमज",
-    author: "डॉ. दीपक पोमण",
-    excerpt: "भूल हे आधुनिक शस्त्रक्रिया शास्त्राचं एक अविभाज्य अंग आहे...",
-    authorImage: sanjayOakImage
-  },
-  {
-    slug: "shamli-padarthacha-pravesh",
-    number: "०८",
-    topic: "शाळांमध्ये अंमली पदार्थांचा प्रवेश: धोक्याची घंटा",
-    author: "डॉ. नितिन बोरा",
-    excerpt: "अंमली पदार्थांची सावली आता शाळांच्या अंगणापर्यंत पसरत आहे...",
-    authorImage: rituparnaShinde
-  },
-  {
-    slug: "amli-padarthacha-shirkav",
-    number: "०९",
-    topic: "अमली पदार्थाचा शिरकाव शालेय जीवनात धोकादायक",
-    author: "श्री. प्रवीण पाटील (आय.पी.एस.)",
-    excerpt: "शालेय जीवनात अमली पदार्थांचा प्रसार रोखण्यासाठी समग्र प्रयत्न आवश्यक...",
-    authorImage: pravinPatilImage
-  },
-  {
-    slug: "sardiche-viker-homeopathic-upchar",
-    number: "१०",
-    topic: "सर्दीचे विकार व त्यावर होमिओपॅथिक उपचार",
-    author: "डॉ. इंद्रयानील बावडेकर",
-    excerpt: "होमिओपॅथिक औषधोपचार हा सर्दीच्या त्रासावर सुरक्षित व परिणामकारक उपाय...",
-    authorImage: umeshChavanImage
-  },
-  {
-    slug: "upachar-peksha-saavdhani",
-    number: "११",
-    topic: "उपचारापेक्षा सावधानी बाळगा",
-    author: "डॉ. श्रीधर चिपळुणकर",
-    excerpt: "योग्य मुद्रा आणि व्यायाम यांच्यामुळे अनेक आजार टाळता येतात...",
-    authorImage: sanjayOakImage
-  },
-  {
-    slug: "uttam-arogya-gurukilli",
-    number: "१२",
-    topic: "उत्तम आरोग्याची गुरुकिल्ली",
-    author: "वैद्य आनंद बर्वे आणि वैद्या ऋचा बर्वे",
-    excerpt: "विद्यार्थ्यांसाठी आरोग्य आणि शैक्षणिक यश यांचा समतोल कसा साधायचा...",
-    authorImage: umeshChavanImage
-  },
-  {
-    slug: "ayurvedic-saundaryaprasadhane",
-    number: "१३",
-    topic: "आयुर्वेदिय सौंदर्यप्रसाधने",
-    author: "डॉ. अश्विनी गुलाबराव बोदडे",
-    excerpt: "घरच्या घरी शास्त्रोक्त पद्धतीने सौंदर्य प्रसाधने कशी बनवावी...",
-    authorImage: rituparnaShinde
-  },
-  {
-    slug: "arogyacha-diva-striyanchi-jagrukta",
-    number: "१४",
-    topic: "आरोग्याचा दिवा : स्त्रियांची जागरुकता",
-    author: "श्री. डॉ. राहुल गारुडकर",
-    excerpt: "पीसीओडी आणि स्त्रियांचे आरोग्य - जीवनशैलीतील बदल महत्त्वाचे...",
-    authorImage: sanjayOakImage
-  },
-  {
-    slug: "lahan-mulanvar-honaare-laingik-atyachar",
-    number: "१५",
-    topic: "लहान मुलांवर होणारे लैंगिक अत्याचार",
-    author: "प्रा.डॉ. मिलिंद भोई",
-    excerpt: "मुलांच्या सुरक्षिततेसाठी पालक आणि समाजाची जबाबदारी...",
-    authorImage: umeshChavanImage
-  },
-  {
-    slug: "gudghyachi-pratyaropan-surgery",
-    number: "१६",
-    topic: "गुडघ्याची प्रत्यारोपण शस्त्रक्रिया टाळण्यासाठी काय करावे ?",
-    author: "डॉ. केदार भोईर",
-    excerpt: "योग्य काळजी घेतल्यास गुडघ्याचे प्रत्यारोपण टाळता येते...",
-    authorImage: sanjayOakImage
-  },
-  {
-    slug: "avyavdan-pavitra-dan",
-    number: "१७",
-    topic: "अवयवदान पवित्र दान",
-    author: "कविवर्य देवेंद्र औटी",
-    excerpt: "अंतरातील ग्रंथी सर्व त्यांची समंती, संवेदनेची फारच सीमंती...",
-    authorImage: undefined
-  },
-  {
-    slug: "dr-vaidehi-bhandare",
-    number: "१८",
-    topic: "आयुर्वेदीय दिनचर्या",
-    author: "डॉ. वैदेही भंडारे",
-    excerpt: "आपला दिवस हा सकाळी उठण्यापासून सुरू होतो. आयुर्वेदाची दिनचर्या...",
-    authorImage: undefined
-  },
-  {
-    slug: "dr-amol-devlekar",
-    number: "१९",
-    topic: "प्रत्येक पेशंट कविता आहे माझ्यासाठी",
-    author: "डॉ. अमोल अशोक देवळेकर (एम.डी.)",
-    excerpt: "प्रत्येक तन सुंदर, प्रत्येक मन सुंदर, प्रत्येक जण स्वतंत्र कलाकृती...",
-    authorImage: amolDevlekarImage
-  },
-  {
-    slug: "lakshman-shinde-tulsi",
-    number: "२०",
-    topic: "अंगणातील तुळस",
-    author: "लक्ष्मण शिंदे",
-    excerpt: "तुळस माझ्या अंगणीची वृंदावनी फुलते, घराच्या अंगणाला तुळसच शोभते...",
-    authorImage: undefined
-  },
-  {
-    slug: "kishor-mogal-dehdaan",
-    number: "२१",
-    topic: "देहदान",
-    author: "किशोर मोगल",
-    excerpt: "आपली एक स्थिती सत्य आहे प्रचलित, देहदान हे जीवनानंतरचे जीवन दान...",
-    authorImage: undefined
-  },
-  {
-    slug: "balkrishna-bachal-arogya",
-    number: "२२",
-    topic: "आरोग्यम् धनसंपदा",
-    author: "बाळकृष्ण बाचल",
-    excerpt: "सकस आहार अन् व्यायामाने शरीर सुदृढ करू, आरोग्यम् धनसंपदा...",
-    authorImage: undefined
-  },
-  {
-    slug: "balkrishna-bachal-vidamban",
-    number: "२३",
-    topic: "विडंबन गीत - हॉटेलची वाट",
-    author: "बाळकृष्ण मुरलीधर बाचल",
-    excerpt: "पाऊले चालती हॉटेलची वाट, सकस आहाराचे दूर करून ताट...",
-    authorImage: undefined
-  },
-  {
-    slug: "sampurna-smaranika",
-    number: "२४",
-    topic: "संपूर्ण स्वास्थ्य संदेश स्मरणिका",
-    author: "यशोदीप पब्लिकेशन्स",
-    excerpt: "संपूर्ण स्मरणिकेचे संवादात्मक डिजिटल स्वरूप - सर्व लेख आणि कविता एका ठिकाणी...",
-    authorImage: undefined
-  }
-];
+const allArticles = [{
+  slug: "shubhechha-sandesh",
+  number: "०१",
+  topic: "शुभेच्छा संदेश",
+  author: "देवेंद्र फडणवीस",
+  excerpt: "महाराष्ट्राचे मुख्यमंत्री देवेंद्र फडणवीस यांचा पहिल्या आरोग्य साहित्य संमेलनासाठी शुभेच्छा संदेश...",
+  authorImage: devendaraFadnavisImage
+}, {
+  slug: "sampadakiya",
+  number: "०२",
+  topic: "संपादकीय",
+  author: "डॉ. अविनाश भोंडवे",
+  excerpt: "साहित्य म्हणजे समाजाचं आरसा असतो आणि आरोग्य हे त्या समाजाच्या जीवनशक्तीचं प्रतिबिंब...",
+  authorImage: avinashBhondweImage
+}, {
+  slug: "adhyakshiya-bhashan",
+  number: "०३",
+  topic: "अध्यक्षीय मनोगत",
+  author: "डॉ. संजय ओक",
+  excerpt: "पहिल्या मराठी आरोग्य संमेलनाच्या अध्यक्षपदाचा सन्मान मिळाल्याबद्दल आभार...",
+  authorImage: sanjayOakImage
+}, {
+  slug: "rugna-hakka-parishad",
+  number: "०४",
+  topic: "रुग्ण हक्क परिषद",
+  author: "उमेश चव्हाण",
+  excerpt: "रुग्णांच्या हक्कांसाठी आणि सामाजिक न्यायासाठी लढणारी एक व्यापक चळवळ...",
+  authorImage: umeshChavanImage
+}, {
+  slug: "arogyacha-sakha",
+  number: "०५",
+  topic: "आरोग्याचा सखा",
+  author: "डॉ. केयुर धनंजयराव चौधरी",
+  excerpt: "मुख्यमंत्री सहाय्यता कक्षाचे प्रमुख रामेश्वर नाईक यांच्या आरोग्य सेवा कार्याचे वर्णन...",
+  authorImage: rameshNaikImage
+}, {
+  slug: "vajan-kami-nahi-arogya-vadhvane",
+  number: "०६",
+  topic: "वजन कमी नाही, आरोग्य वाढवणे महत्त्वाचे",
+  author: "डॉ. ऋतुपर्ण शिंदे",
+  excerpt: "स्थूलता कमी करणे म्हणजे फक्त वजन कमी करणे नाही, तर आरोग्य वाढवणे आहे...",
+  authorImage: rituparnaShinde
+}, {
+  slug: "shastrakriyeteel-aadharsatmbha",
+  number: "०७",
+  topic: "शस्त्रक्रियेतील आधारस्तंभ - भूल - समज, गैरसमज",
+  author: "डॉ. दीपक पोमण",
+  excerpt: "भूल हे आधुनिक शस्त्रक्रिया शास्त्राचं एक अविभाज्य अंग आहे...",
+  authorImage: sanjayOakImage
+}, {
+  slug: "shamli-padarthacha-pravesh",
+  number: "०८",
+  topic: "शाळांमध्ये अंमली पदार्थांचा प्रवेश: धोक्याची घंटा",
+  author: "डॉ. नितिन बोरा",
+  excerpt: "अंमली पदार्थांची सावली आता शाळांच्या अंगणापर्यंत पसरत आहे...",
+  authorImage: rituparnaShinde
+}, {
+  slug: "amli-padarthacha-shirkav",
+  number: "०९",
+  topic: "अमली पदार्थाचा शिरकाव शालेय जीवनात धोकादायक",
+  author: "श्री. प्रवीण पाटील (आय.पी.एस.)",
+  excerpt: "शालेय जीवनात अमली पदार्थांचा प्रसार रोखण्यासाठी समग्र प्रयत्न आवश्यक...",
+  authorImage: pravinPatilImage
+}, {
+  slug: "sardiche-viker-homeopathic-upchar",
+  number: "१०",
+  topic: "सर्दीचे विकार व त्यावर होमिओपॅथिक उपचार",
+  author: "डॉ. इंद्रयानील बावडेकर",
+  excerpt: "होमिओपॅथिक औषधोपचार हा सर्दीच्या त्रासावर सुरक्षित व परिणामकारक उपाय...",
+  authorImage: umeshChavanImage
+}, {
+  slug: "upachar-peksha-saavdhani",
+  number: "११",
+  topic: "उपचारापेक्षा सावधानी बाळगा",
+  author: "डॉ. श्रीधर चिपळुणकर",
+  excerpt: "योग्य मुद्रा आणि व्यायाम यांच्यामुळे अनेक आजार टाळता येतात...",
+  authorImage: sanjayOakImage
+}, {
+  slug: "uttam-arogya-gurukilli",
+  number: "१२",
+  topic: "उत्तम आरोग्याची गुरुकिल्ली",
+  author: "वैद्य आनंद बर्वे आणि वैद्या ऋचा बर्वे",
+  excerpt: "विद्यार्थ्यांसाठी आरोग्य आणि शैक्षणिक यश यांचा समतोल कसा साधायचा...",
+  authorImage: umeshChavanImage
+}, {
+  slug: "ayurvedic-saundaryaprasadhane",
+  number: "१३",
+  topic: "आयुर्वेदिय सौंदर्यप्रसाधने",
+  author: "डॉ. अश्विनी गुलाबराव बोदडे",
+  excerpt: "घरच्या घरी शास्त्रोक्त पद्धतीने सौंदर्य प्रसाधने कशी बनवावी...",
+  authorImage: rituparnaShinde
+}, {
+  slug: "arogyacha-diva-striyanchi-jagrukta",
+  number: "१४",
+  topic: "आरोग्याचा दिवा : स्त्रियांची जागरुकता",
+  author: "श्री. डॉ. राहुल गारुडकर",
+  excerpt: "पीसीओडी आणि स्त्रियांचे आरोग्य - जीवनशैलीतील बदल महत्त्वाचे...",
+  authorImage: sanjayOakImage
+}, {
+  slug: "lahan-mulanvar-honaare-laingik-atyachar",
+  number: "१५",
+  topic: "लहान मुलांवर होणारे लैंगिक अत्याचार",
+  author: "प्रा.डॉ. मिलिंद भोई",
+  excerpt: "मुलांच्या सुरक्षिततेसाठी पालक आणि समाजाची जबाबदारी...",
+  authorImage: umeshChavanImage
+}, {
+  slug: "gudghyachi-pratyaropan-surgery",
+  number: "१६",
+  topic: "गुडघ्याची प्रत्यारोपण शस्त्रक्रिया टाळण्यासाठी काय करावे ?",
+  author: "डॉ. केदार भोईर",
+  excerpt: "योग्य काळजी घेतल्यास गुडघ्याचे प्रत्यारोपण टाळता येते...",
+  authorImage: sanjayOakImage
+}, {
+  slug: "avyavdan-pavitra-dan",
+  number: "१७",
+  topic: "अवयवदान पवित्र दान",
+  author: "कविवर्य देवेंद्र औटी",
+  excerpt: "अंतरातील ग्रंथी सर्व त्यांची समंती, संवेदनेची फारच सीमंती...",
+  authorImage: undefined
+}, {
+  slug: "dr-vaidehi-bhandare",
+  number: "१८",
+  topic: "आयुर्वेदीय दिनचर्या",
+  author: "डॉ. वैदेही भंडारे",
+  excerpt: "आपला दिवस हा सकाळी उठण्यापासून सुरू होतो. आयुर्वेदाची दिनचर्या...",
+  authorImage: undefined
+}, {
+  slug: "dr-amol-devlekar",
+  number: "१९",
+  topic: "प्रत्येक पेशंट कविता आहे माझ्यासाठी",
+  author: "डॉ. अमोल अशोक देवळेकर (एम.डी.)",
+  excerpt: "प्रत्येक तन सुंदर, प्रत्येक मन सुंदर, प्रत्येक जण स्वतंत्र कलाकृती...",
+  authorImage: amolDevlekarImage
+}, {
+  slug: "lakshman-shinde-tulsi",
+  number: "२०",
+  topic: "अंगणातील तुळस",
+  author: "लक्ष्मण शिंदे",
+  excerpt: "तुळस माझ्या अंगणीची वृंदावनी फुलते, घराच्या अंगणाला तुळसच शोभते...",
+  authorImage: undefined
+}, {
+  slug: "kishor-mogal-dehdaan",
+  number: "२१",
+  topic: "देहदान",
+  author: "किशोर मोगल",
+  excerpt: "आपली एक स्थिती सत्य आहे प्रचलित, देहदान हे जीवनानंतरचे जीवन दान...",
+  authorImage: undefined
+}, {
+  slug: "balkrishna-bachal-arogya",
+  number: "२२",
+  topic: "आरोग्यम् धनसंपदा",
+  author: "बाळकृष्ण बाचल",
+  excerpt: "सकस आहार अन् व्यायामाने शरीर सुदृढ करू, आरोग्यम् धनसंपदा...",
+  authorImage: undefined
+}, {
+  slug: "balkrishna-bachal-vidamban",
+  number: "२३",
+  topic: "विडंबन गीत - हॉटेलची वाट",
+  author: "बाळकृष्ण मुरलीधर बाचल",
+  excerpt: "पाऊले चालती हॉटेलची वाट, सकस आहाराचे दूर करून ताट...",
+  authorImage: undefined
+}, {
+  slug: "sampurna-smaranika",
+  number: "२४",
+  topic: "संपूर्ण स्वास्थ्य संदेश स्मरणिका",
+  author: "यशोदीप पब्लिकेशन्स",
+  excerpt: "संपूर्ण स्मरणिकेचे संवादात्मक डिजिटल स्वरूप - सर्व लेख आणि कविता एका ठिकाणी...",
+  authorImage: undefined
+}];
 
 // Function to get next articles based on current slug
 const getNextArticles = (currentSlug: string | undefined) => {
   if (!currentSlug) return [];
-  
   const currentIndex = allArticles.findIndex(article => article.slug === currentSlug);
   if (currentIndex === -1) return [];
-  
+
   // Get next 2 articles, wrapping around if needed
   const nextArticles = [];
   for (let i = 1; i <= 2; i++) {
     const nextIndex = (currentIndex + i) % allArticles.length;
     nextArticles.push(allArticles[nextIndex]);
   }
-  
   return nextArticles;
 };
 
 // Function to get previous article
 const getPreviousArticle = (currentSlug: string | undefined) => {
   if (!currentSlug) return null;
-  
   const currentIndex = allArticles.findIndex(article => article.slug === currentSlug);
   if (currentIndex === -1) return null;
-  
   const prevIndex = currentIndex === 0 ? allArticles.length - 1 : currentIndex - 1;
   return allArticles[prevIndex];
 };
@@ -1344,10 +1321,8 @@ const getPreviousArticle = (currentSlug: string | undefined) => {
 // Function to get next article
 const getNextArticle = (currentSlug: string | undefined) => {
   if (!currentSlug) return null;
-  
   const currentIndex = allArticles.findIndex(article => article.slug === currentSlug);
   if (currentIndex === -1) return null;
-  
   const nextIndex = (currentIndex + 1) % allArticles.length;
   return allArticles[nextIndex];
 };
@@ -1357,19 +1332,19 @@ const ArticleDetail = () => {
   } = useParams();
   const article = slug ? articles[slug] : null;
   const relatedArticles = getNextArticles(slug);
-  
+
   // Get current article number
   const currentArticleIndex = allArticles.findIndex(a => a.slug === slug);
   const currentArticleNumber = currentArticleIndex !== -1 ? allArticles[currentArticleIndex].number : "";
   const totalArticles = "२४";
-  
+
   // Get previous and next articles for navigation
   const previousArticle = getPreviousArticle(slug);
   const nextArticle = getNextArticle(slug);
-  
+
   // Reading progress state
   const [readingProgress, setReadingProgress] = useState(0);
-  
+
   // Smooth scroll to top when article changes
   useEffect(() => {
     window.scrollTo({
@@ -1377,68 +1352,54 @@ const ArticleDetail = () => {
       behavior: 'smooth'
     });
   }, [slug]);
-  
+
   // Track reading progress
   useEffect(() => {
     const handleScroll = () => {
       const windowHeight = window.innerHeight;
       const documentHeight = document.documentElement.scrollHeight;
       const scrollTop = window.scrollY;
-      
+
       // Calculate progress percentage
       const totalScrollableHeight = documentHeight - windowHeight;
-      const progress = (scrollTop / totalScrollableHeight) * 100;
-      
+      const progress = scrollTop / totalScrollableHeight * 100;
       setReadingProgress(Math.min(progress, 100));
     };
-    
     window.addEventListener('scroll', handleScroll);
     // Initial calculation
     handleScroll();
-    
     return () => window.removeEventListener('scroll', handleScroll);
   }, [slug]);
   const handleShare = (platform: string) => {
     const url = window.location.href;
-    
     if (!article) return;
-    
+
     // Create detailed share messages
     const title = article.topic;
     const author = article.author;
     const authorTitle = article.authorTitle || "";
-    
+
     // Facebook share text (will appear in the preview)
     const fbText = `${title} | लेखक: ${author}${authorTitle ? ` (${authorTitle})` : ''}`;
-    
+
     // Twitter/X share text (280 char limit, so keep it concise)
     const twitterText = `📖 ${title}\n\n✍️ ${author}${authorTitle ? ` - ${authorTitle}` : ''}\n\n#आरोग्यसाहित्यसंमेलन #आरोग्य`;
-    
+
     // WhatsApp share text (more detailed)
     const whatsappText = `📚 *${title}*\n\n✍️ लेखक: ${author}${authorTitle ? `\n${authorTitle}` : ''}\n\n🔗 वाचा:`;
-    
+
     // Instagram copy text
     const instagramText = `📖 ${title}\n\n✍️ ${author}${authorTitle ? `\n${authorTitle}` : ''}\n\n🔗 ${url}\n\n#आरोग्यसाहित्यसंमेलन #आरोग्य #मराठी`;
-    
     switch (platform) {
       case 'facebook':
         // Facebook with quote parameter for better sharing
-        window.open(
-          `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(fbText)}`,
-          '_blank'
-        );
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(fbText)}`, '_blank');
         break;
       case 'x':
-        window.open(
-          `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(twitterText)}`,
-          '_blank'
-        );
+        window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(twitterText)}`, '_blank');
         break;
       case 'whatsapp':
-        window.open(
-          `https://wa.me/?text=${encodeURIComponent(whatsappText + ' ' + url)}`,
-          '_blank'
-        );
+        window.open(`https://wa.me/?text=${encodeURIComponent(whatsappText + ' ' + url)}`, '_blank');
         break;
       case 'instagram':
         // Instagram doesn't have a direct share URL, so we copy to clipboard
@@ -1450,7 +1411,6 @@ const ArticleDetail = () => {
         break;
     }
   };
-
   const handlePrint = () => {
     window.print();
   };
@@ -1578,10 +1538,9 @@ const ArticleDetail = () => {
       
       {/* Reading Progress Bar */}
       <div className="fixed top-0 left-0 w-full h-1 bg-gray-200 z-50">
-        <div 
-          className="h-full bg-[#FF0080] transition-all duration-150 ease-out"
-          style={{ width: `${readingProgress}%` }}
-        />
+        <div className="h-full bg-[#FF0080] transition-all duration-150 ease-out" style={{
+          width: `${readingProgress}%`
+        }} />
       </div>
       
       <main className="flex-1 bg-[#F8F9FA]">
@@ -1589,48 +1548,32 @@ const ArticleDetail = () => {
         <section className="relative bg-hero-navy pt-20 pb-32 px-4 overflow-hidden print-header no-print">
           {/* Square Pattern Overlay */}
           <div className="absolute inset-0 opacity-10" style={{
-          backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 20px, rgba(255,255,255,0.1) 20px, rgba(255,255,255,0.1) 21px),
+            backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 20px, rgba(255,255,255,0.1) 20px, rgba(255,255,255,0.1) 21px),
                                repeating-linear-gradient(90deg, transparent, transparent 20px, rgba(255,255,255,0.1) 20px, rgba(255,255,255,0.1) 21px)`
-        }} />
+          }} />
           
           {/* Content */}
           <div className="container mx-auto max-w-4xl relative z-10 text-center text-white">
             {/* Progress Indicator with Navigation Arrows */}
             <div className="flex items-center justify-center gap-4 mb-4">
               {/* Previous Article Button */}
-              {previousArticle && (
-                <Link to={`/article/${previousArticle.slug}`}>
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    className="text-white hover:text-[#FF0080] hover:bg-white/10 transition-colors"
-                    title={`पूर्वीचा लेख: ${previousArticle.topic}`}
-                  >
+              {previousArticle && <Link to={`/article/${previousArticle.slug}`}>
+                  <Button variant="ghost" size="icon" className="text-white hover:text-[#FF0080] hover:bg-white/10 transition-colors" title={`पूर्वीचा लेख: ${previousArticle.topic}`}>
                     <ArrowLeft className="w-6 h-6" />
                   </Button>
-                </Link>
-              )}
+                </Link>}
               
               {/* Progress Badge */}
-              {currentArticleNumber && (
-                <span className="inline-block bg-[#FF0080] text-white px-4 py-2 rounded-full text-sm font-semibold">
+              {currentArticleNumber && <span className="inline-block bg-[#FF0080] text-white px-4 py-2 rounded-full text-sm font-semibold">
                   लेख {currentArticleNumber} / {totalArticles}
-                </span>
-              )}
+                </span>}
               
               {/* Next Article Button */}
-              {nextArticle && (
-                <Link to={`/article/${nextArticle.slug}`}>
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    className="text-white hover:text-[#FF0080] hover:bg-white/10 transition-colors"
-                    title={`पुढील लेख: ${nextArticle.topic}`}
-                  >
+              {nextArticle && <Link to={`/article/${nextArticle.slug}`}>
+                  <Button variant="ghost" size="icon" className="text-white hover:text-[#FF0080] hover:bg-white/10 transition-colors" title={`पुढील लेख: ${nextArticle.topic}`}>
                     <ArrowRight className="w-6 h-6" />
                   </Button>
-                </Link>
-              )}
+                </Link>}
             </div>
             
             <h1 className="text-4xl md:text-5xl font-bold mb-6 mt-12 font-heading">
@@ -1645,12 +1588,10 @@ const ArticleDetail = () => {
               {/* Metadata - All on one line */}
               <div className="flex items-center gap-2">
                 <span className="font-semibold">लेखक: {article.author}</span>
-                {article.authorTitle && (
-                  <>
+                {article.authorTitle && <>
                     <span className="text-white/50">•</span>
                     <span className="text-white/80">{article.authorTitle}</span>
-                  </>
-                )}
+                  </>}
                 <span className="text-white/50">|</span>
                 <span className="text-white/80">{article.date}</span>
               </div>
@@ -1658,10 +1599,7 @@ const ArticleDetail = () => {
 
             {/* Breadcrumb Navigation */}
             <div className="flex justify-center">
-              <Link 
-                to="/souvenir" 
-                className="text-[#FF0080] hover:text-[#FF0080]/80 hover:underline text-sm font-medium inline-flex items-center gap-1"
-              >
+              <Link to="/souvenir" className="text-[#FF0080] hover:text-[#FF0080]/80 hover:underline text-sm font-medium inline-flex items-center gap-1">
                 <ChevronLeft className="w-4 h-4" />
                 स्मरणिका मुख्य पान
               </Link>
@@ -1683,12 +1621,10 @@ const ArticleDetail = () => {
           <h1 className="text-3xl font-bold mb-2">{article.topic}</h1>
           <div className="flex items-center gap-4 text-sm">
             <span>लेखक: {article.author}</span>
-            {article.authorTitle && (
-              <>
+            {article.authorTitle && <>
                 <span>•</span>
                 <span>{article.authorTitle}</span>
-              </>
-            )}
+              </>}
             <span>•</span>
             <span>{article.date}</span>
           </div>
@@ -1696,41 +1632,32 @@ const ArticleDetail = () => {
         
         <div className="bg-white rounded-b-2xl rounded-t-none shadow-lg p-8 md:p-12">
           {/* Official Emblem - Only for Chief Minister's article */}
-          {slug === "shubhechha-sandesh" && (
-            <div className="text-center mb-8 print-emblem">
+          {slug === "shubhechha-sandesh" && <div className="text-center mb-8 print-emblem">
               <img src={emblemImage} alt="Emblem of India" className="w-20 h-20 mx-auto mb-2 object-contain" />
               <p className="text-lg font-bold text-hero-navy">सत्यमेव जयते</p>
-            </div>
-          )}
+            </div>}
 
           {/* Article Content - Show Download CTA for complete souvenir, regular content for others */}
-          {slug === "sampurna-smaranika" ? (
-            <div className="mb-8 text-center py-12 px-6 bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl">
+          {slug === "sampurna-smaranika" ? <div className="mb-8 text-center py-12 px-6 bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 font-heading">
-                स्मरणिकेची मूळ प्रत डाउनलोड करा
+                स्मरणिकेची मूळ प्रत वाचा आणि डाउनलोड करा
               </h2>
               <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
                 संपूर्ण स्वास्थ्य संदेश स्मरणिका डाउनलोड करा आणि वाचा
               </p>
-              <a
-                href="/pdfs/smarnika-complete.pdf"
-                download
-                className="inline-flex items-center gap-3 px-8 py-4 text-lg font-semibold text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-                style={{ backgroundColor: '#FF0080' }}
-              >
+              <a href="/pdfs/smarnika-complete.pdf" download className="inline-flex items-center gap-3 px-8 py-4 text-lg font-semibold text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105" style={{
+                backgroundColor: '#FF0080'
+              }}>
                 <FileDown className="w-6 h-6" />
                 संपूर्ण स्मरणिका PDF डाउनलोड करा
               </a>
-            </div>
-          ) : (
-            <div className="bg-white rounded-lg p-6 md:p-8 mb-8">
+            </div> : <div className="bg-white rounded-lg p-6 md:p-8 mb-8">
               <div className="prose prose-lg max-w-none">
                 {article.content.split('\n\n').map((paragraph, index) => <p key={index} className="text-gray-700 leading-relaxed mb-4 text-justify print-text">
                     {paragraph}
                   </p>)}
               </div>
-            </div>
-          )}
+            </div>}
 
           {/* PDF Embed Section */}
           {article.pdfLink && <div className="bg-white rounded-lg border-t-4 border-accent-pink p-6 mb-8 shadow-md">
@@ -1740,11 +1667,7 @@ const ArticleDetail = () => {
               
               {/* Embedded PDF */}
               <div className="w-full h-[800px] border border-gray-200 rounded-lg overflow-hidden mb-4">
-                <iframe 
-                  src={`${article.pdfLink}#toolbar=0&navpanes=0&scrollbar=1&view=FitH`} 
-                  className="w-full h-full" 
-                  title="शुभेच्छा पत्र" 
-                />
+                <iframe src={`${article.pdfLink}#toolbar=0&navpanes=0&scrollbar=1&view=FitH`} className="w-full h-full" title="शुभेच्छा पत्र" />
               </div>
               
               {/* Download Link */}
@@ -1810,13 +1733,7 @@ const ArticleDetail = () => {
               {relatedArticles.map(relatedArticle => <div key={relatedArticle.slug} className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all overflow-hidden group border border-gray-100 flex flex-col">
                   {/* Card Image */}
                   <div className="h-40 overflow-hidden bg-gradient-to-br from-hero-navy to-[#1a1a4a]">
-                    {relatedArticle.authorImage && (
-                      <img 
-                        src={relatedArticle.authorImage} 
-                        alt={relatedArticle.topic} 
-                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 opacity-80" 
-                      />
-                    )}
+                    {relatedArticle.authorImage && <img src={relatedArticle.authorImage} alt={relatedArticle.topic} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 opacity-80" />}
                   </div>
                   
                   {/* Card Content */}
@@ -1848,10 +1765,7 @@ const ArticleDetail = () => {
                     </div>
                     
                     {/* Read More Link - Grey */}
-                    <Link 
-                      to={`/article/${relatedArticle.slug}`}
-                      className="text-[#555555] hover:text-[#555555]/80 font-medium text-sm transition-colors inline-flex items-center gap-1 mt-auto my-0 mx-0 px-0 py-[10px]"
-                    >
+                    <Link to={`/article/${relatedArticle.slug}`} className="text-[#555555] hover:text-[#555555]/80 font-medium text-sm transition-colors inline-flex items-center gap-1 mt-auto my-0 mx-0 px-0 py-[10px]">
                       पुढे वाचा
                       <ChevronRight className="w-4 h-4" />
                     </Link>
@@ -1862,11 +1776,7 @@ const ArticleDetail = () => {
             {/* Bottom Navigation Button */}
             <div className="text-center mt-8">
               <Link to="/souvenir">
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  className="border-2 border-[#000F93] text-[#000F93] hover:bg-[#000F93] hover:text-white font-semibold px-8"
-                >
+                <Button variant="outline" size="lg" className="border-2 border-[#000F93] text-[#000F93] hover:bg-[#000F93] hover:text-white font-semibold px-8">
                   सर्व लेख पहा
                 </Button>
               </Link>
