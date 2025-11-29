@@ -1107,7 +1107,7 @@ const articles: Record<string, Article> = {
   },
   "sampurna-smaranika": {
     id: "24",
-    topic: "संपूर्ण आरोग्य संदेश स्मरणिका",
+    topic: "संपूर्ण स्वास्थ्य संदेश स्मरणिका",
     author: "यशोदीप पब्लिकेशन्स",
     authorTitle: "प्रकाशक",
     authorImage: undefined,
@@ -1306,7 +1306,7 @@ const allArticles = [
   {
     slug: "sampurna-smaranika",
     number: "२४",
-    topic: "संपूर्ण आरोग्य संदेश स्मरणिका",
+    topic: "संपूर्ण स्वास्थ्य संदेश स्मरणिका",
     author: "यशोदीप पब्लिकेशन्स",
     excerpt: "संपूर्ण स्मरणिकेचे संवादात्मक डिजिटल स्वरूप - सर्व लेख आणि कविता एका ठिकाणी...",
     authorImage: undefined
@@ -1710,7 +1710,7 @@ const ArticleDetail = () => {
                 स्मरणिकेची मूळ प्रत डाउनलोड करा
               </h2>
               <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-                संपूर्ण आरोग्य संदेश स्मरणिका डाउनलोड करा आणि वाचा
+                संपूर्ण स्वास्थ्य संदेश स्मरणिका डाउनलोड करा आणि वाचा
               </p>
               <a
                 href="/pdfs/smarnika-complete.pdf"
