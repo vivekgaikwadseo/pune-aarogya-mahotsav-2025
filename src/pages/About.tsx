@@ -42,7 +42,7 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Left Column - Image */}
-            <div className="order-2 md:order-1">
+            <div className="order-1 md:order-1">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <img 
                   src={conceptHealthArts} 
@@ -53,7 +53,7 @@ const About = () => {
             </div>
 
             {/* Right Column - Content */}
-            <div className="order-1 md:order-2 space-y-6">
+            <div className="order-2 md:order-2 space-y-6">
               <p className="text-hero-pink font-semibold text-lg">
                 आमची ओळख
               </p>
