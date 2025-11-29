@@ -23,7 +23,7 @@ const Index = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative py-8 md:py-12 lg:py-16 pb-16 md:pb-20 lg:pb-24 overflow-x-hidden bg-white w-full" style={{ clipPath: 'polygon(0 0, 100% 0, 100% 92%, 0 100%)' }}>
+      <section className="relative py-4 md:py-6 lg:py-8 pb-8 md:pb-10 lg:pb-12 overflow-x-hidden bg-white w-full" style={{ clipPath: 'polygon(0 0, 100% 0, 100% 92%, 0 100%)' }}>
         {/* Floating Animated Colored Shapes - Hidden on mobile */}
         <div className="absolute inset-0 z-5 pointer-events-none hidden lg:block">
           {/* Blue Circle */}
@@ -52,7 +52,7 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
             
             {/* Left Column - 50% Content Section */}
-            <div className="space-y-3 md:space-y-4 w-full">
+            <div className="space-y-2 md:space-y-3 w-full">
               {/* Main Headline */}
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-hero-navy leading-tight break-words">
                 पुणे आरोग्य महोत्सव
@@ -64,7 +64,7 @@ const Index = () => {
               </h2>
               
               {/* Information Block with Icons */}
-              <div className="space-y-2 pt-2 w-full">
+              <div className="space-y-2 pt-1 w-full">
                 <div className="flex items-start gap-3 text-sm sm:text-base md:text-lg">
                   <Calendar className="w-5 h-5 md:w-6 md:h-6 text-hero-blue flex-shrink-0 mt-0.5" />
                   <span className="text-hero-navy font-medium break-words flex-1">रविवार, १९ ऑक्टोबर २०२५, सकाळी ९ वा</span>
@@ -76,7 +76,7 @@ const Index = () => {
               </div>
               
               {/* Post-Event Message */}
-              <div className="space-y-3 pt-3 bg-hero-box-bg border border-hero-blue rounded-lg p-4 md:p-5 w-full">
+              <div className="space-y-2 pt-1 bg-hero-box-bg border border-hero-blue rounded-lg p-3 md:p-4 w-full">
                 <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-hero-navy break-words">
                   संमेलन यशस्वीरित्या संपन्न!
                 </h3>
@@ -86,7 +86,7 @@ const Index = () => {
               </div>
               
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3 pt-3 w-full">
+              <div className="flex flex-col sm:flex-row gap-3 pt-1 w-full">
                 <Link to="/health-camp" className="w-full sm:w-auto">
                   <Button 
                     size="lg" 
