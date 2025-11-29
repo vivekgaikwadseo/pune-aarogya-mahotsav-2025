@@ -54,12 +54,12 @@ const Index = () => {
             {/* Left Column - 50% Content Section */}
             <div className="space-y-2 md:space-y-3 w-full">
               {/* Main Headline */}
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-hero-navy leading-tight break-words">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-hero-navy leading-tight whitespace-nowrap">
                 पुणे आरोग्य महोत्सव
               </h1>
               
               {/* Sub-headline */}
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-hero-navy font-medium break-words">
+              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-hero-navy font-medium whitespace-nowrap">
                 महाराष्ट्रातील <span className="text-[#FF0080]">पहिले</span> आरोग्य साहित्य संमेलन
               </h2>
               
