@@ -94,7 +94,7 @@ const Index = () => {
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3 pt-1 w-full">
+              <div className="flex flex-col sm:flex-row gap-3 pt-2 w-full">
                 <Link to="/health-camp" className="w-full sm:w-auto">
                   <Button
                     size="lg"
