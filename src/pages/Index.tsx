@@ -103,7 +103,7 @@ const Index = () => {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="border-2 border-hero-blue text-hero-blue hover:bg-hero-blue hover:text-white text-base sm:text-lg px-6 sm:px-8 w-full font-medium transition-all duration-300 whitespace-normal"
+                    className="border-2 border-hero-blue text-hero-blue hover:bg-hero-blue hover:text-white text-base sm:text-lg px-6 sm:px-8 sm:w-auto w-full font-medium transition-all duration-300 whitespace-nowrap"
                   >
                     स्वास्थ्य संदेश स्मरणिका डाउनलोड करा
                   </Button>
