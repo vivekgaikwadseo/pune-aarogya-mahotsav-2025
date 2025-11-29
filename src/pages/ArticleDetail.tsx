@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Facebook, X, Share2, User, FileDown, ChevronRight, Instagram, ChevronLeft, ArrowLeft, ArrowRight, Printer } from "lucide-react";
 import PDFViewer from "@/components/PDFViewer";
+import FlipBookViewer from "@/components/FlipBookViewer";
 import emblemImage from "@/assets/emblem-of-india-new.png";
 import featuredImage from "@/assets/devendra-fadnavis-featured.png";
 import devendaraFadnavisImage from "@/assets/devendra-fadnavis-new.png";
@@ -1638,19 +1639,28 @@ const ArticleDetail = () => {
             </div>}
 
           {/* Article Content - Show Download CTA for complete souvenir, regular content for others */}
-          {slug === "sampurna-smaranika" ? <div className="mb-8 text-center py-12 px-6 bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 font-heading">
-                स्मरणिकेची मूळ प्रत वाचा आणि डाउनलोड करा
-              </h2>
-              <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-                संपूर्ण स्वास्थ्य संदेश स्मरणिका डाउनलोड करा आणि वाचा
-              </p>
-              <a href="/pdfs/smarnika-complete.pdf" download className="inline-flex items-center gap-3 px-8 py-4 text-lg font-semibold text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105" style={{
-                backgroundColor: '#FF0080'
-              }}>
-                <FileDown className="w-6 h-6" />
-                संपूर्ण स्मरणिका PDF डाउनलोड करा
-              </a>
+          {slug === "sampurna-smaranika" ? <div className="mb-8">
+              <div className="text-center py-8 px-6 bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl mb-8">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-heading">
+                  स्मरणिकेची मूळ प्रत वाचा आणि डाउनलोड करा
+                </h2>
+                <p className="text-muted-foreground mb-2 max-w-2xl mx-auto">
+                  संपूर्ण स्वास्थ्य संदेश स्मरणिका डाउनलोड करा आणि वाचा
+                </p>
+              </div>
+              
+              {/* Interactive FlipBook Viewer */}
+              <FlipBookViewer pdfUrl="/pdfs/smarnika-complete.pdf" />
+              
+              {/* Download Button */}
+              <div className="text-center mt-12 py-8">
+                <a href="/pdfs/smarnika-complete.pdf" download className="inline-flex items-center gap-3 px-8 py-4 text-lg font-semibold text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105" style={{
+                  backgroundColor: '#FF0080'
+                }}>
+                  <FileDown className="w-6 h-6" />
+                  संपूर्ण स्मरणिका PDF डाउनलोड करा
+                </a>
+              </div>
             </div> : <div className="bg-white rounded-lg p-6 md:p-8 mb-8">
               <div className="prose prose-lg max-w-none">
                 {article.content.split('\n\n').map((paragraph, index) => <p key={index} className="text-gray-700 leading-relaxed mb-4 text-justify print-text">
