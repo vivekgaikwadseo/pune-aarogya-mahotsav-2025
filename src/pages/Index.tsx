@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Calendar, MapPin } from "lucide-react";
+import { Calendar, MapPin, Ticket } from "lucide-react";
 import WhyJoinSection from "@/components/WhyJoinSection";
 import ProgramSchedule from "@/components/ProgramSchedule";
 import ConceptSection from "@/components/ConceptSection";
@@ -76,6 +76,10 @@ const Index = () => {
                 <div className="flex items-start gap-3 text-sm sm:text-base md:text-lg">
                   <MapPin className="w-5 h-5 md:w-6 md:h-6 text-hero-blue flex-shrink-0 mt-0.5" />
                   <span className="text-hero-navy font-medium break-words flex-1">स्थळ: बालगंधर्व रंगमंदिर, पुणे</span>
+                </div>
+                <div className="flex items-start gap-3 text-sm sm:text-base md:text-lg">
+                  <Ticket className="w-5 h-5 md:w-6 md:h-6 text-hero-blue flex-shrink-0 mt-0.5" />
+                  <span className="text-hero-navy font-medium break-words flex-1">प्रवेश: पूर्णपणे मोफत</span>
                 </div>
               </div>
 
