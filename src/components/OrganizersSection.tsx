@@ -24,68 +24,57 @@ const OrganizersSection = () => {
     {
       name: "श्री. भानुप्रताप बर्गे",
       role: "माजी सहा. पोलीस आयुक्त",
-      image: bhanupratapBarge,
-      bgColor: "bg-gradient-to-br from-blue-400 to-blue-600"
+      image: bhanupratapBarge
     },
     {
       name: "श्री. मिलिंद गायकवाड",
       role: "माजी सहा. पोलीस आयुक्त",
-      image: milindGaikwad,
-      bgColor: "bg-gradient-to-br from-cyan-400 to-cyan-600"
+      image: milindGaikwad
     },
     {
       name: "श्री. जान महंमद पठाण",
       role: "मा. सहा. पोलीस आयुक्त",
-      image: janmohammadPathan,
-      bgColor: "bg-gradient-to-br from-emerald-400 to-emerald-600"
+      image: janmohammadPathan
     },
     {
       name: "सौ. अपर्णा मारणे-साळवे",
       role: "पुणे शहराध्यक्षा",
-      image: aparnaSathe,
-      bgColor: "bg-gradient-to-br from-purple-400 to-purple-600"
+      image: aparnaSathe
     },
     {
       name: "श्री. इकबाल शेख",
       role: "संचालक, ग्रँड पृथ्वी मेडिकल फाऊंडेशन",
-      image: iqbalShaikh,
-      bgColor: "bg-gradient-to-br from-orange-400 to-orange-600"
+      image: iqbalShaikh
     },
     {
       name: "श्री. आशिष गांधी",
       role: "उपाध्यक्ष, ग्रँड पृथ्वी मेडिकल फाऊंडेशन",
-      image: aashishGandhi,
-      bgColor: "bg-gradient-to-br from-red-400 to-red-600"
+      image: aashishGandhi
     },
     {
       name: "श्री. राहुल हुलावळे",
       role: "सदस्य",
-      image: rahulHulawale,
-      bgColor: "bg-gradient-to-br from-pink-400 to-pink-600"
+      image: rahulHulawale
     },
     {
       name: "श्री. राजेंद्र कदम",
       role: "समन्वयक",
-      image: rajendraKadam,
-      bgColor: "bg-gradient-to-br from-violet-400 to-violet-600"
+      image: rajendraKadam
     },
     {
       name: "सौ. संगिता पाटील",
       role: "मा. सहा. पोलीस आयुक्त",
-      image: sangeetaPatil,
-      bgColor: "bg-gradient-to-br from-fuchsia-400 to-fuchsia-600"
+      image: sangeetaPatil
     },
     {
       name: "श्री. संजय आल्हाट",
       role: "सदस्य",
-      image: sanjayAalhat,
-      bgColor: "bg-gradient-to-br from-teal-400 to-teal-600"
+      image: sanjayAalhat
     },
     {
       name: "श्री. सुरेश फाले",
       role: "सदस्य",
-      image: sureshFale,
-      bgColor: "bg-gradient-to-br from-amber-400 to-amber-600"
+      image: sureshFale
     }
   ];
 
@@ -214,36 +203,13 @@ const OrganizersSection = () => {
                   <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3 mb-8">
                     <Card className="overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-shadow duration-300">
                       <CardContent className="p-0">
-                        {/* Image Section with Unique Gradient Background */}
-                        <div className={`h-64 relative overflow-hidden ${member.bgColor}`}>
-                          {/* White Dotted Pattern Background */}
-                          <div 
-                            className="absolute inset-0 opacity-30"
-                            style={{
-                              backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)',
-                              backgroundSize: '20px 20px'
-                            }}
-                          ></div>
-                          
-                          {/* Decorative Background Elements */}
-                          <div className="absolute inset-0">
-                            {/* Abstract shapes for visual interest */}
-                            <div className="absolute top-4 right-4 w-32 h-32 bg-white/20 rounded-full blur-2xl"></div>
-                            <div className="absolute bottom-6 left-6 w-40 h-40 bg-black/10 rounded-full blur-3xl"></div>
-                            <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-white/15 rounded-full blur-xl"></div>
-                          </div>
-                          
-                          {/* Main Team Member Image */}
-                          <div className="relative h-56 flex items-center justify-center overflow-hidden">
-                            <img 
-                              src={member.image}
-                              alt={member.name}
-                              className="h-full w-full object-contain relative z-10 drop-shadow-2xl"
-                            />
-                          </div>
-                          
-                          {/* Gradient Overlay for smooth transition */}
-                          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/5"></div>
+                        {/* Image Section with Light Grey Background */}
+                        <div className="h-64 relative overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 flex items-end justify-center">
+                          <img 
+                            src={member.image}
+                            alt={member.name}
+                            className="h-full w-full object-contain"
+                          />
                         </div>
                         
                         {/* White Content Box */}
