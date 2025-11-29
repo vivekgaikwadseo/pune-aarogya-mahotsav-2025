@@ -80,7 +80,7 @@ export default function FlipBookViewer({ pdfUrl }: FlipBookViewerProps) {
     <div className={`flex flex-col items-center transition-all duration-300 ${
       isFullscreen 
         ? 'fixed inset-0 z-50 bg-background p-4 md:p-8 overflow-auto' 
-        : 'w-full mt-8 mb-16'
+        : 'w-full mt-8 mb-32'
     }`}>
       {/* Title */}
       <div className="text-center mb-6">
