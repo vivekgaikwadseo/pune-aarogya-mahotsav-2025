@@ -3,7 +3,6 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Calendar, MapPin } from "lucide-react";
-
 import WhyJoinSection from "@/components/WhyJoinSection";
 import ProgramSchedule from "@/components/ProgramSchedule";
 import ConceptSection from "@/components/ConceptSection";
@@ -16,14 +15,14 @@ import FinalCTASection from "@/components/FinalCTASection";
 import LocationSection from "@/components/LocationSection";
 import heroBackground from "@/assets/hero-health-background.jpg";
 import chiefGuestPhoto from "@/assets/devendra-fadnavis-new.png";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative py-4 md:py-6 lg:py-8 pb-8 md:pb-10 lg:pb-12 overflow-x-hidden bg-white w-full" style={{ clipPath: 'polygon(0 0, 100% 0, 100% 92%, 0 100%)' }}>
+      <section className="relative py-4 md:py-6 lg:py-8 pb-8 md:pb-10 lg:pb-12 overflow-x-hidden bg-white w-full" style={{
+      clipPath: 'polygon(0 0, 100% 0, 100% 92%, 0 100%)'
+    }}>
         {/* Floating Animated Colored Shapes - Hidden on mobile */}
         <div className="absolute inset-0 z-5 pointer-events-none hidden lg:block">
           {/* Blue Circle */}
@@ -35,14 +34,7 @@ const Index = () => {
           {/* Pink Zig-Zag Line */}
           <div className="absolute top-1/2 left-1/4 animate-float">
             <svg width="60" height="20" viewBox="0 0 60 20" fill="none">
-              <path 
-                d="M0 10 L15 2 L30 10 L45 2 L60 10" 
-                stroke="hsl(var(--hero-deep-pink))" 
-                strokeWidth="3" 
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
+              <path d="M0 10 L15 2 L30 10 L45 2 L60 10" stroke="hsl(var(--hero-deep-pink))" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </div>
         </div>
@@ -67,7 +59,7 @@ const Index = () => {
               <div className="space-y-2 pt-1 w-full">
                 <div className="flex items-start gap-3 text-sm sm:text-base md:text-lg">
                   <Calendar className="w-5 h-5 md:w-6 md:h-6 text-hero-blue flex-shrink-0 mt-0.5" />
-                  <span className="text-hero-navy font-medium break-words flex-1">रविवार, १९ ऑक्टोबर २०२५, सकाळी ९ वा</span>
+                  <span className="text-hero-navy font-medium break-words flex-1">रविवार, १९ ऑक्टोबर २०२५, सकाळी ९ वाजेपासून सुरु </span>
                 </div>
                 <div className="flex items-start gap-3 text-sm sm:text-base md:text-lg">
                   <MapPin className="w-5 h-5 md:w-6 md:h-6 text-hero-blue flex-shrink-0 mt-0.5" />
@@ -88,19 +80,12 @@ const Index = () => {
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-3 pt-1 w-full">
                 <Link to="/health-camp" className="w-full sm:w-auto">
-                  <Button 
-                    size="lg" 
-                    className="bg-hero-pink hover:bg-hero-pink/90 text-white text-base sm:text-lg px-6 sm:px-8 w-full font-medium"
-                  >
+                  <Button size="lg" className="bg-hero-pink hover:bg-hero-pink/90 text-white text-base sm:text-lg px-6 sm:px-8 w-full font-medium">
                     संमेलनाचे क्षणचित्रे पहा
                   </Button>
                 </Link>
                 <Link to="/events" className="w-full sm:w-auto">
-                  <Button 
-                    size="lg" 
-                    variant="outline"
-                    className="border-2 border-hero-blue text-hero-blue hover:bg-hero-blue hover:text-white text-base sm:text-lg px-6 sm:px-8 w-full font-medium transition-all duration-300 whitespace-normal"
-                  >
+                  <Button size="lg" variant="outline" className="border-2 border-hero-blue text-hero-blue hover:bg-hero-blue hover:text-white text-base sm:text-lg px-6 sm:px-8 w-full font-medium transition-all duration-300 whitespace-normal">
                     आरोग्य संदेश स्मरणिका डाउनलोड करा
                   </Button>
                 </Link>
@@ -110,18 +95,13 @@ const Index = () => {
             {/* Right Column - 50% Chief Minister Section */}
             <div className="relative flex flex-col items-center justify-start pt-4 lg:pt-0 min-h-[350px] sm:min-h-[400px] md:min-h-[450px] w-full max-w-full">
               {/* Pink Blob Background - Positioned Behind */}
-              <div 
-                className="absolute top-1/3 left-1/2 -translate-x-1/2 w-40 h-40 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 bg-hero-pastel-pink -z-10"
-                style={{ borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%' }}
-              />
+              <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-40 h-40 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 bg-hero-pastel-pink -z-10" style={{
+              borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%'
+            }} />
               
               {/* Large CM Image - Prominent & Overflowing */}
               <div className="relative z-10 w-full max-w-[200px] sm:max-w-[240px] md:max-w-[280px] lg:max-w-sm xl:max-w-md flex justify-center">
-                <img 
-                  src={chiefGuestPhoto}
-                  alt="मा. ना. श्री. देवेंद्रजी फडणवीस"
-                  className="h-[200px] sm:h-[240px] md:h-[280px] lg:h-[320px] xl:h-[360px] w-auto object-contain"
-                />
+                <img src={chiefGuestPhoto} alt="मा. ना. श्री. देवेंद्रजी फडणवीस" className="h-[200px] sm:h-[240px] md:h-[280px] lg:h-[320px] xl:h-[360px] w-auto object-contain" />
               </div>
               
               {/* Decorative Deep Pink Plus Sign - Hidden on mobile */}
@@ -175,8 +155,6 @@ const Index = () => {
       <LocationSection />
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
