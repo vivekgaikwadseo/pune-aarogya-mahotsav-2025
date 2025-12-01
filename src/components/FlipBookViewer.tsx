@@ -40,11 +40,11 @@ export default function FlipBookViewer({ pdfUrl }: FlipBookViewerProps) {
 
   // Calculate page width based on screen size
   const getPageWidth = () => {
-    if (typeof window === 'undefined') return 400;
+    if (typeof window === 'undefined') return 650;
     const width = window.innerWidth;
-    if (width < 640) return Math.min(width - 40, 300); // Mobile
-    if (width < 1024) return 350; // Tablet
-    return isFullscreen ? 500 : 400; // Desktop
+    if (width < 640) return Math.min(width - 40, 280); // Mobile
+    if (width < 1024) return 450; // Tablet
+    return isFullscreen ? 700 : 650; // Desktop - minimum 650px
   };
 
   const [pageWidth, setPageWidth] = useState(getPageWidth());
@@ -106,7 +106,7 @@ export default function FlipBookViewer({ pdfUrl }: FlipBookViewerProps) {
       </div>
 
       {/* Controls */}
-      <div className="flex items-center justify-center gap-4 mb-6 flex-wrap bg-card p-4 rounded-lg shadow-lg border border-border">
+      <div className="flex items-center justify-center gap-4 mb-8 flex-wrap bg-card p-4 rounded-lg shadow-lg border border-border relative z-20">
         <Button
           variant="outline"
           size="sm"
@@ -181,10 +181,11 @@ export default function FlipBookViewer({ pdfUrl }: FlipBookViewerProps) {
       </div>
 
       {/* FlipBook */}
-      <div 
-        className="flipbook-container relative transition-transform duration-300" 
-        style={{ transform: `scale(${zoom})` }}
-      >
+      <div className="flipbook-wrapper overflow-auto max-w-full flex justify-center items-start">
+        <div 
+          className="flipbook-container relative transition-transform duration-300" 
+          style={{ transform: `scale(${zoom})`, transformOrigin: 'top center' }}
+        >
         <Document
           file={pdfUrl}
           onLoadSuccess={onDocumentLoadSuccess}
@@ -205,10 +206,10 @@ export default function FlipBookViewer({ pdfUrl }: FlipBookViewerProps) {
               width={pageWidth}
               height={pageWidth * 1.414} // A4 aspect ratio
               size="stretch"
-              minWidth={300}
-              maxWidth={600}
+              minWidth={280}
+              maxWidth={900}
               minHeight={400}
-              maxHeight={850}
+              maxHeight={1200}
               showCover={true}
               flippingTime={1000}
               usePortrait={true}
@@ -238,6 +239,7 @@ export default function FlipBookViewer({ pdfUrl }: FlipBookViewerProps) {
             </HTMLFlipBook>
           )}
         </Document>
+        </div>
       </div>
 
       {/* Mobile Navigation */}
@@ -266,31 +268,48 @@ export default function FlipBookViewer({ pdfUrl }: FlipBookViewerProps) {
       </div>
 
       <style>{`
+        .flipbook-wrapper {
+          touch-action: pan-x pan-y pinch-zoom;
+          -webkit-overflow-scrolling: touch;
+        }
+        
         .flipbook-container {
           perspective: 2000px;
+          touch-action: manipulation;
         }
         
         .flipbook {
           margin: 0 auto;
           background: transparent;
+          position: relative;
+          z-index: 1;
         }
         
         .page-shadow {
           background: white;
           box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+          position: relative;
+          z-index: 1;
         }
         
         .stf__parent {
           position: relative;
           margin: 0 auto;
+          z-index: 1;
         }
         
         .stf__wrapper {
           position: relative;
+          z-index: 1;
         }
         
         .stf__block {
           page-break-inside: avoid;
+        }
+        
+        /* Ensure controls don't overlap content */
+        .stf__parent > * {
+          pointer-events: auto;
         }
       `}</style>
     </div>
