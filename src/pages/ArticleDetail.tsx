@@ -1639,8 +1639,8 @@ const ArticleDetail = () => {
             </div>}
 
           {/* Article Content - Show Download CTA for complete souvenir, regular content for others */}
-          {slug === "sampurna-smaranika" ? <div className="mb-8">
-              <div className="text-center py-8 px-6 bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl mb-8">
+          {slug === "sampurna-smaranika" ? <div className="mb-8 -mx-8 md:-mx-12">
+              <div className="text-center py-8 px-6 md:px-12 bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl mb-8 mx-8 md:mx-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-heading">
                   स्मरणिकेची मूळ प्रत वाचा आणि डाउनलोड करा
                 </h2>
@@ -1653,7 +1653,7 @@ const ArticleDetail = () => {
               <FlipBookViewer pdfUrl="/pdfs/smarnika-complete.pdf" />
               
               {/* Download Button */}
-              <div className="text-center mt-12 py-8">
+              <div className="text-center mt-12 py-8 mx-8 md:mx-12">
                 <a href="/pdfs/smarnika-complete.pdf" download className="inline-flex items-center gap-3 px-8 py-4 text-lg font-semibold text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105" style={{
                   backgroundColor: '#FF0080'
                 }}>

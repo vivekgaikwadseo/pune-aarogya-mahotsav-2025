@@ -42,8 +42,8 @@ export default function FlipBookViewer({ pdfUrl }: FlipBookViewerProps) {
   const getPageWidth = () => {
     if (typeof window === 'undefined') return 650;
     const width = window.innerWidth;
-    if (width < 640) return Math.min(width - 40, 280); // Mobile
-    if (width < 1024) return 450; // Tablet
+    if (width < 640) return Math.min(width - 40, 300); // Mobile - slightly larger
+    if (width < 1024) return 550; // Tablet - increased
     return isFullscreen ? 700 : 650; // Desktop - minimum 650px
   };
 
