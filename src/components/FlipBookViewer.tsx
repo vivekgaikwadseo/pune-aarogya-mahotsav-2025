@@ -181,9 +181,9 @@ export default function FlipBookViewer({ pdfUrl }: FlipBookViewerProps) {
       </div>
 
       {/* FlipBook */}
-      <div className="flipbook-wrapper overflow-auto max-w-full flex justify-center items-start">
+      <div className="flipbook-wrapper w-full flex justify-center items-start overflow-visible">
         <div 
-          className="flipbook-container relative transition-transform duration-300" 
+          className="flipbook-container relative transition-transform duration-300 min-w-[650px]" 
           style={{ transform: `scale(${zoom})`, transformOrigin: 'top center' }}
         >
         <Document
@@ -271,6 +271,13 @@ export default function FlipBookViewer({ pdfUrl }: FlipBookViewerProps) {
         .flipbook-wrapper {
           touch-action: pan-x pan-y pinch-zoom;
           -webkit-overflow-scrolling: touch;
+        }
+        
+        @media (min-width: 1024px) {
+          .flipbook-container {
+            min-width: 650px !important;
+            width: 650px;
+          }
         }
         
         .flipbook-container {
