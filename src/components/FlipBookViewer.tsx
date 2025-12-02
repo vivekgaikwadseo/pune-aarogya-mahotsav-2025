@@ -190,7 +190,7 @@ export default function FlipBookViewer({ pdfUrl }: FlipBookViewerProps) {
         style={{ minHeight: `${scaledHeight + 60}px` }}
       >
         <div 
-          className="flipbook-container relative transition-transform duration-300 max-w-full" 
+          className="flipbook-container relative transition-transform duration-300 max-w-full mx-auto" 
           style={{ transform: `scale(${zoom})`, transformOrigin: 'top center' }}
         >
         <Document
@@ -283,6 +283,8 @@ export default function FlipBookViewer({ pdfUrl }: FlipBookViewerProps) {
         .flipbook-container {
           perspective: 2000px;
           touch-action: manipulation;
+          margin-left: auto;
+          margin-right: auto;
         }
         
         .flipbook {
