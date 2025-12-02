@@ -40,11 +40,11 @@ export default function FlipBookViewer({ pdfUrl }: FlipBookViewerProps) {
 
   // Calculate page width based on screen size
   const getPageWidth = () => {
-    if (typeof window === 'undefined') return 650;
+    if (typeof window === 'undefined') return 500;
     const width = window.innerWidth;
-    if (width < 640) return Math.min(width - 40, 300); // Mobile - slightly larger
-    if (width < 1024) return 550; // Tablet - increased
-    return isFullscreen ? 700 : 650; // Desktop - minimum 650px
+    if (width < 640) return Math.min(width - 40, 280); // Mobile
+    if (width < 1024) return Math.min(width - 80, 450); // Tablet
+    return isFullscreen ? 600 : 500; // Desktop - fits within container
   };
 
   const [pageWidth, setPageWidth] = useState(getPageWidth());
@@ -89,11 +89,15 @@ export default function FlipBookViewer({ pdfUrl }: FlipBookViewerProps) {
     setZoom(1);
   };
 
+  // Calculate container height based on zoom to prevent overlap
+  const baseHeight = pageWidth * 1.414; // A4 aspect ratio
+  const scaledHeight = baseHeight * zoom;
+
   return (
     <div className={`flex flex-col items-center transition-all duration-300 ${
       isFullscreen 
         ? 'fixed inset-0 z-50 bg-background p-4 md:p-8 overflow-auto' 
-        : 'w-full mt-8 mb-32'
+        : 'w-full max-w-full mt-8 mb-16'
     }`}>
       {/* Title */}
       <div className="text-center mb-6">
@@ -181,9 +185,12 @@ export default function FlipBookViewer({ pdfUrl }: FlipBookViewerProps) {
       </div>
 
       {/* FlipBook */}
-      <div className="flipbook-wrapper w-full flex justify-center items-start overflow-visible">
+      <div 
+        className="flipbook-wrapper w-full flex justify-center items-start overflow-hidden"
+        style={{ minHeight: `${scaledHeight + 60}px` }}
+      >
         <div 
-          className="flipbook-container relative transition-transform duration-300 min-w-[650px]" 
+          className="flipbook-container relative transition-transform duration-300 max-w-full" 
           style={{ transform: `scale(${zoom})`, transformOrigin: 'top center' }}
         >
         <Document
@@ -206,10 +213,10 @@ export default function FlipBookViewer({ pdfUrl }: FlipBookViewerProps) {
               width={pageWidth}
               height={pageWidth * 1.414} // A4 aspect ratio
               size="stretch"
-              minWidth={280}
-              maxWidth={900}
-              minHeight={400}
-              maxHeight={1200}
+              minWidth={250}
+              maxWidth={700}
+              minHeight={350}
+              maxHeight={1000}
               showCover={true}
               flippingTime={1000}
               usePortrait={true}
@@ -271,13 +278,6 @@ export default function FlipBookViewer({ pdfUrl }: FlipBookViewerProps) {
         .flipbook-wrapper {
           touch-action: pan-x pan-y pinch-zoom;
           -webkit-overflow-scrolling: touch;
-        }
-        
-        @media (min-width: 1024px) {
-          .flipbook-container {
-            min-width: 650px !important;
-            width: 650px;
-          }
         }
         
         .flipbook-container {
