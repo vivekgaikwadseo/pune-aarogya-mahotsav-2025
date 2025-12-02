@@ -40,11 +40,11 @@ export default function FlipBookViewer({ pdfUrl }: FlipBookViewerProps) {
 
   // Calculate page width based on screen size
   const getPageWidth = () => {
-    if (typeof window === 'undefined') return 500;
+    if (typeof window === 'undefined') return 550;
     const width = window.innerWidth;
-    if (width < 640) return Math.min(width - 40, 280); // Mobile
-    if (width < 1024) return Math.min(width - 80, 450); // Tablet
-    return isFullscreen ? 600 : 500; // Desktop - fits within container
+    if (width < 640) return Math.min(width - 40, 300); // Mobile
+    if (width < 1024) return Math.min(width - 60, 480); // Tablet
+    return isFullscreen ? 650 : 550; // Desktop - comfortable reading size
   };
 
   const [pageWidth, setPageWidth] = useState(getPageWidth());
