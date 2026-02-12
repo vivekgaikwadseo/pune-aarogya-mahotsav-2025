@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import FlipBookViewer from "@/components/FlipBookViewer";
 import { FileDown } from "lucide-react";
 
-const PDF_URL = "https://drive.google.com/uc?export=view&id=1sEglyY7yFJs6wD5-EZvQI0eqRblAUweb";
+const PDF_URL = "/karyavruttant.pdf";
 const DOWNLOAD_URL = "https://drive.google.com/uc?export=download&id=1sEglyY7yFJs6wD5-EZvQI0eqRblAUweb";
 
 const Karyavruttant = () => {
