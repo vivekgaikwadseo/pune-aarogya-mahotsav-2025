@@ -21,6 +21,7 @@ const Navigation = () => {
     { path: "/souvenir", label: "स्मरणिका" },
     { path: "/guests", label: "पाहुणे आणि मान्यवर" },
     { path: "/organizers", label: "आयोजक आणि प्रायोजक" },
+    { path: "/karyavruttant", label: "कार्यवृतांत" },
     { path: "/contact", label: "संपर्क" },
   ];
 

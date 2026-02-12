@@ -11,6 +11,7 @@ import Souvenir from "./pages/Souvenir";
 import ArticleDetail from "./pages/ArticleDetail";
 import Guests from "./pages/Guests";
 import Organizers from "./pages/Organizers";
+import Karyavruttant from "./pages/Karyavruttant";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/article/:slug" element={<ArticleDetail />} />
           <Route path="/guests" element={<Guests />} />
           <Route path="/organizers" element={<Organizers />} />
+          <Route path="/karyavruttant" element={<Karyavruttant />} />
           <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
