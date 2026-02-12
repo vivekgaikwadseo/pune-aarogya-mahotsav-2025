@@ -1,11 +1,16 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FlipBookViewer from "@/components/FlipBookViewer";
-import { FileDown } from "lucide-react";
+import { FileDown, AlertTriangle } from "lucide-react";
+import { useState } from "react";
 
-const PDF_URL = "/pdfs/karyavruttant.pdf";
+const PDF_URL = "https://drive.google.com/uc?export=view&id=1Uk1Suvn08EDTmxHRTpao5L8ZcTvIAbRT";
+const DOWNLOAD_URL = "https://drive.google.com/uc?export=download&id=1Uk1Suvn08EDTmxHRTpao5L8ZcTvIAbRT";
 
 const Karyavruttant = () => {
+  const [viewerError, setViewerError] = useState(false);
+  const [showViewer, setShowViewer] = useState(false);
+
   return (
     <div className="min-h-screen bg-muted/30">
       <Navigation />
@@ -45,16 +50,36 @@ const Karyavruttant = () => {
             </p>
           </div>
 
-          {/* Interactive FlipBook Viewer */}
-          <div className="w-full overflow-hidden">
-            <FlipBookViewer pdfUrl={PDF_URL} />
+          {/* Large file notice + optional viewer */}
+          <div className="text-center py-8 px-6 bg-amber-50 border border-amber-200 rounded-2xl mb-8">
+            <AlertTriangle className="w-10 h-10 text-amber-500 mx-auto mb-4" />
+            <h3 className="text-xl font-bold text-foreground mb-2">मोठी फाइल सूचना</h3>
+            <p className="text-muted-foreground mb-4 max-w-2xl mx-auto">
+              हा कार्यवृतांत PDF खूप मोठा (१.५ GB) आहे. सर्वोत्तम अनुभवासाठी, कृपया PDF डाउनलोड करा.
+            </p>
+            {!showViewer && (
+              <button
+                onClick={() => setShowViewer(true)}
+                className="text-sm text-primary underline hover:no-underline"
+              >
+                तरीही ऑनलाइन पाहण्याचा प्रयत्न करा (हळू लोड होऊ शकते)
+              </button>
+            )}
           </div>
+
+          {/* Interactive FlipBook Viewer - shown on demand */}
+          {showViewer && !viewerError && (
+            <div className="w-full overflow-hidden">
+              <FlipBookViewer pdfUrl={PDF_URL} />
+            </div>
+          )}
 
           {/* Download Button */}
           <div className="text-center mt-16 py-8">
             <a
-              href={PDF_URL}
-              download
+              href={DOWNLOAD_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-8 py-4 text-lg font-semibold text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               style={{ backgroundColor: "#FF0080" }}
             >
